@@ -1,7 +1,14 @@
 import { pageRedirects, wildcardRedirects, imageRedirects } from './lib/redirects.mjs';
 
+// Static export for shared hosting (Hostinger public_html). Redirects/headers
+// below are ignored in export mode — _build/make-htaccess.mjs generates the
+// .htaccess equivalent from the same data. Unset EXPORT to run as a Node app.
+const isExport = process.env.EXPORT !== '0';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  ...(isExport ? { output: 'export' } : {}),
+  images: { unoptimized: true },
   reactStrictMode: true,
   // Keep trailing slashes so canonical URLs match what Google already indexed
   // (e.g. https://skywingsacademy.com/about-us/).

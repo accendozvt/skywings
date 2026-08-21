@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { SITE_URL } from '@/lib/site';
 import { PAGE_META } from '@/lib/seo';
 
