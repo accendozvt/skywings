@@ -1,0 +1,1293 @@
+<!-- SkyWings Academy | Student Feedback Form + Analytics Dashboard -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<style>
+/* ═══════════════════════════════════════
+   SKYWINGS FEEDBACK SYSTEM
+   Form + Password-Protected Dashboard
+═══════════════════════════════════════ */
+:root {
+  --ink:       #0a1128;
+  --navy:      #001f54;
+  --mid:       #034078;
+  --sky:       #1282a2;
+  --sky2:      #0e6d87;
+  --cream:     #fefcfb;
+  --offwhite:  #f4f6f9;
+  --white:     #ffffff;
+  --sky-dim:   rgba(18,130,162,0.10);
+  --sky-line:  rgba(18,130,162,0.25);
+  --navy-line: rgba(0,31,84,0.10);
+  --text:      rgba(0,31,84,0.70);
+  --text-lt:   rgba(0,31,84,0.42);
+  --green:     #16a34a;
+  --amber:     #d97706;
+  --red:       #dc2626;
+  --r:         10px;
+  --rlg:       18px;
+  --t:         0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.fb-root * { box-sizing: border-box; margin: 0; padding: 0; }
+.fb-root {
+  font-family: 'Instrument Sans', sans-serif;
+  color: var(--navy);
+  background: var(--offwhite);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ── SHARED ── */
+.fb-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.fb-wrap--wide { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.fb-eyebrow { font-family: 'Sora', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--sky); display: block; margin-bottom: 8px; }
+h2.fb-title { font-family: 'Sora', sans-serif; font-size: clamp(22px, 3vw, 32px); font-weight: 600; color: var(--navy); line-height: 1.2; letter-spacing: -0.5px; }
+.fb-sub { font-size: 14px; font-weight: 300; color: var(--text); line-height: 1.7; margin-top: 6px; }
+.fb-rule { width: 32px; height: 2px; background: var(--sky); display: block; margin: 14px 0; }
+
+/* ── FORM HEADER ── */
+.fb-header {
+  background: linear-gradient(135deg, var(--ink) 0%, var(--navy) 55%, var(--mid) 100%);
+  padding: 104px 0 48px;
+  position: relative;
+  overflow: hidden;
+}
+.fb-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(254,252,251,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+.fb-header__inner { position: relative; z-index: 2; text-align: center; }
+.fb-header__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18,130,162,0.15);
+  border: 1px solid rgba(18,130,162,0.3);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-family: 'Sora', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sky);
+  margin-bottom: 20px;
+}
+.fb-header__badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sky); animation: fb-pulse 2s ease infinite; }
+@keyframes fb-pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.5;transform:scale(1.3);} }
+.fb-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(24px,4vw,42px); font-weight: 300; color: var(--cream); line-height: 1.15; letter-spacing: -1px; margin-bottom: 10px; }
+.fb-header__note { font-size: 13px; font-weight: 300; color: rgba(254,252,251,0.45); line-height: 1.6; max-width: 500px; margin: 0 auto; }
+.fb-header__note strong { color: rgba(18,130,162,0.9); font-weight: 500; }
+.fb-progress-bar { height: 3px; background: rgba(255,255,255,0.1); margin-top: 32px; border-radius: 2px; overflow: hidden; }
+.fb-progress-fill { height: 100%; background: var(--sky); border-radius: 2px; transition: width 0.5s ease; }
+.fb-progress-text { font-size: 11px; color: rgba(254,252,251,0.35); margin-top: 6px; font-family: 'Sora', sans-serif; letter-spacing: 0.5px; }
+
+/* ── FORM BODY ── */
+.fb-body { padding: 40px 0 64px; }
+
+/* Section card */
+.fb-section {
+  background: var(--white);
+  border-radius: var(--rlg);
+  border: 1px solid var(--navy-line);
+  margin-bottom: 20px;
+  overflow: hidden;
+  animation: fb-fadeup 0.5s ease both;
+}
+@keyframes fb-fadeup { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+.fb-section:nth-child(1) { animation-delay: 0.05s; }
+.fb-section:nth-child(2) { animation-delay: 0.10s; }
+.fb-section:nth-child(3) { animation-delay: 0.15s; }
+.fb-section:nth-child(4) { animation-delay: 0.20s; }
+.fb-section:nth-child(5) { animation-delay: 0.25s; }
+.fb-section:nth-child(6) { animation-delay: 0.30s; }
+
+.fb-section__head {
+  background: var(--navy);
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.fb-section__icon {
+  width: 36px; height: 36px;
+  background: rgba(18,130,162,0.2);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--sky); flex-shrink: 0;
+}
+.fb-section__icon svg { width: 16px; height: 16px; }
+.fb-section__label { font-family: 'Sora', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(254,252,251,0.4); display: block; margin-bottom: 2px; }
+.fb-section__title { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 500; color: var(--cream); }
+.fb-section__body { padding: 28px; }
+
+/* Questions */
+.fb-q { margin-bottom: 26px; }
+.fb-q:last-child { margin-bottom: 0; }
+.fb-q-label { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 12px; display: block; line-height: 1.4; }
+.fb-q-label span { color: var(--sky); }
+
+/* Radio / checkbox options */
+.fb-options { display: flex; flex-direction: column; gap: 8px; }
+.fb-option { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid var(--navy-line); border-radius: var(--r); cursor: pointer; transition: var(--t); }
+.fb-option:hover { border-color: var(--sky-line); background: var(--sky-dim); }
+.fb-option input { display: none; }
+.fb-option__box { width: 18px; height: 18px; border: 1.5px solid rgba(0,31,84,0.25); border-radius: 50%; flex-shrink: 0; transition: var(--t); display: flex; align-items: center; justify-content: center; }
+.fb-option--check .fb-option__box { border-radius: 4px; }
+.fb-option__box-inner { width: 8px; height: 8px; border-radius: 50%; background: var(--sky); opacity: 0; transition: var(--t); }
+.fb-option--check .fb-option__box-inner { border-radius: 2px; }
+.fb-option.selected { border-color: var(--sky); background: var(--sky-dim); }
+.fb-option.selected .fb-option__box { border-color: var(--sky); background: var(--sky); }
+.fb-option.selected .fb-option__box-inner { opacity: 1; background: white; }
+.fb-option__text { font-size: 13.5px; font-weight: 300; color: var(--navy); line-height: 1.4; }
+
+/* Star Rating */
+.fb-stars { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.fb-star { width: 40px; height: 40px; border: 1.5px solid var(--navy-line); border-radius: var(--r); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--t); font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 500; color: var(--text-lt); }
+.fb-star:hover, .fb-star.active { background: var(--sky); border-color: var(--sky); color: var(--white); transform: scale(1.08); }
+.fb-star-label { font-size: 11px; color: var(--text-lt); margin-left: 8px; font-style: italic; }
+
+/* Rating grid (matrix) */
+/* Rating row — replaces grid table */
+.fb-rating-list { display: flex; flex-direction: column; gap: 12px; }
+.fb-rating-row { background: var(--offwhite); border: 1px solid var(--navy-line); border-radius: var(--r); padding: 14px 16px; transition: var(--t); }
+.fb-rating-row:hover { border-color: var(--sky-line); background: rgba(18,130,162,0.04); }
+.fb-rating-row.answered { border-color: var(--sky-line); background: rgba(18,130,162,0.06); }
+.fb-rating-row__label { font-size: 13px; font-weight: 400; color: var(--navy); margin-bottom: 12px; line-height: 1.4; }
+.fb-rating-row__scale { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.fb-rating-row__scale-hint { display: flex; justify-content: space-between; width: 100%; margin-top: 4px; }
+.fb-rating-row__scale-hint span { font-size: 10px; color: var(--text-lt); font-style: italic; }
+.fb-rate-btn { flex: 1; min-width: 44px; max-width: 64px; height: 44px; border: 1.5px solid var(--navy-line); border-radius: var(--r); cursor: pointer; transition: var(--t); font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 600; color: var(--text-lt); background: var(--white); display: flex; align-items: center; justify-content: center; }
+.fb-rate-btn:hover { border-color: var(--sky); color: var(--sky); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(18,130,162,0.15); }
+.fb-rate-btn.selected { background: var(--sky); border-color: var(--sky); color: white; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(18,130,162,0.25); }
+.fb-rate-btn input { display: none; }
+
+/* Textarea */
+.fb-textarea { width: 100%; font-family: 'Instrument Sans', sans-serif; font-size: 13.5px; font-weight: 300; color: var(--navy); background: var(--offwhite); border: 1px solid var(--navy-line); border-radius: var(--r); padding: 12px 14px; resize: vertical; min-height: 80px; transition: var(--t); outline: none; line-height: 1.6; }
+.fb-textarea:focus { border-color: var(--sky); background: var(--white); box-shadow: 0 0 0 3px rgba(18,130,162,0.08); }
+.fb-textarea::placeholder { color: var(--text-lt); }
+
+/* Submit */
+.fb-submit-wrap { text-align: center; margin-top: 32px; }
+.fb-submit {
+  background: var(--sky); color: var(--white); border: none;
+  padding: 16px 48px; border-radius: 100px;
+  font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600;
+  cursor: pointer; transition: var(--t); display: inline-flex; align-items: center; gap: 10px;
+  letter-spacing: 0.3px;
+}
+.fb-submit:hover { background: var(--sky2); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(18,130,162,0.35); }
+.fb-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.fb-submit svg { flex-shrink: 0; }
+.fb-submit-note { font-size: 12px; color: var(--text-lt); margin-top: 12px; }
+
+/* Success Screen */
+.fb-success {
+  display: none;
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--white);
+  border-radius: var(--rlg);
+  border: 1px solid var(--navy-line);
+  margin-top: 20px;
+}
+.fb-success__icon { width: 72px; height: 72px; background: rgba(22,163,74,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--green); }
+.fb-success__icon svg { width: 32px; height: 32px; }
+.fb-success h2 { font-family: 'Sora', sans-serif; font-size: 24px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+.fb-success p { font-size: 14px; font-weight: 300; color: var(--text); line-height: 1.7; max-width: 420px; margin: 0 auto; }
+
+/* ═══════════════════════════════════════
+   DASHBOARD (PASSWORD PROTECTED)
+═══════════════════════════════════════ */
+.fb-dash-root { display: none; }
+.fb-dash-root.unlocked { display: block; }
+
+/* Password gate */
+.fb-lock {
+  background: var(--navy);
+  padding: 80px 24px;
+  text-align: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fb-lock__card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--rlg); padding: 48px 40px; max-width: 400px; width: 100%; }
+.fb-lock__icon { width: 56px; height: 56px; background: rgba(18,130,162,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--sky); }
+.fb-lock__title { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 500; color: var(--cream); margin-bottom: 6px; }
+.fb-lock__sub { font-size: 13px; font-weight: 300; color: rgba(254,252,251,0.4); margin-bottom: 28px; line-height: 1.5; }
+.fb-lock__input { width: 100%; font-family: 'Instrument Sans', sans-serif; font-size: 14px; color: var(--cream); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--r); padding: 13px 16px; outline: none; transition: var(--t); letter-spacing: 1px; text-align: center; }
+.fb-lock__input:focus { border-color: var(--sky); box-shadow: 0 0 0 3px rgba(18,130,162,0.15); }
+.fb-lock__input::placeholder { color: rgba(254,252,251,0.2); letter-spacing: 0; }
+.fb-lock__btn { width: 100%; margin-top: 14px; padding: 13px; background: var(--sky); color: white; border: none; border-radius: var(--r); font-family: 'Instrument Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: var(--t); }
+.fb-lock__btn:hover { background: var(--sky2); }
+.fb-lock__error { color: #f87171; font-size: 12px; margin-top: 10px; display: none; }
+
+/* Dashboard styles */
+.fb-dash-header { background: linear-gradient(135deg, var(--ink), var(--navy) 60%, var(--mid)); padding: 40px 0; }
+.fb-dash-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.fb-dash-header h2 { font-family: 'Sora', sans-serif; font-size: clamp(20px,2.8vw,30px); font-weight: 300; color: var(--cream); letter-spacing: -0.5px; }
+.fb-dash-header__meta { font-size: 12px; color: rgba(254,252,251,0.35); margin-top: 4px; }
+.fb-dash-btn { padding: 10px 20px; background: rgba(18,130,162,0.2); border: 1px solid rgba(18,130,162,0.3); border-radius: 100px; color: var(--sky); font-family: 'Instrument Sans', sans-serif; font-size: 12px; font-weight: 500; cursor: pointer; transition: var(--t); }
+.fb-dash-btn:hover { background: rgba(18,130,162,0.35); }
+
+/* KPI cards */
+.fb-kpi-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin: 32px 0 24px; }
+.fb-kpi { background: var(--white); border: 1px solid var(--navy-line); border-radius: var(--rlg); padding: 24px 22px; position: relative; overflow: hidden; }
+.fb-kpi::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+.fb-kpi__num { font-family: 'Sora', sans-serif; font-size: 40px; font-weight: 200; color: var(--navy); letter-spacing: -1.5px; line-height: 1; margin-bottom: 6px; }
+.fb-kpi__label { font-size: 12px; font-weight: 400; color: var(--text-lt); letter-spacing: 0.3px; }
+.fb-kpi__change { font-size: 11px; font-weight: 500; color: var(--green); margin-top: 8px; }
+
+/* Chart grid */
+.fb-chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.fb-chart-grid--3 { grid-template-columns: repeat(3,1fr); }
+.fb-chart-card { background: var(--white); border: 1px solid var(--navy-line); border-radius: var(--rlg); padding: 24px; }
+.fb-chart-card--wide { grid-column: span 2; }
+.fb-chart-card__title { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.fb-chart-card__sub { font-size: 11px; color: var(--text-lt); margin-bottom: 20px; }
+.fb-chart-card canvas { max-height: 220px; }
+
+/* Score table */
+.fb-score-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.fb-score-table th { font-family: 'Sora', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sky); text-align: left; padding: 8px 0; border-bottom: 1px solid var(--navy-line); }
+.fb-score-table td { padding: 10px 0; border-bottom: 1px solid var(--navy-line); font-size: 13px; color: var(--text); vertical-align: middle; }
+.fb-score-table tr:last-child td { border-bottom: none; }
+.fb-score-bar { height: 6px; border-radius: 3px; background: var(--offwhite); margin-top: 4px; overflow: hidden; }
+.fb-score-bar-fill { height: 100%; border-radius: 3px; background: var(--sky); transition: width 1s ease; }
+.fb-score-badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 100px; }
+.fb-score-badge--good { background: rgba(22,163,74,0.1); color: var(--green); }
+.fb-score-badge--mid { background: rgba(217,119,6,0.1); color: var(--amber); }
+.fb-score-badge--low { background: rgba(220,38,38,0.1); color: var(--red); }
+
+/* Open responses */
+.fb-responses { margin-top: 16px; }
+.fb-response-item { padding: 14px 16px; background: var(--offwhite); border-radius: var(--r); border-left: 3px solid var(--sky); margin-bottom: 10px; font-size: 13px; font-weight: 300; color: var(--navy); line-height: 1.6; }
+
+/* Refresh spinner */
+.fb-loading { text-align: center; padding: 40px; color: var(--text-lt); font-size: 13px; }
+
+@media (max-width:768px) {
+  .fb-kpi-grid { grid-template-columns: 1fr 1fr; }
+  .fb-chart-grid { grid-template-columns: 1fr; }
+  .fb-chart-grid--3 { grid-template-columns: 1fr; }
+  .fb-chart-card--wide { grid-column: span 1; }
+  .fb-section__body { padding: 20px; }
+  .fb-star { width: 34px; height: 34px; font-size: 12px; }
+  .fb-dash-header__inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .fb-kpi-grid { grid-template-columns: 1fr 1fr; }
+  .fb-wrap, .fb-wrap--wide { padding: 0 16px; }
+}
+</style>
+
+<div class="fb-root" id="fb-root">
+
+<!-- ═══════════ FORM VIEW ═══════════ -->
+<div id="fb-form-view">
+
+  <!-- Header -->
+  <div class="fb-header">
+    <div class="fb-wrap">
+      <div class="fb-header__inner">
+        <div class="fb-header__badge">
+          <div class="fb-header__badge-dot"></div>
+          Anonymous Submission
+        </div>
+        <h1>Your Feedback Matters</h1>
+        <p class="fb-header__note">This form is <strong>completely anonymous</strong> — no name, roll number, or contact is collected. Your honest input helps us improve SkyWings Academy for everyone.</p>
+        <div class="fb-wrap" style="margin-top:20px;">
+          <div class="fb-progress-bar"><div class="fb-progress-fill" id="fb-progress" style="width:0%"></div></div>
+          <div class="fb-progress-text" id="fb-progress-text">Complete all sections to submit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="fb-body">
+    <div class="fb-wrap">
+      <form id="fb-form" onsubmit="return false;">
+
+        <!-- SECTION A -->
+        <div class="fb-section">
+          <div class="fb-section__head">
+            <div class="fb-section__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div><span class="fb-section__label">Section A</span><span class="fb-section__title">About Your Enrolment</span></div>
+          </div>
+          <div class="fb-section__body">
+
+            <div class="fb-q">
+              <span class="fb-q-label">A1. How long have you been studying at SkyWings Academy?</span>
+              <div class="fb-options" id="qa1">
+                <label class="fb-option"><input type="radio" name="a1" value="Less than 3 months"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Less than 3 months</span></label>
+                <label class="fb-option"><input type="radio" name="a1" value="3 to 6 months"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">3 to 6 months</span></label>
+                <label class="fb-option"><input type="radio" name="a1" value="6 to 12 months"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">6 to 12 months</span></label>
+                <label class="fb-option"><input type="radio" name="a1" value="More than 1 year"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">More than 1 year</span></label>
+              </div>
+            </div>
+
+            <div class="fb-q">
+              <span class="fb-q-label">A2. Which campus are you enrolled at?</span>
+              <div class="fb-options" id="qa2">
+                <label class="fb-option"><input type="radio" name="a2" value="Kochi"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Kochi (Ernakulam)</span></label>
+                <label class="fb-option"><input type="radio" name="a2" value="Mahe"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Mahe</span></label>
+              </div>
+            </div>
+
+            <div class="fb-q">
+              <span class="fb-q-label">A3. Which programme are you enrolled in?</span>
+              <div class="fb-options" id="qa3">
+                <label class="fb-option"><input type="radio" name="a3" value="BBA Aviation"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">BBA Aviation — Airline & Airport Management</span></label>
+                <label class="fb-option"><input type="radio" name="a3" value="MBA Aviation"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">MBA Aviation — Airline & Airport Management</span></label>
+                <label class="fb-option"><input type="radio" name="a3" value="Diploma Cabin Crew"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Diploma in Cabin Crew Management</span></label>
+                <label class="fb-option"><input type="radio" name="a3" value="Diploma AAM"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Diploma in Airline & Airport Management</span></label>
+                <label class="fb-option"><input type="radio" name="a3" value="BBA Logistics"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">BBA Logistics & Supply Chain Management</span></label>
+                <label class="fb-option"><input type="radio" name="a3" value="Diploma Hospitality"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Diploma in Aviation & Hospitality</span></label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SECTION B — Training Quality -->
+        <div class="fb-section">
+          <div class="fb-section__head">
+            <div class="fb-section__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+            <div><span class="fb-section__label">Section B</span><span class="fb-section__title">Training Quality</span></div>
+          </div>
+          <div class="fb-section__body">
+            <div class="fb-rating-list">
+          <div class="fb-rating-row" id="row-b1">
+            <div class="fb-rating-row__label">Quality of classroom teaching</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="b1" data-val="1" onclick="setRating('b1',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="b1" data-val="2" onclick="setRating('b1',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="b1" data-val="3" onclick="setRating('b1',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="b1" data-val="4" onclick="setRating('b1',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="b1" data-val="5" onclick="setRating('b1',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="b1" id="b1-val">
+          </div>
+          <div class="fb-rating-row" id="row-b2">
+            <div class="fb-rating-row__label">Trainer's knowledge and industry expertise</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="b2" data-val="1" onclick="setRating('b2',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="b2" data-val="2" onclick="setRating('b2',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="b2" data-val="3" onclick="setRating('b2',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="b2" data-val="4" onclick="setRating('b2',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="b2" data-val="5" onclick="setRating('b2',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="b2" id="b2-val">
+          </div>
+          <div class="fb-rating-row" id="row-b3">
+            <div class="fb-rating-row__label">Relevance of content to real aviation jobs</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="b3" data-val="1" onclick="setRating('b3',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="b3" data-val="2" onclick="setRating('b3',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="b3" data-val="3" onclick="setRating('b3',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="b3" data-val="4" onclick="setRating('b3',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="b3" data-val="5" onclick="setRating('b3',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="b3" id="b3-val">
+          </div>
+          <div class="fb-rating-row" id="row-b4">
+            <div class="fb-rating-row__label">Practical / hands-on training sessions</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="b4" data-val="1" onclick="setRating('b4',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="b4" data-val="2" onclick="setRating('b4',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="b4" data-val="3" onclick="setRating('b4',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="b4" data-val="4" onclick="setRating('b4',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="b4" data-val="5" onclick="setRating('b4',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="b4" id="b4-val">
+          </div>
+          <div class="fb-rating-row" id="row-b5">
+            <div class="fb-rating-row__label">English communication training sessions</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="b5" data-val="1" onclick="setRating('b5',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="b5" data-val="2" onclick="setRating('b5',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="b5" data-val="3" onclick="setRating('b5',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="b5" data-val="4" onclick="setRating('b5',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="b5" data-val="5" onclick="setRating('b5',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="b5" id="b5-val">
+          </div>
+            </div>
+            <div class="fb-q" style="margin-top:22px;">
+              <span class="fb-q-label">What would you change or improve about the training?</span>
+              <textarea class="fb-textarea" name="b_open" id="b_open" placeholder="Share your thoughts (optional)…"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION C — Grooming & Uniform -->
+        <div class="fb-section">
+          <div class="fb-section__head">
+            <div class="fb-section__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div><span class="fb-section__label">Section C</span><span class="fb-section__title">Grooming & Uniform</span></div>
+          </div>
+          <div class="fb-section__body">
+            <div class="fb-rating-list">
+          <div class="fb-rating-row" id="row-c1">
+            <div class="fb-rating-row__label">Overall quality and design of the uniform</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="c1" data-val="1" onclick="setRating('c1',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="c1" data-val="2" onclick="setRating('c1',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="c1" data-val="3" onclick="setRating('c1',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="c1" data-val="4" onclick="setRating('c1',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="c1" data-val="5" onclick="setRating('c1',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="c1" id="c1-val">
+          </div>
+          <div class="fb-rating-row" id="row-c2">
+            <div class="fb-rating-row__label">Comfort and fit of the uniform</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="c2" data-val="1" onclick="setRating('c2',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="c2" data-val="2" onclick="setRating('c2',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="c2" data-val="3" onclick="setRating('c2',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="c2" data-val="4" onclick="setRating('c2',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="c2" data-val="5" onclick="setRating('c2',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="c2" id="c2-val">
+          </div>
+          <div class="fb-rating-row" id="row-c3">
+            <div class="fb-rating-row__label">How professional the uniform looks</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="c3" data-val="1" onclick="setRating('c3',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="c3" data-val="2" onclick="setRating('c3',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="c3" data-val="3" onclick="setRating('c3',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="c3" data-val="4" onclick="setRating('c3',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="c3" data-val="5" onclick="setRating('c3',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="c3" id="c3-val">
+          </div>
+          <div class="fb-rating-row" id="row-c4">
+            <div class="fb-rating-row__label">Quality of grooming training sessions</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="c4" data-val="1" onclick="setRating('c4',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="c4" data-val="2" onclick="setRating('c4',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="c4" data-val="3" onclick="setRating('c4',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="c4" data-val="4" onclick="setRating('c4',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="c4" data-val="5" onclick="setRating('c4',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="c4" id="c4-val">
+          </div>
+          <div class="fb-rating-row" id="row-c5">
+            <div class="fb-rating-row__label">Personal presentation confidence</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="c5" data-val="1" onclick="setRating('c5',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="c5" data-val="2" onclick="setRating('c5',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="c5" data-val="3" onclick="setRating('c5',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="c5" data-val="4" onclick="setRating('c5',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="c5" data-val="5" onclick="setRating('c5',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="c5" id="c5-val">
+          </div>
+            </div>
+            <div class="fb-q" style="margin-top:22px;">
+              <span class="fb-q-label">Any feedback on the uniform (colour, design, fit, material)?</span>
+              <textarea class="fb-textarea" name="c_open" id="c_open" placeholder="Share your thoughts (optional)…"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION D — Campus & Facilities -->
+        <div class="fb-section">
+          <div class="fb-section__head">
+            <div class="fb-section__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div><span class="fb-section__label">Section D</span><span class="fb-section__title">Campus & Facilities</span></div>
+          </div>
+          <div class="fb-section__body">
+            <div class="fb-rating-list">
+          <div class="fb-rating-row" id="row-d1">
+            <div class="fb-rating-row__label">Cleanliness and maintenance of campus</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="d1" data-val="1" onclick="setRating('d1',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="d1" data-val="2" onclick="setRating('d1',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="d1" data-val="3" onclick="setRating('d1',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="d1" data-val="4" onclick="setRating('d1',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="d1" data-val="5" onclick="setRating('d1',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="d1" id="d1-val">
+          </div>
+          <div class="fb-rating-row" id="row-d2">
+            <div class="fb-rating-row__label">Comfort of classrooms (AC, seating, lighting)</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="d2" data-val="1" onclick="setRating('d2',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="d2" data-val="2" onclick="setRating('d2',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="d2" data-val="3" onclick="setRating('d2',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="d2" data-val="4" onclick="setRating('d2',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="d2" data-val="5" onclick="setRating('d2',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="d2" id="d2-val">
+          </div>
+          <div class="fb-rating-row" id="row-d3">
+            <div class="fb-rating-row__label">Availability of study materials</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="d3" data-val="1" onclick="setRating('d3',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="d3" data-val="2" onclick="setRating('d3',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="d3" data-val="3" onclick="setRating('d3',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="d3" data-val="4" onclick="setRating('d3',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="d3" data-val="5" onclick="setRating('d3',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="d3" id="d3-val">
+          </div>
+          <div class="fb-rating-row" id="row-d4">
+            <div class="fb-rating-row__label">Campus safety and security</div>
+            <div class="fb-rating-row__scale">
+              <button type="button" class="fb-rate-btn" data-name="d4" data-val="1" onclick="setRating('d4',1,this)">1</button>
+              <button type="button" class="fb-rate-btn" data-name="d4" data-val="2" onclick="setRating('d4',2,this)">2</button>
+              <button type="button" class="fb-rate-btn" data-name="d4" data-val="3" onclick="setRating('d4',3,this)">3</button>
+              <button type="button" class="fb-rate-btn" data-name="d4" data-val="4" onclick="setRating('d4',4,this)">4</button>
+              <button type="button" class="fb-rate-btn" data-name="d4" data-val="5" onclick="setRating('d4',5,this)">5</button>
+            </div>
+            <div class="fb-rating-row__scale-hint">
+              <span>1 = Very Poor</span>
+              <span>5 = Excellent</span>
+            </div>
+            <input type="hidden" name="d4" id="d4-val">
+          </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION E — Placement -->
+        <div class="fb-section">
+          <div class="fb-section__head">
+            <div class="fb-section__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2l6 6-1 3.5 3.5-1z"/></svg></div>
+            <div><span class="fb-section__label">Section E</span><span class="fb-section__title">Placement & Career Support</span></div>
+          </div>
+          <div class="fb-section__body">
+
+            <div class="fb-q">
+              <span class="fb-q-label">E1. How satisfied are you with placement support so far?</span>
+              <div class="fb-options" id="qe1">
+                <label class="fb-option"><input type="radio" name="e1" value="Very Satisfied"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Very Satisfied</span></label>
+                <label class="fb-option"><input type="radio" name="e1" value="Satisfied"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Satisfied</span></label>
+                <label class="fb-option"><input type="radio" name="e1" value="Neutral"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Neutral</span></label>
+                <label class="fb-option"><input type="radio" name="e1" value="Dissatisfied"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Dissatisfied</span></label>
+                <label class="fb-option"><input type="radio" name="e1" value="Very Dissatisfied"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Very Dissatisfied</span></label>
+              </div>
+            </div>
+
+            <div class="fb-q">
+              <span class="fb-q-label">E2. How confident do you feel about clearing an airline interview? <span>(1 = Not at all · 5 = Very confident)</span></span>
+              <div class="fb-stars" id="stars-e2">
+                <div class="fb-star" data-val="1" onclick="setStar('e2',1)">1</div>
+                <div class="fb-star" data-val="2" onclick="setStar('e2',2)">2</div>
+                <div class="fb-star" data-val="3" onclick="setStar('e2',3)">3</div>
+                <div class="fb-star" data-val="4" onclick="setStar('e2',4)">4</div>
+                <div class="fb-star" data-val="5" onclick="setStar('e2',5)">5</div>
+                <span class="fb-star-label" id="e2-label">Tap to rate</span>
+              </div>
+              <input type="hidden" name="e2" id="e2-val">
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SECTION F — Overall -->
+        <div class="fb-section">
+          <div class="fb-section__head">
+            <div class="fb-section__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+            <div><span class="fb-section__label">Section F</span><span class="fb-section__title">Overall Experience</span></div>
+          </div>
+          <div class="fb-section__body">
+
+            <div class="fb-q">
+              <span class="fb-q-label">F1. Overall, how would you rate SkyWings Academy? <span>(1 = Very Poor · 5 = Excellent)</span></span>
+              <div class="fb-stars" id="stars-f1">
+                <div class="fb-star" data-val="1" onclick="setStar('f1',1)">1</div>
+                <div class="fb-star" data-val="2" onclick="setStar('f1',2)">2</div>
+                <div class="fb-star" data-val="3" onclick="setStar('f1',3)">3</div>
+                <div class="fb-star" data-val="4" onclick="setStar('f1',4)">4</div>
+                <div class="fb-star" data-val="5" onclick="setStar('f1',5)">5</div>
+                <span class="fb-star-label" id="f1-label">Tap to rate</span>
+              </div>
+              <input type="hidden" name="f1" id="f1-val">
+            </div>
+
+            <div class="fb-q" style="margin-top:20px;">
+              <span class="fb-q-label">F2. Would you recommend SkyWings Academy to a friend?</span>
+              <div class="fb-options" id="qf2">
+                <label class="fb-option"><input type="radio" name="f2" value="Definitely yes"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Definitely yes</span></label>
+                <label class="fb-option"><input type="radio" name="f2" value="Probably yes"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Probably yes</span></label>
+                <label class="fb-option"><input type="radio" name="f2" value="Not sure"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Not sure</span></label>
+                <label class="fb-option"><input type="radio" name="f2" value="Probably not"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Probably not</span></label>
+                <label class="fb-option"><input type="radio" name="f2" value="Definitely not"><span class="fb-option__box"><span class="fb-option__box-inner"></span></span><span class="fb-option__text">Definitely not</span></label>
+              </div>
+            </div>
+
+            <div class="fb-q" style="margin-top:20px;">
+              <span class="fb-q-label">F3. What is the <strong>best thing</strong> about SkyWings Academy?</span>
+              <textarea class="fb-textarea" name="f3" id="f3" placeholder="The trainers, grooming sessions, campus environment…"></textarea>
+            </div>
+
+            <div class="fb-q">
+              <span class="fb-q-label">F4. What is the <strong>one thing</strong> you wish was different?</span>
+              <textarea class="fb-textarea" name="f4" id="f4" placeholder="Any honest suggestion is welcome…"></textarea>
+            </div>
+
+            <div class="fb-q">
+              <span class="fb-q-label">F5. Any other comments or suggestions for management?</span>
+              <textarea class="fb-textarea" name="f5" id="f5" placeholder="Anything else on your mind…" style="min-height:100px;"></textarea>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="fb-submit-wrap">
+          <button type="button" class="fb-submit" id="fb-submit-btn" onclick="submitFeedback()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Submit Feedback
+          </button>
+          <p class="fb-submit-note">🔒 100% anonymous · No personal data collected</p>
+        </div>
+
+      </form>
+
+      <!-- Success -->
+      <div class="fb-success" id="fb-success">
+        <div class="fb-success__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h2>Thank you for your feedback!</h2>
+        <p>Your response has been recorded anonymously. SkyWings Academy management will review all feedback and take meaningful action.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ DASHBOARD TOGGLE BUTTON ═══════════ -->
+<div style="text-align:center;padding:20px 0 40px;background:var(--offwhite);">
+  <button onclick="toggleDashboard()" style="font-family:'Sora',sans-serif;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:10px 22px;border-radius:100px;border:1px solid var(--navy-line);background:transparent;color:var(--text-lt);cursor:pointer;transition:var(--t);" onmouseover="this.style.color='var(--sky)';this.style.borderColor='var(--sky)'" onmouseout="this.style.color='var(--text-lt)';this.style.borderColor='var(--navy-line)'">
+    📊 View Analytics Dashboard
+  </button>
+</div>
+
+<!-- ═══════════ DASHBOARD ═══════════ -->
+<div class="fb-dash-root" id="fb-dash-root">
+
+  <!-- Lock screen -->
+  <div class="fb-lock" id="fb-lock">
+    <div class="fb-lock__card">
+      <div class="fb-lock__icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      </div>
+      <div class="fb-lock__title">Analytics Dashboard</div>
+      <div class="fb-lock__sub">Enter password to access feedback analytics</div>
+      <input type="password" class="fb-lock__input" id="fb-pw" placeholder="Enter password" onkeydown="if(event.key==='Enter')checkPassword()">
+      <button class="fb-lock__btn" onclick="checkPassword()">Unlock Dashboard</button>
+      <div class="fb-lock__error" id="fb-pw-err">Incorrect password. Please try again.</div>
+    </div>
+  </div>
+
+  <!-- Dashboard content (hidden until unlocked) -->
+  <div id="fb-dash-content" style="display:none;">
+
+    <div class="fb-dash-header">
+      <div class="fb-wrap--wide">
+        <div class="fb-dash-header__inner">
+          <div>
+            <h2>Feedback Analytics Dashboard</h2>
+            <div class="fb-dash-header__meta" id="dash-meta">Loading responses…</div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button class="fb-dash-btn" onclick="loadDashboard()">⟳ Refresh Data</button>
+            <button class="fb-dash-btn" onclick="lockDashboard()">🔒 Lock</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--offwhite);padding:32px 0 56px;">
+      <div class="fb-wrap--wide">
+
+        <!-- KPIs -->
+        <div class="fb-kpi-grid">
+          <div class="fb-kpi">
+            <div class="fb-kpi__num" id="kpi-total">—</div>
+            <div class="fb-kpi__label">Total Responses</div>
+            <div class="fb-kpi__change" id="kpi-recent">Loading…</div>
+          </div>
+          <div class="fb-kpi">
+            <div class="fb-kpi__num" id="kpi-overall">—</div>
+            <div class="fb-kpi__label">Overall Rating (avg)</div>
+            <div class="fb-kpi__change" id="kpi-overall-trend">out of 5</div>
+          </div>
+          <div class="fb-kpi">
+            <div class="fb-kpi__num" id="kpi-nps">—</div>
+            <div class="fb-kpi__label">Would Recommend</div>
+            <div class="fb-kpi__change">Definitely + Probably Yes</div>
+          </div>
+          <div class="fb-kpi">
+            <div class="fb-kpi__num" id="kpi-confidence">—</div>
+            <div class="fb-kpi__label">Interview Confidence (avg)</div>
+            <div class="fb-kpi__change">out of 5</div>
+          </div>
+        </div>
+
+        <!-- Row 1: Overall + Campus split -->
+        <div class="fb-chart-grid" style="margin-bottom:16px;">
+          <div class="fb-chart-card">
+            <div class="fb-chart-card__title">Overall Rating Distribution</div>
+            <div class="fb-chart-card__sub">How students rate SkyWings overall (1–5)</div>
+            <canvas id="chart-overall"></canvas>
+          </div>
+          <div class="fb-chart-card">
+            <div class="fb-chart-card__title">Responses by Campus</div>
+            <div class="fb-chart-card__sub">Kochi vs Mahe breakdown</div>
+            <canvas id="chart-campus"></canvas>
+          </div>
+        </div>
+
+        <!-- Row 2: Section averages + Programme -->
+        <div class="fb-chart-grid" style="margin-bottom:16px;">
+          <div class="fb-chart-card">
+            <div class="fb-chart-card__title">Average Score by Section</div>
+            <div class="fb-chart-card__sub">Avg rating across Training, Grooming, Campus</div>
+            <canvas id="chart-sections"></canvas>
+          </div>
+          <div class="fb-chart-card">
+            <div class="fb-chart-card__title">Responses by Programme</div>
+            <div class="fb-chart-card__sub">Which courses are submitting the most feedback</div>
+            <canvas id="chart-programme"></canvas>
+          </div>
+        </div>
+
+        <!-- Row 3: Recommend + Placement sat -->
+        <div class="fb-chart-grid" style="margin-bottom:16px;">
+          <div class="fb-chart-card">
+            <div class="fb-chart-card__title">Would Recommend SkyWings?</div>
+            <div class="fb-chart-card__sub">NPS-style recommendation breakdown</div>
+            <canvas id="chart-recommend"></canvas>
+          </div>
+          <div class="fb-chart-card">
+            <div class="fb-chart-card__title">Placement Satisfaction</div>
+            <div class="fb-chart-card__sub">How satisfied are students with placement support</div>
+            <canvas id="chart-placement"></canvas>
+          </div>
+        </div>
+
+        <!-- Score table -->
+        <div class="fb-chart-card" style="margin-bottom:16px;">
+          <div class="fb-chart-card__title">Section Score Breakdown</div>
+          <div class="fb-chart-card__sub">Average score per question across all responses</div>
+          <table class="fb-score-table" id="score-table">
+            <thead><tr><th style="width:50%">Question</th><th>Avg Score</th><th>Rating</th><th style="width:25%">Distribution</th></tr></thead>
+            <tbody id="score-table-body"><tr><td colspan="4" style="color:var(--text-lt);font-style:italic;">Loading…</td></tr></tbody>
+          </table>
+        </div>
+
+        <!-- Open responses -->
+        <div class="fb-chart-grid">
+          <div class="fb-chart-card">
+            <div class="fb-chart-card__title">What students love most</div>
+            <div class="fb-chart-card__sub">Open-ended responses (F3)</div>
+            <div class="fb-responses" id="resp-best"><div class="fb-loading">Loading…</div></div>
+          </div>
+          <div class="fb-chart-card">
+            <div class="fb-chart-card__title">What students want changed</div>
+            <div class="fb-chart-card__sub">Open-ended responses (F4)</div>
+            <div class="fb-responses" id="resp-change"><div class="fb-loading">Loading…</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div><!-- /.fb-dash-root -->
+
+</div><!-- /.fb-root -->
+
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// CONFIGURATION — UPDATE THESE
+// ═══════════════════════════════════════════════════════════════════
+
+// STEP 1: Create a Google Apps Script Web App and paste its URL here
+// Instructions below in the setup guide
+var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyC-Rbo1_nX3ZOxZiqbUsWUgLTGef6ZFyRDzTxC_J4ntnD1latGVsTN0Rq6KEikAzc/exec';
+
+var CORRECT_PW = 'SkyFi@567$$';
+
+// ═══════════════════════════════════════════════════════════════════
+// FORM LOGIC
+// ═══════════════════════════════════════════════════════════════════
+
+// Rating button selection (replaces grid table)
+function setRating(name, val, btn) {
+  // Clear all buttons for this name
+  document.querySelectorAll('.fb-rate-btn[data-name="' + name + '"]').forEach(function(b) {
+    b.classList.remove('selected');
+  });
+  // Select this one
+  btn.classList.add('selected');
+  // Set hidden input
+  var hiddenEl = document.getElementById(name + '-val');
+  if (hiddenEl) hiddenEl.value = val;
+  // Mark row as answered
+  var row = document.getElementById('row-' + name);
+  if (row) row.classList.add('answered');
+  // Update progress
+  updateProgress();
+}
+
+// Radio / checkbox selection with visual feedback
+document.querySelectorAll('.fb-option input').forEach(function(input) {
+  input.addEventListener('change', function() {
+    var name = this.name;
+    document.querySelectorAll('input[name="' + name + '"]').forEach(function(i) {
+      i.closest('.fb-option').classList.remove('selected');
+    });
+    this.closest('.fb-option').classList.add('selected');
+    updateProgress();
+  });
+});
+
+// Grid radios — update progress on change
+document.querySelectorAll('.fb-grid-radio input').forEach(function(input) {
+  input.addEventListener('change', updateProgress);
+});
+
+// Star rating
+var starVals = {};
+function setStar(group, val) {
+  starVals[group] = val;
+  var stars = document.querySelectorAll('#stars-' + group + ' .fb-star');
+  stars.forEach(function(s, i) {
+    s.classList.toggle('active', i < val);
+  });
+  var labels = { 1:'Not confident', 2:'Somewhat confident', 3:'Fairly confident', 4:'Confident', 5:'Very confident!' };
+  var overallLabels = { 1:'Very poor', 2:'Poor', 3:'Average', 4:'Good', 5:'Excellent!' };
+  var labelEl = document.getElementById(group + '-label');
+  if (labelEl) labelEl.textContent = (group === 'f1' ? overallLabels : labels)[val] || '';
+  var hiddenEl = document.getElementById(group + '-val');
+  if (hiddenEl) hiddenEl.value = val;
+  updateProgress();
+}
+
+function updateProgress() {
+  var radioRequired = ['a1','a2','a3','e1'];
+  var ratingRequired = ['b1','b2','b3','b4','b5','c1','c2','c3','c4','c5','d1','d2','d3','d4'];
+  var done = 0;
+  radioRequired.forEach(function(name) {
+    if (document.querySelector('input[name="' + name + '"]:checked')) done++;
+  });
+  ratingRequired.forEach(function(name) {
+    var el = document.getElementById(name + '-val');
+    if (el && el.value) done++;
+  });
+  if (starVals['e2']) done++;
+  if (starVals['f1']) done++;
+  if (document.querySelector('input[name="f2"]:checked')) done++;
+  var total = required.length + 3;
+  var pct = Math.round((done / total) * 100);
+  document.getElementById('fb-progress').style.width = pct + '%';
+  document.getElementById('fb-progress-text').textContent = pct + '% complete' + (pct < 100 ? ' — answer all questions to submit' : ' — ready to submit!');
+}
+
+function getFormData() {
+  var data = {};
+  // Radio fields
+  var radioNames = ['a1','a2','a3','e1','f2'];
+  radioNames.forEach(function(name) {
+    var el = document.querySelector('input[name="' + name + '"]:checked');
+    data[name] = el ? el.value : '';
+  });
+  // Rating button fields (b1-b5, c1-c5, d1-d4) — read from hidden inputs
+  var ratingNames = ['b1','b2','b3','b4','b5','c1','c2','c3','c4','c5','d1','d2','d3','d4'];
+  ratingNames.forEach(function(name) {
+    var el = document.getElementById(name + '-val');
+    data[name] = el ? el.value : '';
+  });
+  data['e2'] = document.getElementById('e2-val').value;
+  data['f1'] = document.getElementById('f1-val').value;
+  data['b_open'] = document.getElementById('b_open').value;
+  data['c_open'] = document.getElementById('c_open').value;
+  data['f3'] = document.getElementById('f3').value;
+  data['f4'] = document.getElementById('f4').value;
+  data['f5'] = document.getElementById('f5').value;
+  data['timestamp'] = new Date().toISOString();
+  return data;
+}
+
+function submitFeedback() {
+  var btn = document.getElementById('fb-submit-btn');
+  var data = getFormData();
+
+  // Basic validation
+  var allRequired = ['a1','a2','a3','b1','b2','b3','b4','b5','c1','c2','c3','c4','c5','d1','d2','d3','d4','e1','f2'];
+  var missing = allRequired.filter(function(k) { return !data[k]; });
+  if (missing.length > 0 || !data['e2'] || !data['f1']) {
+    alert('Please answer all questions before submitting. Thank you!');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Submitting…';
+
+  // Send to Google Sheets via Apps Script
+  fetch(SHEET_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .catch(function() {}) // no-cors always throws, that's OK
+  .finally(function() {
+    document.getElementById('fb-form').style.display = 'none';
+    document.getElementById('fb-success').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('fb-success').offsetTop - 40, behavior: 'smooth' });
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// DASHBOARD LOGIC
+// ═══════════════════════════════════════════════════════════════════
+
+function toggleDashboard() {
+  var dash = document.getElementById('fb-dash-root');
+  dash.classList.toggle('unlocked');
+  if (dash.classList.contains('unlocked')) {
+    setTimeout(function() { dash.scrollIntoView({ behavior: 'smooth' }); }, 100);
+  }
+}
+
+function checkPassword() {
+  var pw = document.getElementById('fb-pw').value;
+  if (pw === CORRECT_PW) {
+    document.getElementById('fb-lock').style.display = 'none';
+    document.getElementById('fb-dash-content').style.display = 'block';
+    loadDashboard();
+  } else {
+    document.getElementById('fb-pw-err').style.display = 'block';
+    document.getElementById('fb-pw').value = '';
+    document.getElementById('fb-pw').style.borderColor = '#f87171';
+    setTimeout(function() {
+      document.getElementById('fb-pw').style.borderColor = '';
+      document.getElementById('fb-pw-err').style.display = 'none';
+    }, 2500);
+  }
+}
+
+function lockDashboard() {
+  document.getElementById('fb-dash-content').style.display = 'none';
+  document.getElementById('fb-lock').style.display = 'flex';
+  document.getElementById('fb-pw').value = '';
+  document.getElementById('fb-dash-root').classList.remove('unlocked');
+}
+
+// Chart instances
+var charts = {};
+
+function destroyChart(id) {
+  if (charts[id]) { charts[id].destroy(); charts[id] = null; }
+}
+
+var SKY_COLORS = ['#1282a2','#034078','#001f54','#0e6d87','#16a34a','#d97706'];
+var LIGHT_COLORS = ['rgba(18,130,162,0.8)','rgba(3,64,120,0.8)','rgba(0,31,84,0.7)','rgba(14,109,135,0.8)','rgba(22,163,74,0.7)','rgba(217,119,6,0.7)'];
+
+function avg(arr) {
+  if (!arr.length) return 0;
+  return arr.reduce(function(a,b){return a+b;},0)/arr.length;
+}
+
+function countOccurrences(arr, vals) {
+  return vals.map(function(v){ return arr.filter(function(x){return x===v;}).length; });
+}
+
+function loadDashboard() {
+  // Fetch from Google Sheet
+  fetch(SHEET_URL + '?action=read')
+    .then(function(r){ return r.json(); })
+    .then(function(rows){
+      renderDashboard(rows);
+    })
+    .catch(function(err){
+      console.error('Dashboard fetch error:', err);
+      document.getElementById('dash-meta').textContent = 'Could not load data. Check Sheet URL configuration.';
+    });
+}
+
+function renderDashboard(rows) {
+  if (!rows || !rows.length) {
+    document.getElementById('dash-meta').textContent = 'No responses yet.';
+    return;
+  }
+
+  document.getElementById('dash-meta').textContent = rows.length + ' total responses · Last updated: ' + new Date().toLocaleString('en-IN');
+  document.getElementById('kpi-total').textContent = rows.length;
+
+  // Overall rating
+  var overallRatings = rows.map(function(r){ return parseInt(r.f1)||0; }).filter(Boolean);
+  var avgOverall = avg(overallRatings).toFixed(1);
+  document.getElementById('kpi-overall').textContent = avgOverall;
+
+  // Would recommend
+  var recommendYes = rows.filter(function(r){ return r.f2 === 'Definitely yes' || r.f2 === 'Probably yes'; }).length;
+  document.getElementById('kpi-nps').textContent = Math.round(recommendYes/rows.length*100) + '%';
+
+  // Confidence
+  var conf = rows.map(function(r){ return parseInt(r.e2)||0; }).filter(Boolean);
+  document.getElementById('kpi-confidence').textContent = avg(conf).toFixed(1);
+
+  // Recent responses
+  document.getElementById('kpi-recent').textContent = 'Latest batch data';
+
+  // Chart 1 — Overall Rating Distribution
+  destroyChart('overall');
+  var overallDist = [1,2,3,4,5].map(function(v){ return overallRatings.filter(function(r){return r===v;}).length; });
+  charts['overall'] = new Chart(document.getElementById('chart-overall'), {
+    type: 'bar',
+    data: {
+      labels: ['1 ★','2 ★','3 ★','4 ★','5 ★'],
+      datasets: [{ label: 'Responses', data: overallDist, backgroundColor: ['#dc2626','#d97706','#eab308','#16a34a','#1282a2'], borderRadius: 6, borderSkipped: false }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } }
+  });
+
+  // Chart 2 — Campus
+  destroyChart('campus');
+  var kochi = rows.filter(function(r){ return r.a2 === 'Kochi'; }).length;
+  var mahe = rows.filter(function(r){ return r.a2 === 'Mahe'; }).length;
+  charts['campus'] = new Chart(document.getElementById('chart-campus'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Kochi','Mahe'],
+      datasets: [{ data: [kochi, mahe], backgroundColor: ['#1282a2','#034078'], borderWidth: 0 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+  });
+
+  // Chart 3 — Section averages
+  destroyChart('sections');
+  var trainingFields = ['b1','b2','b3','b4','b5'];
+  var groomingFields = ['c1','c2','c3','c4','c5'];
+  var campusFields = ['d1','d2','d3','d4'];
+  function sectionAvg(fields) {
+    var vals = [];
+    rows.forEach(function(r){ fields.forEach(function(f){ if(parseInt(r[f])) vals.push(parseInt(r[f])); }); });
+    return avg(vals).toFixed(2);
+  }
+  charts['sections'] = new Chart(document.getElementById('chart-sections'), {
+    type: 'radar',
+    data: {
+      labels: ['Training Quality','Grooming & Uniform','Campus & Facilities','Placement Support','Interview Confidence'],
+      datasets: [{
+        label: 'Avg Score',
+        data: [sectionAvg(trainingFields), sectionAvg(groomingFields), sectionAvg(campusFields),
+               avg(rows.map(function(r){return ['Very Satisfied','Satisfied'].includes(r.e1)?4.5:['Neutral'].includes(r.e1)?3:2;})).toFixed(2),
+               avg(conf).toFixed(2)],
+        backgroundColor: 'rgba(18,130,162,0.15)',
+        borderColor: '#1282a2',
+        borderWidth: 2,
+        pointBackgroundColor: '#1282a2'
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 5, ticks: { stepSize: 1 } } } }
+  });
+
+  // Chart 4 — Programme
+  destroyChart('programme');
+  var progs = ['BBA Aviation','Diploma Cabin Crew','MBA Aviation','BBA Logistics','Diploma AAM','Diploma Hospitality'];
+  var progCounts = progs.map(function(p){ return rows.filter(function(r){ return r.a3 === p; }).length; });
+  charts['programme'] = new Chart(document.getElementById('chart-programme'), {
+    type: 'bar',
+    data: {
+      labels: ['BBA Aviation','Cabin Crew','MBA','Logistics','AAM Diploma','Hospitality'],
+      datasets: [{ label: 'Responses', data: progCounts, backgroundColor: SKY_COLORS, borderRadius: 6, borderSkipped: false }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { beginAtZero: true } } }
+  });
+
+  // Chart 5 — Recommend
+  destroyChart('recommend');
+  var recOpts = ['Definitely yes','Probably yes','Not sure','Probably not','Definitely not'];
+  var recCounts = countOccurrences(rows.map(function(r){return r.f2;}), recOpts);
+  charts['recommend'] = new Chart(document.getElementById('chart-recommend'), {
+    type: 'doughnut',
+    data: {
+      labels: recOpts,
+      datasets: [{ data: recCounts, backgroundColor: ['#16a34a','#4ade80','#eab308','#f97316','#dc2626'], borderWidth: 0 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { font: { size: 10 } } } } }
+  });
+
+  // Chart 6 — Placement satisfaction
+  destroyChart('placement');
+  var plOpts = ['Very Satisfied','Satisfied','Neutral','Dissatisfied','Very Dissatisfied'];
+  var plCounts = countOccurrences(rows.map(function(r){return r.e1;}), plOpts);
+  charts['placement'] = new Chart(document.getElementById('chart-placement'), {
+    type: 'bar',
+    data: {
+      labels: ['Very Sat.','Satisfied','Neutral','Dissatisfied','Very Dis.'],
+      datasets: [{ label: 'Count', data: plCounts, backgroundColor: ['#16a34a','#4ade80','#eab308','#f97316','#dc2626'], borderRadius: 6, borderSkipped: false }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+  });
+
+  // Score table
+  var allQs = [
+    { name: 'b1', label: 'Quality of classroom teaching' },
+    { name: 'b2', label: 'Trainer knowledge & expertise' },
+    { name: 'b3', label: 'Content relevance to real jobs' },
+    { name: 'b4', label: 'Practical / hands-on training' },
+    { name: 'b5', label: 'English communication training' },
+    { name: 'c1', label: 'Uniform quality & design' },
+    { name: 'c2', label: 'Uniform comfort & fit' },
+    { name: 'c3', label: 'Uniform professional appearance' },
+    { name: 'c4', label: 'Grooming training sessions' },
+    { name: 'c5', label: 'Personal presentation confidence' },
+    { name: 'd1', label: 'Campus cleanliness' },
+    { name: 'd2', label: 'Classroom comfort' },
+    { name: 'd3', label: 'Study material availability' },
+    { name: 'd4', label: 'Campus safety & security' },
+  ];
+  var tbody = document.getElementById('score-table-body');
+  tbody.innerHTML = '';
+  allQs.forEach(function(q) {
+    var vals = rows.map(function(r){ return parseInt(r[q.name]); }).filter(Boolean);
+    var a = avg(vals);
+    var badge = a >= 4.2 ? 'good' : a >= 3.0 ? 'mid' : 'low';
+    var badgeText = a >= 4.2 ? 'Strong' : a >= 3.0 ? 'Average' : 'Needs Work';
+    var pct = ((a / 5) * 100).toFixed(0);
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + q.label + '</td>' +
+      '<td style="font-family:\'Sora\',sans-serif;font-weight:600;color:var(--navy);">' + (a.toFixed(1)||'—') + '</td>' +
+      '<td><span class="fb-score-badge fb-score-badge--' + badge + '">' + badgeText + '</span></td>' +
+      '<td><div class="fb-score-bar"><div class="fb-score-bar-fill" style="width:' + pct + '%"></div></div><div style="font-size:10px;color:var(--text-lt);margin-top:2px;">' + pct + '%</div></td>';
+    tbody.appendChild(tr);
+  });
+
+  // Open responses
+  function renderResponses(containerId, field) {
+    var el = document.getElementById(containerId);
+    var resps = rows.map(function(r){ return r[field]; }).filter(function(r){ return r && r.trim().length > 3; });
+    if (!resps.length) { el.innerHTML = '<div style="color:var(--text-lt);font-size:13px;padding:12px;">No responses yet.</div>'; return; }
+    el.innerHTML = resps.slice(-8).map(function(r){ return '<div class="fb-response-item">' + r + '</div>'; }).join('');
+  }
+  renderResponses('resp-best', 'f3');
+  renderResponses('resp-change', 'f4');
+}
+
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+  SETUP GUIDE — READ BEFORE DEPLOYING
+════════════════════════════════════════════════════════════════════════════
+
+STEP 1: CREATE THE GOOGLE SHEET
+─────────────────────────────────
+1. Go to sheets.google.com → create a new sheet named "SkyWings Feedback"
+2. Add these headers in Row 1 (A1 to Z1):
+   timestamp | a1 | a2 | a3 | b1 | b2 | b3 | b4 | b5 | c1 | c2 | c3 | c4 | c5 | d1 | d2 | d3 | d4 | e1 | e2 | f1 | f2 | f3 | f4 | f5 | b_open | c_open
+
+STEP 2: CREATE THE GOOGLE APPS SCRIPT
+──────────────────────────────────────
+1. In your sheet: Extensions → Apps Script
+2. Delete existing code and paste this:
+
+---
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  var row = headers.map(function(h) { return data[h] || ''; });
+  sheet.appendRow(row);
+  return ContentService.createTextOutput(JSON.stringify({status:'ok'})).setMimeType(ContentService.MimeType.JSON);
+}
+
+function doGet(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = sheet.getDataRange().getValues();
+  var headers = data[0];
+  var rows = data.slice(1).map(function(row) {
+    var obj = {};
+    headers.forEach(function(h, i) { obj[h] = row[i]; });
+    return obj;
+  });
+  return ContentService.createTextOutput(JSON.stringify(rows)).setMimeType(ContentService.MimeType.JSON);
+}
+
+---
+
+3. Click Save → Deploy → New Deployment
+4. Type: Web App
+5. Execute as: Me
+6. Who has access: Anyone
+7. Click Deploy → Copy the Web App URL
+
+STEP 3: PASTE URL INTO THIS FILE
+──────────────────────────────────
+Replace YOUR_SCRIPT_ID_HERE in the SHEET_URL variable at the top of the script block with your copied URL.
+
+That's it. The form will write to the sheet and the dashboard will read from it.
+
+═══════════════════════════════════════════════════════════════════════ -->

@@ -1,0 +1,787 @@
+<!-- SkyWings Academy | MBA in Airline and Airport Management -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Is the MBA degree recognized by the Government?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Yes. The MBA degree is awarded by a UGC Recognized Government University (such as Bharathiar University), ensuring it is valid for government jobs, UPSC exams, and migration abroad." }
+  }, {
+    "@type": "Question",
+    "name": "Why is SkyWings considered the best MBA Aviation college in Kerala?",
+    "acceptedAnswer": { "@type": "Answer", "text": "We combine a Government University degree with practical IATA-based training and a cutting-edge AI in Aviation syllabus. Our focus on leadership and 100% internship support sets us apart." }
+  }, {
+    "@type": "Question",
+    "name": "What is the salary after MBA in Aviation Management?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Freshers can expect ₹40,000 to ₹60,000 per month, while experienced Airport Managers earn significantly higher, often in lakhs." }
+  }, {
+    "@type": "Question",
+    "name": "Can I join if I have a B.Tech or B.Com degree?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Yes. Graduates from any discipline with 55% marks are eligible. Engineering graduates often do very well in technical aviation management roles." }
+  }, {
+    "@type": "Question",
+    "name": "Does the course cover Logistics?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Yes. The syllabus includes Air Cargo, Shipping, and Warehouse Management, making you eligible for high-paying jobs in logistics and supply chain." }
+  }, {
+    "@type": "Question",
+    "name": "Is there an entrance exam?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Admission is generally based on graduation marks and a personal interview at SkyWings." }
+  }, {
+    "@type": "Question",
+    "name": "How does AI training help in an MBA?",
+    "acceptedAnswer": { "@type": "Answer", "text": "By learning AI for Aviation Business, you gain skills in data analytics and automation, making you a more efficient and modern manager compared to graduates from traditional colleges." }
+  }, {
+    "@type": "Question",
+    "name": "Do you provide placement for MBA students?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Yes, we connect MBA graduates with HR departments of leading airlines, airports, and logistics companies for managerial and executive trainee roles." }
+  }, {
+    "@type": "Question",
+    "name": "What is the duration of the internship?",
+    "acceptedAnswer": { "@type": "Answer", "text": "The course includes a mandatory 3-Month Practical Internship for gaining real On-the-Job experience." }
+  }, {
+    "@type": "Question",
+    "name": "Can I work abroad after this course?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. The Middle East, Europe, and Canada have a high demand for skilled aviation managers, and your degree is valid internationally." }
+  }]
+}
+</script>
+
+<style>
+/* ═══════════════════════════════════════
+   SKYWINGS — MBA AIRLINE & AIRPORT MANAGEMENT
+   Palette: #0a1128 | #001f54 | #034078 | #1282a2 | #fefcfb
+═══════════════════════════════════════ */
+:root {
+  --ink:        #0a1128;
+  --navy:       #001f54;
+  --mid:        #034078;
+  --sky:        #1282a2;
+  --cream:      #fefcfb;
+  --sky-dim:    rgba(18,130,162,0.12);
+  --navy-line:  rgba(0,31,84,0.1);
+  --white:      #ffffff;
+  --text-body:  rgba(0,31,84,0.68);
+  --text-light: rgba(0,31,84,0.42);
+  --radius:     12px;
+  --radius-lg:  20px;
+  --trans:      0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.mba * { box-sizing: border-box; margin: 0; padding: 0; }
+.mba {
+  font-family: 'Instrument Sans', sans-serif;
+  color: var(--navy);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  line-height: 1;
+  width: 100%;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.mba > * { width: 100%; max-width: 100%; }
+
+/* ── LAYOUT ── */
+.mba-wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+.mba-sec       { padding: 100px 0; background: var(--white); }
+.mba-sec--dark { padding: 100px 0; background: var(--navy); }
+.mba-sec--ink  { padding: 100px 0; background: var(--ink); }
+.mba-sec--dim  { padding: 100px 0; background: var(--cream); }
+
+/* ── EYEBROW ── */
+.mba-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--sky); margin-bottom: 20px; }
+.mba-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--sky); flex-shrink: 0; }
+
+/* ── TYPOGRAPHY ── */
+.mba-h1 { font-family: 'Sora', sans-serif; font-size: clamp(34px,5vw,64px); font-weight: 300; line-height: 1.1; letter-spacing: -1.5px; color: var(--cream); }
+.mba-h2 { font-family: 'Sora', sans-serif; font-size: clamp(24px,3.5vw,42px); font-weight: 300; line-height: 1.15; letter-spacing: -0.8px; color: var(--navy); }
+.mba-h2--light { color: var(--cream); }
+.mba-body     { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--text-body); }
+.mba-body--sm { font-size: 14px; font-weight: 300; line-height: 1.8;  color: var(--text-body); }
+.mba-rule { width: 40px; height: 1px; background: var(--sky); display: block; margin: 24px 0; }
+
+/* ── BUTTONS ── */
+.mba-btn { display: inline-flex; align-items: center; gap: 10px; font-family: 'Instrument Sans', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; text-decoration: none; cursor: pointer; border: none; transition: var(--trans); padding: 14px 28px; border-radius: 100px; white-space: nowrap; }
+.mba-btn--sky   { background: var(--sky);  color: var(--white); }
+.mba-btn--sky:hover { background: #0e6d87; color: var(--white); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(18,130,162,0.3); }
+.mba-btn--solid { background: var(--navy); color: var(--cream); }
+.mba-btn--solid:hover { background: var(--ink); color: var(--white); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,31,84,0.25); }
+.mba-btn--ghost { background: transparent; color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.2); }
+.mba-btn--ghost:hover { color: var(--white); border-color: rgba(255,255,255,0.5); transform: translateY(-2px); }
+.mba-btn--wa  { background: #25D366; color: var(--white); }
+.mba-btn--wa:hover { background: #1ebe5d; color: var(--white); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(37,211,102,0.3); }
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.mba-hero { background: var(--ink); min-height: 88vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+.mba-hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(18,130,162,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(18,130,162,0.04) 1px,transparent 1px); background-size: 56px 56px; pointer-events: none; z-index: 0; }
+.mba-hero__left { display: flex; flex-direction: column; justify-content: center; padding: 80px 48px 80px max(32px,calc((100vw - 1100px)/2)); position: relative; z-index: 2; }
+.mba-hero__pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 36px; }
+.mba-pill { display: inline-flex; align-items: center; gap: 7px; background: rgba(254,252,251,0.06); border: 1px solid rgba(254,252,251,0.1); padding: 8px 16px; border-radius: 100px; font-size: 12px; font-weight: 500; color: rgba(254,252,251,0.7); letter-spacing: 0.3px; }
+.mba-pill svg { color: var(--sky); flex-shrink: 0; }
+.mba-hero__cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.mba-hero__stats { display: flex; gap: 2px; margin-top: 48px; }
+.mba-hero__stat { flex: 1; background: rgba(254,252,251,0.04); border: 1px solid rgba(254,252,251,0.07); padding: 18px 12px; text-align: center; }
+.mba-hero__stat:first-child { border-radius: var(--radius) 0 0 var(--radius); }
+.mba-hero__stat:last-child  { border-radius: 0 var(--radius) var(--radius) 0; }
+.mba-hero__stat-num { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 300; color: var(--cream); letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+.mba-hero__stat-num span { font-size: 16px; }
+.mba-hero__stat-label { font-size: 10px; color: rgba(254,252,251,0.35); font-weight: 400; letter-spacing: 0.3px; }
+.mba-hero__right { position: relative; z-index: 2; overflow: hidden; padding: 48px 32px; }
+.mba-hero__right::before { content: ''; position: absolute; top: 10%; bottom: 10%; left: 0; width: 1px; background: linear-gradient(to bottom,transparent,rgba(18,130,162,0.2) 30%,rgba(18,130,162,0.2) 70%,transparent); }
+.mba-hero__right img { position: absolute; top: 48px; left: 32px; right: 32px; bottom: 48px; width: calc(100% - 64px); height: calc(100% - 96px); object-fit: contain; object-position: bottom center; display: block; }
+
+/* ── PHONE STRIP ── */
+.mba-phonestrip { background: var(--mid); padding: 20px 32px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.mba-phonestrip__text { font-size: 14px; color: rgba(254,252,251,0.55); font-weight: 300; display: flex; align-items: center; gap: 10px; }
+.mba-phonestrip__text svg { color: var(--sky); flex-shrink: 0; width: 15px; height: 15px; }
+.mba-phonestrip a { font-size: 16px; font-weight: 500; color: var(--cream); text-decoration: none; transition: color var(--trans); }
+.mba-phonestrip a:hover { color: var(--sky); }
+.mba-phonestrip__sep { width: 1px; height: 24px; background: rgba(254,252,251,0.12); }
+
+/* ══════════════════════════════════════
+   SPLIT
+══════════════════════════════════════ */
+.mba-split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.mba-split--rev { direction: rtl; }
+.mba-split--rev > * { direction: ltr; }
+.mba-split__img { position: relative; border-radius: var(--radius-lg); overflow: hidden; height: 500px; }
+.mba-split__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+
+/* ══════════════════════════════════════
+   AI SECTION
+══════════════════════════════════════ */
+.mba-ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(254,252,251,0.07); border-radius: var(--radius); overflow: hidden; margin-top: 64px; }
+.mba-ai-card { background: rgba(3,64,120,0.4); padding: 40px 36px; transition: background var(--trans); }
+.mba-ai-card:hover { background: rgba(3,64,120,0.65); }
+.mba-ai-card__heading { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--sky); display: flex; align-items: center; gap: 10px; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid rgba(254,252,251,0.08); }
+.mba-ai-card__heading::before { content: ''; display: block; width: 20px; height: 1px; background: var(--sky); flex-shrink: 0; }
+.mba-ai-item { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
+.mba-ai-item:last-child { margin-bottom: 0; }
+.mba-ai-item__icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(18,130,162,0.15); color: var(--sky); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.mba-ai-item__icon svg { width: 16px; height: 16px; }
+.mba-ai-item__title { font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 400; color: var(--cream); margin-bottom: 6px; line-height: 1.3; }
+.mba-ai-item__body { font-size: 13px; font-weight: 300; line-height: 1.75; color: rgba(254,252,251,0.45); }
+
+/* ══════════════════════════════════════
+   DUAL CERTIFICATION CARDS (2 col)
+══════════════════════════════════════ */
+.mba-cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; }
+.mba-cert-card { background: var(--white); border: 1px solid var(--navy-line); border-radius: var(--radius); padding: 40px 36px; transition: var(--trans); position: relative; overflow: hidden; }
+.mba-cert-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+.mba-cert-card:hover { border-color: rgba(18,130,162,0.3); box-shadow: 0 16px 48px rgba(0,31,84,0.08); transform: translateY(-4px); }
+.mba-cert-card__num { font-family: 'Sora', sans-serif; font-size: 48px; font-weight: 200; color: var(--sky-dim); letter-spacing: -2px; line-height: 1; margin-bottom: 20px; }
+.mba-cert-card__title { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 500; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
+
+/* ══════════════════════════════════════
+   HIGHLIGHTS GRID (4 col)
+══════════════════════════════════════ */
+.mba-highlights-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: var(--navy-line); border-radius: var(--radius); overflow: hidden; margin-top: 56px; }
+.mba-highlight-item { background: var(--white); padding: 32px 24px; transition: var(--trans); }
+.mba-highlight-item:hover { background: var(--sky-dim); }
+.mba-highlight-item__icon { width: 44px; height: 44px; background: var(--sky-dim); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--sky); margin-bottom: 16px; }
+.mba-highlight-item__icon svg { width: 20px; height: 20px; }
+.mba-highlight-item__title { font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+
+/* ══════════════════════════════════════
+   MID CTA
+══════════════════════════════════════ */
+.mba-cta { background: var(--sky); padding: 64px 0; }
+.mba-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
+.mba-cta__text .mba-h2 { color: var(--white); font-size: clamp(22px,3vw,36px); }
+.mba-cta__text p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.65); margin-top: 10px; line-height: 1.7; }
+.mba-cta__actions { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+
+/* ══════════════════════════════════════
+   WHY SKYWINGS (3 col icon cards)
+══════════════════════════════════════ */
+.mba-why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 56px; }
+.mba-why-card { background: var(--white); border: 1px solid var(--navy-line); border-radius: var(--radius); padding: 36px 28px; transition: var(--trans); }
+.mba-why-card:hover { border-color: rgba(18,130,162,0.3); box-shadow: 0 12px 40px rgba(0,31,84,0.07); transform: translateY(-4px); }
+.mba-why-card__icon { width: 48px; height: 48px; background: var(--sky-dim); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--sky); margin-bottom: 20px; }
+.mba-why-card__icon svg { width: 22px; height: 22px; }
+.mba-why-card__title { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+
+/* ══════════════════════════════════════
+   INCLUSIONS CHECKLIST
+══════════════════════════════════════ */
+.mba-checklist { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 56px; }
+.mba-check-item { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border: 1px solid var(--navy-line); border-radius: var(--radius); background: var(--white); transition: var(--trans); }
+.mba-check-item:hover { border-color: rgba(18,130,162,0.3); background: var(--sky-dim); transform: translateX(4px); }
+.mba-check-item__icon { width: 32px; height: 32px; background: var(--sky-dim); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--sky); flex-shrink: 0; }
+.mba-check-item__icon svg { width: 14px; height: 14px; }
+.mba-check-item__text { font-size: 14px; font-weight: 500; color: var(--navy); line-height: 1.3; }
+
+/* ══════════════════════════════════════
+   CAREER GRID (3+3)
+══════════════════════════════════════ */
+.mba-career-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 56px; }
+.mba-career-card { background: var(--white); border: 1px solid var(--navy-line); border-radius: var(--radius); padding: 32px 24px; text-align: center; transition: var(--trans); }
+.mba-career-card:hover { border-color: rgba(18,130,162,0.3); box-shadow: 0 12px 40px rgba(0,31,84,0.07); transform: translateY(-4px); }
+.mba-career-card__icon { width: 52px; height: 52px; background: var(--sky-dim); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--sky); margin: 0 auto 16px; }
+.mba-career-card__icon svg { width: 22px; height: 22px; }
+.mba-career-card__title { font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+
+/* ══════════════════════════════════════
+   NUMBERS
+══════════════════════════════════════ */
+.mba-numbers { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(18,130,162,0.15); border-radius: var(--radius); overflow: hidden; margin-top: 56px; }
+.mba-number-item { background: var(--ink); padding: 48px 32px; transition: background var(--trans); }
+.mba-number-item:hover { background: #0e1831; }
+.mba-number-item__num { font-family: 'Sora', sans-serif; font-size: 48px; font-weight: 200; letter-spacing: -2px; line-height: 1; color: var(--cream); margin-bottom: 10px; }
+.mba-number-item__num span { font-size: 28px; }
+.mba-number-item__label { font-size: 13px; color: rgba(254,252,251,0.38); font-weight: 400; line-height: 1.5; }
+
+/* ══════════════════════════════════════
+   FAQ
+══════════════════════════════════════ */
+.mba-faq-list { max-width: 800px; margin: 56px auto 0; display: flex; flex-direction: column; gap: 2px; background: var(--navy-line); border-radius: var(--radius); overflow: hidden; }
+.mba-faq-item { background: var(--white); overflow: hidden; }
+.mba-faq-item[open] { background: rgba(18,130,162,0.03); }
+.mba-faq-summary { padding: 22px 28px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 400; color: var(--navy); list-style: none; gap: 16px; line-height: 1.4; }
+.mba-faq-summary::-webkit-details-marker { display: none; }
+.mba-faq-summary__arrow { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--navy-line); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sky); transition: var(--trans); }
+.mba-faq-item[open] .mba-faq-summary__arrow { background: var(--sky); color: var(--white); border-color: var(--sky); transform: rotate(180deg); }
+.mba-faq-answer { padding: 20px 28px 24px; font-size: 14px; font-weight: 300; line-height: 1.85; color: var(--text-body); border-top: 1px solid var(--navy-line); }
+
+/* ══════════════════════════════════════
+   FINAL CTA
+══════════════════════════════════════ */
+.mba-finalcta { background: var(--navy); padding: 120px 0; position: relative; overflow: hidden; text-align: center; }
+.mba-finalcta::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(to right,transparent,var(--sky),transparent); }
+.mba-finalcta__inner { max-width: 680px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
+.mba-finalcta__actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
+.mba-trust-row { display: flex; justify-content: center; gap: 28px; margin-top: 52px; padding-top: 36px; border-top: 1px solid rgba(254,252,251,0.06); flex-wrap: wrap; }
+.mba-trust-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(254,252,251,0.35); }
+.mba-trust-item svg { color: var(--sky); opacity: 0.6; width: 13px; height: 13px; }
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .mba-hero { grid-template-columns: 1fr; min-height: auto; }
+  .mba-hero__left { padding: 64px 32px 40px; }
+  .mba-hero__right { min-height: 380px; padding: 0 32px 40px; }
+  .mba-hero__right img { position: relative; top: auto; left: auto; right: auto; bottom: auto; width: 100%; height: 380px; object-fit: contain; object-position: bottom center; }
+  .mba-split { grid-template-columns: 1fr; gap: 48px; }
+  .mba-split--rev { direction: ltr; }
+  .mba-split__img { height: 420px; }
+  .mba-ai-grid { grid-template-columns: 1fr; }
+  .mba-cert-grid { grid-template-columns: 1fr; }
+  .mba-highlights-grid { grid-template-columns: repeat(2,1fr); }
+  .mba-why-grid { grid-template-columns: repeat(2,1fr); }
+  .mba-career-grid { grid-template-columns: repeat(2,1fr); }
+  .mba-numbers { grid-template-columns: repeat(2,1fr); }
+  .mba-cta__inner { flex-direction: column; gap: 28px; text-align: center; }
+}
+
+@media (max-width: 640px) {
+  .mba-wrap { padding: 0 20px; }
+  .mba-sec, .mba-sec--dark, .mba-sec--ink, .mba-sec--dim { padding: 72px 0; }
+  .mba-hero__left { padding: 48px 20px 32px; }
+  .mba-hero__left .mba-h1 { font-size: 48px; letter-spacing: -1.5px; }
+  .mba-hero__right { display: flex; min-height: 280px; padding: 0 20px 32px; }
+  .mba-hero__right img { position: relative; width: 100%; height: 280px; object-fit: contain; object-position: bottom center; }
+  .mba-hero__stats { display: grid; grid-template-columns: 1fr 1fr; }
+  .mba-cert-grid { grid-template-columns: 1fr; }
+  .mba-highlights-grid { grid-template-columns: 1fr 1fr; }
+  .mba-why-grid { grid-template-columns: 1fr; }
+  .mba-career-grid { grid-template-columns: 1fr 1fr; }
+  .mba-checklist { grid-template-columns: 1fr; }
+  .mba-numbers { grid-template-columns: 1fr 1fr; }
+  .mba-phonestrip { flex-direction: row; flex-wrap: wrap; gap: 12px 20px; justify-content: center; padding: 16px 20px; }
+  .mba-phonestrip__sep { display: none; }
+  .mba-phonestrip__text { width: 100%; justify-content: center; }
+  .mba-split__img { height: 300px; }
+  .mba-cta__actions { justify-content: center; }
+  .mba-finalcta__actions { flex-wrap: wrap; justify-content: center; }
+  .mba-trust-row { gap: 16px; }
+}
+</style>
+
+<!-- SVG DEFS -->
+<svg style="display:none"><defs>
+  <symbol id="m-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></symbol>
+  <symbol id="m-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+  <symbol id="m-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+  <symbol id="m-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+</defs></svg>
+
+<div class="mba">
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="mba-hero">
+    <div class="mba-hero__left">
+      <div class="mba-eyebrow">Best MBA Aviation College — Kerala</div>
+      <h1 class="mba-h1">MBA in Airline<br>&amp; Airport<br>Management.</h1>
+
+      <div class="mba-hero__pills">
+        <div class="mba-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          2 Years Full Time
+        </div>
+        <div class="mba-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Any Graduate (Min 55%)
+        </div>
+        <div class="mba-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
+          UGC Recognised Degree
+        </div>
+        <div class="mba-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
+          AI-Integrated Syllabus
+        </div>
+      </div>
+
+      <div class="mba-hero__cta">
+        <a href="tel:+919847163163" class="mba-btn mba-btn--sky">
+          <svg width="15" height="15"><use href="#m-phone"/></svg> Enquire Now
+        </a>
+        <a href="https://wa.me/919847163163" class="mba-btn mba-btn--wa" target="_blank" rel="noopener">
+          <svg width="15" height="15"><use href="#m-wa"/></svg> WhatsApp Us
+        </a>
+      </div>
+
+      <div class="mba-hero__stats">
+        <div class="mba-hero__stat">
+          <div class="mba-hero__stat-num">₹60K<span>+</span></div>
+          <div class="mba-hero__stat-label">Fresher Salary/Month</div>
+        </div>
+        <div class="mba-hero__stat">
+          <div class="mba-hero__stat-num">100<span>%</span></div>
+          <div class="mba-hero__stat-label">Placement Assistance</div>
+        </div>
+        <div class="mba-hero__stat">
+          <div class="mba-hero__stat-num">3<span>mo</span></div>
+          <div class="mba-hero__stat-label">Practical Internship</div>
+        </div>
+        <div class="mba-hero__stat">
+          <div class="mba-hero__stat-num">25<span>%</span></div>
+          <div class="mba-hero__stat-label">Industry CAGR Growth</div>
+        </div>
+      </div>
+    </div>
+    <div class="mba-hero__right">
+      <img src="https://skywingsacademy.com/wp-content/uploads/2026/02/02.png" alt="MBA Airline and Airport Management — SkyWings Kochi">
+    </div>
+  </section>
+
+  <!-- ── PHONE STRIP ── -->
+  <div class="mba-phonestrip">
+    <div class="mba-phonestrip__text">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      Free career guidance — Kerala's No. 1 MBA Aviation College
+    </div>
+    <div class="mba-phonestrip__sep"></div>
+    <a href="tel:+919847163163">+91 9847 163 163</a>
+    <div class="mba-phonestrip__sep"></div>
+    <a href="https://wa.me/919847163163" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;">
+      <svg width="15" height="15"><use href="#m-wa"/></svg> WhatsApp
+    </a>
+  </div>
+
+  <!-- ═══════════════════════════ COURSE OVERVIEW SPLIT ═══════════════════════════ -->
+  <section class="mba-sec">
+    <div class="mba-wrap">
+      <div class="mba-split">
+        <div>
+          <div class="mba-eyebrow">Course Overview</div>
+          <h2 class="mba-h2">Lead the industry with the No. 1 premium aviation college.</h2>
+          <span class="mba-rule"></span>
+          <p class="mba-body">Welcome to the pinnacle of aviation education. The MBA in Airline and Airport Management at SkyWings is designed for the next generation of leaders. We don't just create managers — we create entrepreneurs and visionaries ready to tackle the complexities of the global aerospace sector.</p>
+          <p class="mba-body" style="margin-top:16px;">The Indian aviation industry is growing at a CAGR of over 25%. With the government planning 400 new airports and airlines placing record-breaking aircraft orders, the industry is desperate for skilled leadership. This programme bridges that gap.</p>
+          <p class="mba-body" style="margin-top:16px;">At SkyWings, we combine the core business strategies of a UGC-recognised degree with the specialised operational knowledge of Aviation of IATA standards — plus an Artificial Intelligence module that makes our graduates future-proof.</p>
+          <div style="margin-top:36px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="tel:+919847163163" class="mba-btn mba-btn--solid">
+              <svg width="14" height="14"><use href="#m-phone"/></svg> Speak with an Expert
+            </a>
+            <a href="https://wa.me/919847163163" class="mba-btn mba-btn--wa" target="_blank" rel="noopener">
+              <svg width="14" height="14"><use href="#m-wa"/></svg> WhatsApp Us
+            </a>
+          </div>
+        </div>
+        <div class="mba-split__img">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01272.jpg" alt="MBA Aviation College Kerala — SkyWings Academy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ AI SECTION ═══════════════════════════ -->
+  <section class="mba-sec--dark">
+    <div class="mba-wrap">
+      <div style="max-width:680px;">
+        <div class="mba-eyebrow" style="color:var(--sky);">Exclusive to SkyWings</div>
+        <h2 class="mba-h2 mba-h2--light">The AI leadership advantage.</h2>
+        <span class="mba-rule"></span>
+        <p class="mba-body" style="color:rgba(254,252,251,0.5);">In 2026, you cannot lead an airline or airport without understanding technology. Our MBA includes a specialised AI module designed to elevate your professional capabilities and future-proof your management career.</p>
+      </div>
+      <div class="mba-ai-grid">
+        <div class="mba-ai-card">
+          <div class="mba-ai-card__heading">AI for Leadership Growth</div>
+          <div class="mba-ai-item">
+            <div class="mba-ai-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div class="mba-ai-item__title">Strategic Decision Making</div>
+              <div class="mba-ai-item__body">Use AI-driven Business Intelligence tools to analyse market trends — predict profitable routes and passenger behaviours with data, not guesswork.</div>
+            </div>
+          </div>
+          <div class="mba-ai-item">
+            <div class="mba-ai-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+            </div>
+            <div>
+              <div class="mba-ai-item__title">Efficiency &amp; Automation</div>
+              <div class="mba-ai-item__body">Learn how AI tools automate rostering, scheduling, and HR tasks — freeing managers to focus on high-level strategy and team leadership.</div>
+            </div>
+          </div>
+          <div class="mba-ai-item">
+            <div class="mba-ai-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="mba-ai-item__title">Crisis Management</div>
+              <div class="mba-ai-item__body">AI simulations let you practise handling airport emergencies — cyber-attacks, system failures — in a safe virtual environment, building real decision-making confidence.</div>
+            </div>
+          </div>
+        </div>
+        <div class="mba-ai-card">
+          <div class="mba-ai-card__heading">AI in Airport &amp; Logistics Operations</div>
+          <div class="mba-ai-item">
+            <div class="mba-ai-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            </div>
+            <div>
+              <div class="mba-ai-item__title">Smart Logistics</div>
+              <div class="mba-ai-item__body">AI optimises supply chains, tracks shipments in real-time, and predicts warehouse capacity — crucial for roles in Air Cargo and Shipping management.</div>
+            </div>
+          </div>
+          <div class="mba-ai-item">
+            <div class="mba-ai-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <div class="mba-ai-item__title">Passenger Flow Management</div>
+              <div class="mba-ai-item__body">How Smart Airports use AI sensors to manage security and immigration queues — reducing wait times and dramatically improving the passenger experience.</div>
+            </div>
+          </div>
+          <div class="mba-ai-item">
+            <div class="mba-ai-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/></svg>
+            </div>
+            <div>
+              <div class="mba-ai-item__title">Dynamic Pricing &amp; Revenue Management</div>
+              <div class="mba-ai-item__body">Learn the algorithms airlines use to set ticket prices. Revenue Management is one of the most highly paid and in-demand skills in the entire airline industry.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ DUAL CERTIFICATION ═══════════════════════════ -->
+  <section class="mba-sec">
+    <div class="mba-wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;">
+        <div>
+          <div class="mba-eyebrow">Accreditation</div>
+          <h2 class="mba-h2">Dual certification &amp; global value.</h2>
+        </div>
+        <div>
+          <p class="mba-body">We give our students the best of both worlds — academic recognition and industry-grade skills. A degree that opens doors in India and abroad.</p>
+        </div>
+      </div>
+      <div class="mba-cert-grid">
+        <div class="mba-cert-card">
+          <div class="mba-cert-card__num">01</div>
+          <div class="mba-cert-card__title">MBA Degree — UGC Recognised University</div>
+          <p class="mba-body--sm">A full-time MBA degree from a UGC Recognised Government University (e.g. Bharathiar University) — valid for government jobs, UPSC exams, and higher studies abroad (PhD / Executive programmes).</p>
+        </div>
+        <div class="mba-cert-card">
+          <div class="mba-cert-card__num">02</div>
+          <div class="mba-cert-card__title">Certificate of Accomplishment — SkyWings Aviation</div>
+          <p class="mba-body--sm">Issued by SkyWings Aviation &amp; Logistics Academy, certifying your practical skills in Airport Management, AI for Aviation, and Cargo Operations — recognised by leading industry employers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ COURSE HIGHLIGHTS ═══════════════════════════ -->
+  <section class="mba-sec--dim">
+    <div class="mba-wrap">
+      <div style="text-align:center;max-width:620px;margin:0 auto;">
+        <div class="mba-eyebrow" style="justify-content:center;">Syllabus Focus</div>
+        <h2 class="mba-h2">A curriculum built for aviation leaders.</h2>
+        <span class="mba-rule" style="margin:24px auto;"></span>
+        <p class="mba-body">Our pedagogy emphasises Participatory Learning — less theory, more action. Built around the real demands of the global aerospace sector.</p>
+      </div>
+      <div class="mba-highlights-grid">
+        <div class="mba-highlight-item">
+          <div class="mba-highlight-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div class="mba-highlight-item__title">Commercial Geography &amp; Shipping</div>
+          <p class="mba-body--sm">Understanding global trade routes — essential knowledge for any logistics or airport manager operating at scale.</p>
+        </div>
+        <div class="mba-highlight-item">
+          <div class="mba-highlight-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5S18 2 17 2c-.7 0-1.5.3-2.1.9l-3.5 3.5L4 4l-1.2 1.2 6.2 5.5-2 2L5 11H3l-1.2 1.2L5 14l1.8 2.8L8 18l2.8 1.8 1.2 1.2 1-1.2v-2l-2-2 5.5 6.2L17.8 19.2z"/></svg>
+          </div>
+          <div class="mba-highlight-item__title">Air Cargo &amp; Warehousing</div>
+          <p class="mba-body--sm">Hands-on training in airfreight management, inventory systems, and International Commercial Terms (Incoterms).</p>
+        </div>
+        <div class="mba-highlight-item">
+          <div class="mba-highlight-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="mba-highlight-item__title">Personality &amp; Leadership</div>
+          <p class="mba-body--sm">A dedicated module on soft skills, corporate etiquette, and leadership communication — essential for senior aviation roles.</p>
+        </div>
+        <div class="mba-highlight-item">
+          <div class="mba-highlight-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <div class="mba-highlight-item__title">3-Month Practical Internship</div>
+          <p class="mba-body--sm">Mandatory On-the-Job Training at leading airports or logistics companies — real managerial experience before graduation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ MID CTA ═══════════════════════════ -->
+  <div class="mba-cta">
+    <div class="mba-wrap">
+      <div class="mba-cta__inner">
+        <div class="mba-cta__text">
+          <h2 class="mba-h2">Ready to lead the aviation industry?</h2>
+          <p>Join SkyWings MBA graduates now working as airport managers, airline executives, and logistics heads across India, the Middle East, and beyond.</p>
+        </div>
+        <div class="mba-cta__actions">
+          <a href="tel:+919847163163" class="mba-btn mba-btn--solid">
+            <svg width="14" height="14"><use href="#m-phone"/></svg> Call: +91 9847 163 163
+          </a>
+          <a href="https://wa.me/919847163163" class="mba-btn mba-btn--ghost" target="_blank" rel="noopener">
+            <svg width="14" height="14"><use href="#m-wa"/></svg> WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ WHY SKYWINGS ═══════════════════════════ -->
+  <section class="mba-sec">
+    <div class="mba-wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;">
+        <div>
+          <div class="mba-eyebrow">Why SkyWings</div>
+          <h2 class="mba-h2">Premium facilities for premium education.</h2>
+        </div>
+        <div>
+          <p class="mba-body">What makes SkyWings the No. 1 MBA Aviation college in Kerala? Our unwavering commitment to producing leaders — not just degree holders.</p>
+        </div>
+      </div>
+      <div class="mba-why-grid">
+        <div class="mba-why-card">
+          <div class="mba-why-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="mba-why-card__title">Smart Classrooms</div>
+          <p class="mba-body--sm">Tech-enabled learning spaces with audio-visual aids, simulation tools, and Harvard-style case study discussions led by industry professionals.</p>
+        </div>
+        <div class="mba-why-card">
+          <div class="mba-why-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="mba-why-card__title">Grooming Excellence</div>
+          <p class="mba-body--sm">We ensure you look, speak, and carry yourself like a corporate aviation leader — because in this industry, your presence is your brand.</p>
+        </div>
+        <div class="mba-why-card">
+          <div class="mba-why-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <div class="mba-why-card__title">Continuous Assessment</div>
+          <p class="mba-body--sm">Rigorous classroom tests, seminars, and assignments keep you sharp. Clear mark distribution is provided on joining — no surprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ INCLUSIONS + IMAGE SPLIT ═══════════════════════════ -->
+  <section class="mba-sec--dim">
+    <div class="mba-wrap">
+      <div class="mba-split mba-split--rev">
+        <div>
+          <div class="mba-eyebrow">What's Included</div>
+          <h2 class="mba-h2">Everything you need to succeed.</h2>
+          <span class="mba-rule"></span>
+          <p class="mba-body">A comprehensive package — academic rigour, industry skills, and career support all in one programme designed for future aviation leaders.</p>
+          <div class="mba-checklist">
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="mba-check-item__text">MBA Course Training — University Syllabus + Industry Modules</span></div>
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg></div><span class="mba-check-item__text">Certificate Course in AI for Aviation — Exclusive Module</span></div>
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5S18 2 17 2c-.7 0-1.5.3-2.1.9l-3.5 3.5L4 4l-1.2 1.2 6.2 5.5-2 2L5 11H3l-1.2 1.2L5 14l1.8 2.8L8 18l2.8 1.8 1.2 1.2 1-1.2v-2l-2-2 5.5 6.2L17.8 19.2z"/></svg></div><span class="mba-check-item__text">Air Cargo &amp; Logistics Training — Practical Supply Chain Skills</span></div>
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div><span class="mba-check-item__text">3-Month Practical Internship — Real Work Experience</span></div>
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg></div><span class="mba-check-item__text">Placement Assistance — Top Airline &amp; Airport HR Connections</span></div>
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><span class="mba-check-item__text">Personality Development &amp; Soft Skills</span></div>
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><span class="mba-check-item__text">Mock Interview Sessions — For Managerial Roles</span></div>
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H7v10a2 2 0 002 2h6a2 2 0 002-2V10h3.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/></svg></div><span class="mba-check-item__text">Corporate Aviation Uniform</span></div>
+            <div class="mba-check-item"><div class="mba-check-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><span class="mba-check-item__text">Industrial Visits — Airports, Warehouses, Shipping Yards</span></div>
+          </div>
+        </div>
+        <div class="mba-split__img">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/ADA05317.jpg" alt="MBA Aviation training at SkyWings Academy Kochi">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CAREER PROSPECTS ═══════════════════════════ -->
+  <section class="mba-sec">
+    <div class="mba-wrap">
+      <div style="text-align:center;max-width:620px;margin:0 auto;">
+        <div class="mba-eyebrow" style="justify-content:center;">After Graduation</div>
+        <h2 class="mba-h2">Career prospects.</h2>
+        <span class="mba-rule" style="margin:24px auto;"></span>
+        <p class="mba-body">Graduates from Kerala's best MBA Aviation college command high salaries and respect across the global aerospace industry.</p>
+      </div>
+      <div class="mba-career-grid">
+        <div class="mba-career-card">
+          <div class="mba-career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <div class="mba-career-card__title">Airport Manager</div>
+          <p class="mba-body--sm">Oversee entire terminal operations, staffing, and passenger experience</p>
+        </div>
+        <div class="mba-career-card">
+          <div class="mba-career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5S18 2 17 2c-.7 0-1.5.3-2.1.9l-3.5 3.5L4 4l-1.2 1.2 6.2 5.5-2 2L5 11H3l-1.2 1.2L5 14l1.8 2.8L8 18l2.8 1.8 1.2 1.2 1-1.2v-2l-2-2 5.5 6.2L17.8 19.2z"/></svg>
+          </div>
+          <div class="mba-career-card__title">Airline Operations Head</div>
+          <p class="mba-body--sm">Manage fleet schedules, crew deployment, and operational efficiency</p>
+        </div>
+        <div class="mba-career-card">
+          <div class="mba-career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="mba-career-card__title">Aviation Consultant</div>
+          <p class="mba-body--sm">Advise airlines and airports on efficiency, safety, and growth strategy</p>
+        </div>
+        <div class="mba-career-card">
+          <div class="mba-career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div class="mba-career-card__title">Logistics Manager</div>
+          <p class="mba-body--sm">Head supply chain and cargo operations for MNCs and global firms</p>
+        </div>
+        <div class="mba-career-card">
+          <div class="mba-career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="mba-career-card__title">Regulatory Officer</div>
+          <p class="mba-body--sm">Work with DGCA, IATA, or international aviation regulatory bodies</p>
+        </div>
+        <div class="mba-career-card">
+          <div class="mba-career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div class="mba-career-card__title">Entrepreneur</div>
+          <p class="mba-body--sm">Launch your own travel agency, aviation consultancy, or logistics firm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ NUMBERS ═══════════════════════════ -->
+  <section class="mba-sec--ink">
+    <div class="mba-wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;">
+        <div>
+          <div class="mba-eyebrow" style="color:var(--sky);">Industry Numbers</div>
+          <h2 class="mba-h2 mba-h2--light">The aviation leadership opportunity.</h2>
+        </div>
+        <div>
+          <p class="mba-body" style="color:rgba(254,252,251,0.38);">The Indian aviation sector is booming — and SkyWings MBA graduates are ready to lead it.</p>
+        </div>
+      </div>
+      <div class="mba-numbers">
+        <div class="mba-number-item">
+          <div class="mba-number-item__num">₹60K<span>+</span></div>
+          <div class="mba-number-item__label">Fresher salary per month for MBA Aviation graduates</div>
+        </div>
+        <div class="mba-number-item">
+          <div class="mba-number-item__num">400<span>+</span></div>
+          <div class="mba-number-item__label">New airports planned under India's UDAN scheme</div>
+        </div>
+        <div class="mba-number-item">
+          <div class="mba-number-item__num">25<span>%</span></div>
+          <div class="mba-number-item__label">CAGR of the Indian aviation industry — fastest growing</div>
+        </div>
+        <div class="mba-number-item">
+          <div class="mba-number-item__num">3<span>mo</span></div>
+          <div class="mba-number-item__label">Mandatory internship at airports or logistics companies</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+  <section class="mba-sec--dim">
+    <div class="mba-wrap">
+      <div style="text-align:center;max-width:580px;margin:0 auto;">
+        <div class="mba-eyebrow" style="justify-content:center;">Got Questions?</div>
+        <h2 class="mba-h2">Frequently asked questions.</h2>
+        <span class="mba-rule" style="margin:24px auto;"></span>
+      </div>
+      <div class="mba-faq-list">
+        <details class="mba-faq-item"><summary class="mba-faq-summary">Is the MBA degree recognised by the Government?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">Yes. The MBA degree is awarded by a UGC Recognised Government University (such as Bharathiar University), ensuring it is valid for government jobs, UPSC exams, and migration abroad.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">Why is SkyWings considered the best MBA Aviation college in Kerala?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">We combine a Government University degree with practical IATA-based training and a cutting-edge AI in Aviation syllabus. Our focus on leadership development and 100% internship support sets us apart from every other college in Kerala.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">What is the salary after MBA in Aviation Management?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">Managerial roles in aviation are highly paid. Freshers can expect ₹40,000 to ₹60,000 per month, while experienced Airport Managers earn significantly higher — often in lakhs — especially in the Middle East.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">Can I join if I have a B.Tech or B.Com degree?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">Yes. Graduates from any discipline — Arts, Science, Commerce, or Engineering — with a minimum of 55% marks are eligible. Engineering graduates often excel in technical aviation management roles.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">Does the course cover Logistics?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">Yes. The syllabus includes Air Cargo, Shipping, and Warehouse Management, making you eligible for high-paying jobs in the logistics and supply chain sector as well as aviation.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">Is there an entrance exam?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">Admission is generally based on your graduation marks and a personal interview at SkyWings. Please contact our admissions desk for specific university entrance requirements for the current year.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">How does AI training help in an MBA?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">By learning AI for Aviation Business, you gain skills in data analytics and automation — making you a more efficient and modern manager compared to graduates from traditional colleges who have no AI exposure.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">Do you provide placement for MBA students?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">Yes, we offer Placement Assistance, connecting MBA graduates with HR departments of leading airlines, airports, and logistics companies for managerial and executive trainee roles.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">What is the duration of the internship?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">The course includes a mandatory 3-Month Practical Internship. This is crucial for gaining the On-the-Job experience that employers specifically look for when hiring for managerial roles.</div></details>
+        <details class="mba-faq-item"><summary class="mba-faq-summary">Can I work abroad after this course?<span class="mba-faq-summary__arrow"><svg width="12" height="12"><use href="#m-chev"/></svg></span></summary><div class="mba-faq-answer">Absolutely. The MBA in Airline and Airport Management is a globally recognised degree. The Middle East, Europe, and Canada have a high demand for skilled aviation managers, and your UGC-recognised degree is valid internationally.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FINAL CTA ═══════════════════════════ -->
+  <section class="mba-finalcta">
+    <div class="mba-finalcta__inner">
+      <div class="mba-eyebrow" style="justify-content:center;">Kerala's No. 1 MBA Aviation College</div>
+      <h2 class="mba-h2 mba-h2--light" style="margin:16px 0 20px;font-size:clamp(26px,4vw,48px);">Still have questions about your future in aviation management?</h2>
+      <p class="mba-body" style="color:rgba(254,252,251,0.5);line-height:1.8;">Every great aviation career begins with one decision. At SkyWings Academy, Kochi, we are ready to guide you from your first enquiry to the day you receive your appointment letter at a top airline or airport.</p>
+      <div class="mba-finalcta__actions">
+        <a href="tel:+919847163163" class="mba-btn mba-btn--sky">
+          <svg width="15" height="15"><use href="#m-phone"/></svg> +91 9847 163 163
+        </a>
+        <a href="https://wa.me/919847163163" class="mba-btn mba-btn--wa" target="_blank" rel="noopener">
+          <svg width="15" height="15"><use href="#m-wa"/></svg> Chat on WhatsApp
+        </a>
+        <a href="https://skywingsacademy.com/aviation-courses/" class="mba-btn mba-btn--ghost">
+          All Courses <svg width="13" height="13"><use href="#m-arrow"/></svg>
+        </a>
+      </div>
+      <div class="mba-trust-row">
+        <div class="mba-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No. 1 MBA Aviation College</div>
+        <div class="mba-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> UGC Recognised Degree</div>
+        <div class="mba-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> IATA-Aligned Curriculum</div>
+        <div class="mba-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AI-Integrated Syllabus</div>
+        <div class="mba-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Placement Assistance</div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.mba -->

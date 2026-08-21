@@ -1,0 +1,17 @@
+# dependencies / build output
+node_modules/
+.next/
+out/
+
+# legacy static build (regenerable via _build/build.mjs)
+dist/
+
+# local working folders — not part of the site
+_backup-images-old/
+new-images/
+uniform-refs/
+
+# misc
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,495 @@
+<!-- SkyWings Academy | Gallery — Campus Life, Events & Placements -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "SkyWings Academy Gallery — Campus Life, Events & Placements",
+  "description": "Photo gallery of SkyWings Aviation Academy Kochi — campus life, grooming sessions, placement drives, events, and student life.",
+  "url": "https://skywingsacademy.com/gallery/",
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "SkyWings Academy of Aviation & Logistics",
+    "url": "https://skywingsacademy.com"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://skywingsacademy.com" },
+      { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://skywingsacademy.com/gallery/" }
+    ]
+  }
+}
+</script>
+
+<style>
+:root{
+  --ink:#0a1128;--navy:#001f54;--mid:#034078;--sky:#1282a2;--cream:#fefcfb;
+  --offwhite:#f4f6f9;--white:#ffffff;--sky-dim:rgba(18,130,162,0.10);
+  --navy-line:rgba(0,31,84,0.09);--text-body:rgba(0,31,84,0.65);
+  --r:12px;--rlg:20px;--t:0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.glr*{box-sizing:border-box;margin:0;padding:0;}
+.glr{font-family:"Instrument Sans",sans-serif;color:var(--navy);background:var(--offwhite);
+  -webkit-font-smoothing:antialiased;line-height:1;width:100%;overflow-x:hidden;
+  margin:0!important;padding:0!important;}
+.glr-wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+
+/* HERO */
+.glr-hero{background:linear-gradient(135deg,var(--ink) 0%,var(--navy) 55%,var(--mid) 100%);
+  padding:64px 0;position:relative;overflow:hidden;}
+.glr-hero::before{content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(254,252,251,0.04) 1px,transparent 1px);
+  background-size:28px 28px;pointer-events:none;}
+.glr-hero__inner{position:relative;z-index:2;max-width:600px;}
+.glr-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:"Sora",sans-serif;
+  font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--sky);margin-bottom:16px;}
+.glr-eyebrow::before{content:"";display:block;width:20px;height:1px;background:var(--sky);flex-shrink:0;}
+h1.glr-h1{font-family:"Sora",sans-serif!important;font-size:clamp(28px,4vw,52px)!important;
+  font-weight:300!important;line-height:1.1!important;letter-spacing:-1.5px!important;
+  color:var(--cream)!important;margin:0 0 14px!important;padding:0!important;display:block!important;}
+.glr-hero__lead{font-size:15px;font-weight:300;line-height:1.75;color:rgba(254,252,251,0.5);}
+
+/* FILTERS — sticky */
+.glr-filters{background:var(--white);border-bottom:1px solid var(--navy-line);
+  padding:20px 0;position:sticky;top:0;z-index:20;}
+.glr-filters-inner{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.glr-cat-btn{font-family:"Sora",sans-serif;font-size:11px;font-weight:500;letter-spacing:1px;
+  text-transform:uppercase;padding:9px 18px;border-radius:100px;
+  border:1px solid var(--navy-line);background:var(--white);
+  color:var(--text-body);cursor:pointer;transition:var(--t);display:inline-flex;align-items:center;gap:6px;}
+.glr-cat-btn:hover,.glr-cat-btn.active{background:var(--sky);color:var(--white);border-color:var(--sky);}
+.glr-cat-btn__count{font-size:10px;background:rgba(255,255,255,0.25);padding:2px 6px;border-radius:100px;}
+.glr-cat-btn.active .glr-cat-btn__count{background:rgba(255,255,255,0.25);}
+
+/* CATEGORY SECTIONS */
+.glr-body{padding:48px 0 72px;}
+.glr-section{margin-bottom:56px;}
+.glr-section-head{display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.glr-section-head h2{font-family:"Sora",sans-serif!important;font-size:clamp(18px,2.2vw,26px)!important;
+  font-weight:400!important;color:var(--navy)!important;margin:0!important;padding:0!important;
+  display:block!important;letter-spacing:-0.3px!important;}
+.glr-section-line{flex:1;height:1px;background:var(--navy-line);}
+.glr-section-count{font-size:12px;font-weight:400;color:rgba(0,31,84,0.35);white-space:nowrap;
+  font-family:"Sora",sans-serif;}
+
+/* MASONRY-STYLE GRID */
+.glr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.glr-grid--3{grid-template-columns:repeat(3,1fr);}
+.glr-grid--wide .glr-item:first-child{grid-column:span 2;grid-row:span 2;}
+
+/* Gallery item */
+.glr-item{position:relative;overflow:hidden;border-radius:var(--r);
+  background:var(--navy);cursor:pointer;aspect-ratio:4/3;}
+.glr-item--tall{aspect-ratio:3/4;}
+.glr-item--wide{aspect-ratio:16/9;}
+.glr-item img,.glr-item .glr-placeholder{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  display:block;transition:transform 0.5s ease;}
+.glr-item:hover img{transform:scale(1.06);}
+/* Overlay */
+.glr-item__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,31,84,0.7) 0%,transparent 60%);
+  opacity:0;transition:opacity var(--t);display:flex;align-items:flex-end;padding:16px;}
+.glr-item:hover .glr-item__overlay{opacity:1;}
+.glr-item__caption{font-size:12px;font-weight:400;color:rgba(254,252,251,0.85);line-height:1.4;}
+/* Placeholder */
+.glr-placeholder{background:linear-gradient(135deg,#001845 0%,#034078 100%);
+  display:flex!important;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;color:rgba(18,130,162,0.4);}
+.glr-placeholder svg{opacity:0.3;}
+.glr-placeholder span{font-size:10px;font-weight:400;letter-spacing:1px;
+  text-transform:uppercase;color:rgba(254,252,251,0.2);}
+
+/* LIGHTBOX */
+.glr-lightbox{position:fixed;inset:0;background:rgba(10,17,40,0.95);z-index:1000;
+  display:none;align-items:center;justify-content:center;padding:20px;}
+.glr-lightbox.open{display:flex;}
+.glr-lightbox__img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:var(--r);display:block;}
+.glr-lightbox__close{position:absolute;top:20px;right:24px;width:40px;height:40px;
+  border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--cream);
+  transition:var(--t);}
+.glr-lightbox__close:hover{background:rgba(255,255,255,0.2);}
+.glr-lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);
+  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:var(--cream);transition:var(--t);}
+.glr-lightbox__nav:hover{background:rgba(255,255,255,0.2);}
+.glr-lightbox__prev{left:20px;}
+.glr-lightbox__next{right:20px;}
+.glr-lightbox__caption{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
+  font-size:13px;font-weight:300;color:rgba(254,252,251,0.6);text-align:center;
+  white-space:nowrap;}
+
+/* CTA */
+.glr-cta{background:var(--sky);padding:56px 0;text-align:center;}
+.glr-cta h2{font-family:"Sora",sans-serif;font-size:clamp(20px,2.8vw,32px);font-weight:300;
+  color:var(--white);margin-bottom:10px;letter-spacing:-0.3px;}
+.glr-cta p{font-size:14px;font-weight:300;color:rgba(255,255,255,0.65);margin-bottom:24px;line-height:1.6;}
+.glr-cta__btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+.glr-btn{display:inline-flex;align-items:center;gap:8px;font-family:"Instrument Sans",sans-serif;
+  font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;border:none;
+  transition:var(--t);padding:13px 26px;border-radius:100px;white-space:nowrap;}
+.glr-btn--solid{background:var(--navy);color:var(--cream);}
+.glr-btn--solid:hover{background:var(--ink);transform:translateY(-2px);}
+.glr-btn--ghost{background:transparent;color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.25);}
+.glr-btn--ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.5);transform:translateY(-2px);}
+
+@media(max-width:1024px){
+  .glr-grid{grid-template-columns:repeat(3,1fr);}
+  .glr-grid--wide .glr-item:first-child{grid-column:span 2;}
+}
+@media(max-width:640px){
+  .glr-wrap{padding:0 16px;}
+  .glr-grid,.glr-grid--3{grid-template-columns:repeat(2,1fr);}
+  .glr-grid--wide .glr-item:first-child{grid-column:span 1;grid-row:span 1;}
+  .glr-filters-inner{gap:6px;}
+  .glr-cat-btn{padding:8px 14px;}
+}
+</style>
+
+<div class="glr">
+
+<!-- HERO -->
+<section class="glr-hero">
+  <div class="glr-wrap">
+    <div class="glr-hero__inner">
+      <div class="glr-eyebrow">Campus Life at SkyWings</div>
+      <h1 class="glr-h1">Gallery — SkyWings Aviation Academy</h1>
+      <p class="glr-hero__lead">A glimpse into life at Kerala's No.1 aviation college — campus events, grooming sessions, placement ceremonies, student activities, and more.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="glr-filters">
+  <div class="glr-wrap">
+    <div class="glr-filters-inner">
+      <button class="glr-cat-btn active" onclick="showCat('all',this)">All Photos <span class="glr-cat-btn__count" id="cnt-all">0</span></button>
+      <button class="glr-cat-btn" onclick="showCat('campus',this)">Campus &amp; Classrooms <span class="glr-cat-btn__count" id="cnt-campus">0</span></button>
+      <button class="glr-cat-btn" onclick="showCat('events',this)">Events &amp; Ceremonies <span class="glr-cat-btn__count" id="cnt-events">0</span></button>
+      <button class="glr-cat-btn" onclick="showCat('placements',this)">Placements <span class="glr-cat-btn__count" id="cnt-placements">0</span></button>
+      <button class="glr-cat-btn" onclick="showCat('grooming',this)">Grooming &amp; Training <span class="glr-cat-btn__count" id="cnt-grooming">0</span></button>
+      <button class="glr-cat-btn" onclick="showCat('students',this)">Student Life <span class="glr-cat-btn__count" id="cnt-students">0</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY BODY -->
+<div class="glr-body" id="glr-body">
+  <div class="glr-wrap">
+
+    <!-- CAMPUS & CLASSROOMS -->
+    <div class="glr-section" data-cat="campus" id="sec-campus">
+      <div class="glr-section-head">
+        <h2>Campus &amp; Classrooms</h2>
+        <div class="glr-section-line"></div>
+        <div class="glr-section-count">8 photos</div>
+      </div>
+      <div class="glr-grid glr-grid--wide">
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01337.jpg" data-caption="SkyWings Academy — Smart Classroom, Kochi">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01337.jpg" alt="SkyWings Academy Smart Classroom Kochi" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Smart Classroom — Kochi Campus</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01272.jpg" data-caption="Training session in progress — SkyWings Kochi">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01272.jpg" alt="SkyWings Academy Aviation Training Kochi" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Aviation Training Session</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01209.jpg" data-caption="Practical training at SkyWings Academy">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01209.jpg" alt="Practical training SkyWings Academy" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Practical Training Lab</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI00978.jpg" data-caption="Logistics and cargo training">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI00978.jpg" alt="SkyWings Academy Logistics Training" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Logistics Training Module</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01543.jpg" data-caption="Campus facility at SkyWings Kochi">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2022/07/PAI01543.jpg" alt="SkyWings Campus Kochi" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Campus Facility — Kochi</div></div>
+        </div>
+        <!-- Placeholders -->
+        <div class="glr-item">
+          <div class="glr-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Add Campus Photo</span>
+          </div>
+        </div>
+        <div class="glr-item">
+          <div class="glr-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Add Campus Photo</span>
+          </div>
+        </div>
+        <div class="glr-item">
+          <div class="glr-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Add Campus Photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENTS & CEREMONIES -->
+    <div class="glr-section" data-cat="events" id="sec-events">
+      <div class="glr-section-head">
+        <h2>Events &amp; Ceremonies</h2>
+        <div class="glr-section-line"></div>
+        <div class="glr-section-count">8 photos</div>
+      </div>
+      <div class="glr-grid">
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/04/fg.jpg" data-caption="SkyWings Academy annual event">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/fg.jpg" alt="SkyWings Academy Annual Event Kerala" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Annual Function 2025</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/04/ff.jpg" data-caption="Convocation ceremony SkyWings">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/ff.jpg" alt="SkyWings Academy Convocation Ceremony" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Convocation Ceremony</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/04/AJI00248.jpg" data-caption="SkyWings Academy event — students">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/AJI00248.jpg" alt="SkyWings Aviation Students Event" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Student Cultural Event</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/04/AJI00156.jpg" data-caption="Award ceremony at SkyWings Academy">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/AJI00156.jpg" alt="SkyWings Award Ceremony Kerala" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Awards &amp; Recognition</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/04/2024-07-30.jpg" data-caption="SkyFest 2024 — SkyWings Academy">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/2024-07-30.jpg" alt="SkyWings SkyFest 2024" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">SkyFest 2024</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/04/2022-04-10.jpg" data-caption="SkyWings Academy inauguration 2022">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/2022-04-10.jpg" alt="SkyWings Inauguration 2022" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Inauguration 2022</div></div>
+        </div>
+        <div class="glr-item">
+          <div class="glr-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Add Event Photo</span>
+          </div>
+        </div>
+        <div class="glr-item">
+          <div class="glr-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Add Event Photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLACEMENTS -->
+    <div class="glr-section" data-cat="placements" id="sec-placements">
+      <div class="glr-section-head">
+        <h2>Placements &amp; Campus Drives</h2>
+        <div class="glr-section-line"></div>
+        <div class="glr-section-count">12 photos</div>
+      </div>
+      <div class="glr-grid">
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/1.jpg.webp" data-caption="Placed student — SkyWings Academy">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/1.jpg.webp" alt="Placed student SkyWings Academy Kerala" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Placement 2025</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/2.jpg.webp" data-caption="SkyWings placement success">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/2.jpg.webp" alt="SkyWings placement success" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Placement Success</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/3.jpg.webp" data-caption="Airline placement — SkyWings">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/3.jpg.webp" alt="Airline placement SkyWings Kerala" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Airline Placement</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/4.jpg.webp" data-caption="SkyWings student placed in airline">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/4.jpg.webp" alt="SkyWings student placed" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Student Placement</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/5.jpg.webp" data-caption="Placement drive SkyWings Academy">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/5.jpg.webp" alt="Placement drive SkyWings" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Campus Drive</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/6.jpg.webp" data-caption="SkyWings placement 2025">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/6.jpg.webp" alt="SkyWings placement 2025" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Placement 2025</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/7.jpg.webp" data-caption="SkyWings placed students Kerala">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/7.jpg.webp" alt="SkyWings placed students" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Batch Placements</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/8.jpg.webp" data-caption="Aviation placement SkyWings">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/8.jpg.webp" alt="Aviation placement SkyWings" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Aviation Placement</div></div>
+        </div>
+        <!-- Placeholders -->
+        <div class="glr-item">
+          <div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Placement Photo</span></div>
+        </div>
+        <div class="glr-item">
+          <div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Placement Photo</span></div>
+        </div>
+        <div class="glr-item">
+          <div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Placement Photo</span></div>
+        </div>
+        <div class="glr-item">
+          <div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Placement Photo</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GROOMING & TRAINING -->
+    <div class="glr-section" data-cat="grooming" id="sec-grooming">
+      <div class="glr-section-head">
+        <h2>Grooming &amp; Professional Training</h2>
+        <div class="glr-section-line"></div>
+        <div class="glr-section-count">6 photos</div>
+      </div>
+      <div class="glr-grid glr-grid--3">
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-1.webp" data-caption="Grooming and personality development training">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-1.webp" alt="SkyWings grooming training Kerala" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Grooming &amp; Personality Training</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2026/01/freepik__design-editorial-soft-studio-light-photography-hig__41438.png" data-caption="Professional presentation at SkyWings">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2026/01/freepik__design-editorial-soft-studio-light-photography-hig__41438.png" alt="SkyWings professional presentation training" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Professional Presentation</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2026/02/06-copy.webp" data-caption="SkyWings Academy student training">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2026/02/06-copy.webp" alt="SkyWings Academy student training" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Student Training Session</div></div>
+        </div>
+        <div class="glr-item"><div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Grooming Photo</span></div></div>
+        <div class="glr-item"><div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Grooming Photo</span></div></div>
+        <div class="glr-item"><div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Grooming Photo</span></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT LIFE -->
+    <div class="glr-section" data-cat="students" id="sec-students">
+      <div class="glr-section-head">
+        <h2>Student Life at SkyWings</h2>
+        <div class="glr-section-line"></div>
+        <div class="glr-section-count">8 photos</div>
+      </div>
+      <div class="glr-grid">
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/04/unnbnamed.jpg" data-caption="SkyWings Academy premium campus">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/unnbnamed.jpg" alt="SkyWings Premium Campus Kochi" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Premium Campus Life</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/04/gg.jpg" data-caption="SkyWings aviation students">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/gg.jpg" alt="SkyWings Aviation College Students" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Aviation Students</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/9.jpg.webp" data-caption="SkyWings student activities">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/9.jpg.webp" alt="SkyWings student activities" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Student Activities</div></div>
+        </div>
+        <div class="glr-item" onclick="openLightbox(this)" data-src="https://skywingsacademy.com/wp-content/uploads/2025/05/10.jpg.webp" data-caption="Life at SkyWings Academy">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2025/05/10.jpg.webp" alt="Life at SkyWings Academy" loading="lazy">
+          <div class="glr-item__overlay"><div class="glr-item__caption">Life at SkyWings</div></div>
+        </div>
+        <div class="glr-item"><div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Student Photo</span></div></div>
+        <div class="glr-item"><div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Student Photo</span></div></div>
+        <div class="glr-item"><div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Student Photo</span></div></div>
+        <div class="glr-item"><div class="glr-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Student Photo</span></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="glr-lightbox" id="glr-lightbox" onclick="closeLightbox(event)">
+  <button class="glr-lightbox__close" onclick="closeLightbox()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="glr-lightbox__nav glr-lightbox__prev" onclick="navLightbox(-1)">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img class="glr-lightbox__img" id="glr-lightbox-img" src="" alt="">
+  <button class="glr-lightbox__nav glr-lightbox__next" onclick="navLightbox(1)">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="glr-lightbox__caption" id="glr-lightbox-caption"></div>
+</div>
+
+<!-- CTA -->
+<div class="glr-cta">
+  <div class="glr-wrap">
+    <h2>See yourself here — join SkyWings 2026 batch</h2>
+    <p>2026 admissions open · Kochi &amp; Mahe campuses · Free career counselling available</p>
+    <div class="glr-cta__btns">
+      <a href="tel:+919847163163" class="glr-btn glr-btn--solid">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        Call: +91 9847 163 163
+      </a>
+      <a href="https://skywingsacademy.com/aviation-courses/" class="glr-btn glr-btn--ghost">View Courses</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// Category filter counts
+var cats = {campus:8,events:8,placements:12,grooming:6,students:8};
+var total = 0;
+for(var k in cats){
+  total += cats[k];
+  var el = document.getElementById('cnt-'+k);
+  if(el) el.textContent = cats[k];
+}
+document.getElementById('cnt-all').textContent = total;
+
+// Show/hide categories
+function showCat(cat, btn) {
+  document.querySelectorAll('.glr-cat-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.glr-section').forEach(function(sec){
+    if (cat === 'all' || sec.getAttribute('data-cat') === cat) {
+      sec.style.display = '';
+    } else {
+      sec.style.display = 'none';
+    }
+  });
+}
+
+// Lightbox
+var allItems = [];
+var currentIdx = 0;
+
+function buildItemList() {
+  allItems = Array.from(document.querySelectorAll('.glr-item[data-src]'));
+}
+
+function openLightbox(el) {
+  buildItemList();
+  currentIdx = allItems.indexOf(el);
+  var src = el.getAttribute('data-src');
+  var cap = el.getAttribute('data-caption') || '';
+  document.getElementById('glr-lightbox-img').src = src;
+  document.getElementById('glr-lightbox-img').alt = cap;
+  document.getElementById('glr-lightbox-caption').textContent = cap;
+  document.getElementById('glr-lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  if (e && e.target !== document.getElementById('glr-lightbox') && !e.target.closest('.glr-lightbox__close')) return;
+  document.getElementById('glr-lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function navLightbox(dir) {
+  currentIdx = (currentIdx + dir + allItems.length) % allItems.length;
+  var el = allItems[currentIdx];
+  document.getElementById('glr-lightbox-img').src = el.getAttribute('data-src');
+  document.getElementById('glr-lightbox-caption').textContent = el.getAttribute('data-caption') || '';
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('glr-lightbox').classList.contains('open')) return;
+  if (e.key === 'ArrowRight') navLightbox(1);
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'Escape') { document.getElementById('glr-lightbox').classList.remove('open'); document.body.style.overflow = ''; }
+});
+</script>

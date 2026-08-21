@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "skywings-dist",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["_build/devserver.mjs"],
+      "port": 8799
+    },
+    {
+      "name": "skywings-next",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "next-app", "run", "dev", "--", "-p", "3200"],
+      "port": 3200
+    },
+    {
+      "name": "skywings-next-prod",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "next-app", "run", "start", "--", "-p", "3201"],
+      "port": 3201
+    }
+  ]
+}

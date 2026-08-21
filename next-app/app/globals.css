@@ -1,0 +1,51 @@
+/* ═══════════════════════════════════════════════════════════
+   SKYWINGS — GLOBAL DESIGN TOKENS & BASE
+   Shopify-inspired palette: dark teal / action green / lime
+═══════════════════════════════════════════════════════════ */
+:root {
+  --ink:        #001f1f;   /* near-black teal */
+  --navy:       #002d2d;   /* primary: header, hero, footer */
+  --mid:        #008060;   /* action green: gradients, panels */
+  --sky:        #95bf47;   /* lime accent: buttons, icons, links */
+  --sky-hover:  #7ea83a;
+  --cream:      #fefcfb;
+  --offwhite:   #f0f5ef;
+  --white:      #ffffff;
+
+  --sky-dim:    rgba(149,191,71,0.10);
+  --sky-line:   rgba(149,191,71,0.20);
+  --navy-line:  rgba(0,45,45,0.09);
+  --text-body:  rgba(0,45,45,0.65);
+  --text-light: rgba(0,45,45,0.40);
+
+  --radius:     12px;
+  --radius-lg:  20px;
+  --trans:      0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* next/font exposes these; fall back to system stacks */
+  --font-sora: var(--font-sora-var, 'Segoe UI', system-ui, sans-serif);
+  --font-body: var(--font-body-var, 'Segoe UI', system-ui, sans-serif);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--navy);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header is fixed; offset the page content so it clears the bar */
+main { display: block; padding-top: 104px; }
+
+img { max-width: 100%; }
+
+a { color: inherit; }
+
+/* Shared WhatsApp brand color (kept regardless of theme palette) */
+:root { --wa: #25D366; --wa-hover: #1ebe5d; }

@@ -1,0 +1,28 @@
+.sw-mobile-widget {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9990;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+.sw-mw-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sw-mw-btn:active { transform: scale(0.93); }
+.sw-mw-btn:hover { transform: scale(1.07); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); }
+.sw-mw-call { background: var(--sky); color: var(--ink); }
+.sw-mw-wa { background: var(--wa); }
+.sw-mw-btn svg { width: 26px; height: 26px; flex-shrink: 0; }
+
+@media (max-width: 768px) { .sw-mobile-widget { display: flex; } }

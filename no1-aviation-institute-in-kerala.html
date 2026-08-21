@@ -1,0 +1,476 @@
+<!-- SkyWings Academy | 2026 Admissions — Aviation Courses Kerala -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a1128;--navy:#001f54;--mid:#034078;--sky:#1282a2;--cream:#fefcfb;--white:#ffffff;--sky-dim:rgba(18,130,162,0.10);--navy-line:rgba(0,31,84,0.09);--text-body:rgba(0,31,84,0.65);--r:12px;--rlg:20px;--t:0.3s cubic-bezier(0.4,0,0.2,1);}
+.lp*{box-sizing:border-box;margin:0;padding:0;}
+.lp{font-family:"Instrument Sans",sans-serif;color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1;width:100%;overflow-x:hidden;margin:0!important;padding:0!important;}
+.lp-wrap{max-width:75vw;margin:0 auto;padding:0 28px;}
+
+/* ANNOUNCEMENT BAR */
+.lp-bar{background:var(--sky);padding:10px 0;text-align:center;}
+.lp-bar__text{font-size:13px;font-weight:500;color:var(--white);letter-spacing:0.3px;display:inline-flex;align-items:center;gap:10px;}
+.lp-bar__badge{background:rgba(255,255,255,0.2);border-radius:100px;padding:3px 10px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+
+/* HERO */
+.lp-hero{background:linear-gradient(135deg,var(--ink) 0%,#001845 50%,var(--mid) 100%);padding:56px 0 0;position:relative;overflow:hidden;}
+.lp-hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(254,252,251,0.03) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;}
+/* Animated glow */
+.lp-hero::after{content:"";position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(18,130,162,0.12) 0%,transparent 70%);pointer-events:none;animation:lp-glow 8s ease-in-out infinite;}
+@keyframes lp-glow{0%,100%{transform:scale(1) translate(0,0);}50%{transform:scale(1.1) translate(-20px,20px);}}
+.lp-hero__inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;position:relative;z-index:2;}
+.lp-hero__left{padding-bottom:64px;z-index:3;position:relative;}
+.lp-hero__bottom{grid-column:1 / -1;padding-bottom:48px;}
+/* Animate hero content in */
+@keyframes lp-fadeup{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.lp-hero__eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"Sora",sans-serif;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);margin-bottom:20px;animation:lp-fadeup 0.6s ease both;}
+.lp-hero__eyebrow::before{content:"";display:block;width:16px;height:1px;background:var(--sky);}
+h1.lp-h1{font-family:"Sora",sans-serif!important;font-size:clamp(32px,4.5vw,60px)!important;font-weight:700!important;line-height:1.05!important;letter-spacing:-2px!important;color:var(--cream)!important;margin:0 0 16px!important;padding:0!important;display:block!important;animation:lp-fadeup 0.7s 0.1s ease both;}
+.lp-hero__sub{font-size:14px;font-weight:300;line-height:1.45;color:rgba(254,252,251,0.5);margin-bottom:28px;animation:lp-fadeup 0.7s 0.2s ease both;}
+/* Trust badges */
+.lp-trust{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;animation:lp-fadeup 0.7s 0.3s ease both;}
+.lp-trust__badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:7px 14px;font-size:12px;font-weight:400;color:rgba(254,252,251,0.7);}
+.lp-trust__badge svg{color:var(--sky);flex-shrink:0;}
+/* Hero CTAs */
+.lp-hero__cta{display:flex;gap:10px;flex-wrap:wrap;animation:lp-fadeup 0.7s 0.4s ease both;}
+.lp-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Instrument Sans",sans-serif;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:var(--t);padding:15px 30px;border-radius:100px;white-space:nowrap;letter-spacing:0.2px;}
+.lp-btn--sky{background:var(--sky);color:var(--white);}
+.lp-btn--sky:hover{background:#0e6d87;transform:translateY(-2px);box-shadow:0 16px 40px rgba(18,130,162,0.4);}
+.lp-btn--wa{background:#25D366;color:var(--white);}
+.lp-btn--wa:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 16px 40px rgba(37,211,102,0.4);}
+.lp-btn--ghost{background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);}
+.lp-btn--ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.5);transform:translateY(-2px);}
+.lp-btn svg{flex-shrink:0;}
+/* Stats row */
+.lp-hero__stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:40px;animation:lp-fadeup 0.7s 0.5s ease both;}
+.lp-stat{background:rgba(254,252,251,0.05);border:1px solid rgba(254,252,251,0.08);padding:16px 12px;text-align:center;}
+.lp-stat:first-child{border-radius:var(--r) 0 0 var(--r);}
+.lp-stat:last-child{border-radius:0 var(--r) var(--r) 0;}
+.lp-stat__num{font-family:"Sora",sans-serif;font-size:22px;font-weight:300;color:var(--cream);letter-spacing:-0.5px;line-height:1;margin-bottom:4px;}
+.lp-stat__label{font-size:10px;color:rgba(254,252,251,0.35);font-weight:400;letter-spacing:0.3px;}
+
+/* HERO RIGHT — fixed container, image pinned bottom */
+.lp-hero__right{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.lp-hero-img-wrap{position:relative;width:100%;display:flex;align-items:center;justify-content:center;}
+.lp-hero-img{width:70%;height:auto;display:block;margin:0 auto;object-fit:contain;object-position:center center;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4));}
+.lp-hero-rating-badge{position:absolute;top:0;right:-20px;background:rgba(10,17,40,0.88);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.12);border-radius:var(--r);padding:8px 14px;text-align:center;z-index:5;}
+.lp-hero-rating-badge__stars{display:block;font-size:14px;color:#f59e0b;letter-spacing:1px;}
+.lp-hero-rating-badge__text{font-family:"Sora",sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.65);letter-spacing:1.5px;text-transform:uppercase;display:block;margin-top:2px;}
+/* Two badge images at the bottom */
+.lp-hero-badges{position:absolute;bottom:30%;left:0;right:0;display:flex;align-items:center;justify-content:space-between;z-index:5;width:100%;pointer-events:none;padding:0 4%;}
+.lp-hero-badges > *{pointer-events:auto;}
+.lp-hero-badge-img{width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.5));}
+.lp-hero-badge-img--spin{width:150px;height:150px;}
+.lp-hero-badge-img--spin{animation:lp-badge-spin 12s linear infinite;}
+@keyframes lp-badge-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.lp-hero-badge-img--pulse{animation:lp-badge-pulse 2.5s ease-in-out infinite;}
+@keyframes lp-badge-pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+/* Floating call badge */
+.lp-hero-call-badge{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);background:#1282a2;border-radius:100px;padding:14px 24px;display:flex;align-items:center;gap:14px;text-decoration:none;box-shadow:0 8px 32px rgba(0,0,0,0.35);white-space:nowrap;transition:transform 0.2s ease,box-shadow 0.2s ease;z-index:10;}
+.lp-hero-call-badge:hover{transform:translateX(-50%) translateY(-3px);box-shadow:0 16px 48px rgba(18,130,162,0.5);}
+.lp-hero-call-badge__ring{position:absolute;inset:-4px;border-radius:100px;border:2px solid rgba(255,255,255,0.3);animation:lp-ring-pulse 2s ease-in-out infinite;}
+@keyframes lp-ring-pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(1.04);}}
+.lp-hero-call-badge svg{color:white;flex-shrink:0;}
+.lp-hero-call-badge__label{font-size:10px;font-weight:500;color:rgba(255,255,255,0.7);letter-spacing:1px;text-transform:uppercase;display:block;}
+.lp-hero-call-badge__num{font-family:"Sora",sans-serif;font-size:18px;font-weight:700;color:white;letter-spacing:0.5px;line-height:1.1;}
+/* Rating badge top-right */
+.lp-hero-rating-badge{position:absolute;top:16px;right:16px;background:rgba(10,17,40,0.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.12);border-radius:var(--r);padding:8px 14px;text-align:center;}
+.lp-hero-rating-badge__stars{display:block;font-size:14px;color:#f59e0b;letter-spacing:1px;}
+.lp-hero-rating-badge__text{font-family:"Sora",sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.65);letter-spacing:1.5px;text-transform:uppercase;display:block;margin-top:2px;}
+.lp-form-card{background:var(--white);border-radius:var(--rlg);overflow:visible;padding:32px 28px;box-shadow:0 32px 80px rgba(0,31,84,0.25);animation:lp-fadeup 0.8s 0.3s ease both;position:relative;top:0;}
+.lp-form-card__title{font-family:"Sora",sans-serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:4px;}
+.lp-form-card__sub{font-size:13px;font-weight:300;color:rgba(0,31,84,0.45);margin-bottom:24px;line-height:1.5;}
+.lp-form{display:flex;flex-direction:column;gap:14px;}
+.lp-form-group{display:flex;flex-direction:column;gap:5px;}
+.lp-form-label{font-family:"Sora",sans-serif;font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(0,31,84,0.4);}
+.lp-form-input{font-family:"Instrument Sans",sans-serif;font-size:14px;font-weight:300;color:var(--navy);background:#f4f6f9;border:1px solid rgba(0,31,84,0.1);border-radius:var(--r);padding:12px 14px;transition:var(--t);outline:none;width:100%;}
+.lp-form-input:focus{border-color:var(--sky);background:var(--white);box-shadow:0 0 0 3px rgba(18,130,162,0.08);}
+.lp-form-select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231282a2' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;cursor:pointer;}
+.lp-form-submit{background:var(--sky);color:var(--white);border:none;padding:14px 24px;border-radius:100px;font-family:"Instrument Sans",sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:var(--t);display:flex;align-items:center;justify-content:center;gap:9px;width:100%;letter-spacing:0.3px;}
+.lp-form-submit:hover{background:#0e6d87;transform:translateY(-2px);box-shadow:0 12px 30px rgba(18,130,162,0.3);}
+.lp-form-note{font-size:11px;font-weight:300;color:rgba(0,31,84,0.35);text-align:center;margin-top:8px;line-height:1.5;}
+/* Success */
+.lp-form-success{display:none;padding:20px;background:rgba(18,130,162,0.06);border:1px solid rgba(18,130,162,0.2);border-radius:var(--r);text-align:center;color:var(--sky);font-size:14px;font-weight:400;}
+.lp-form-success.visible{display:block;}
+
+/* COURSES */
+.lp-sec{padding:72px 0;background:var(--white);}
+.lp-sec--off{padding:72px 0;background:#f4f6f9;}
+.lp-sec--dark{padding:72px 0;background:var(--navy);}
+.lp-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:"Sora",sans-serif;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);margin-bottom:14px;}
+.lp-eyebrow::before{content:"";display:block;width:16px;height:1px;background:var(--sky);flex-shrink:0;}
+h2.lp-h2{font-family:"Sora",sans-serif!important;font-size:clamp(22px,3vw,36px)!important;font-weight:600!important;line-height:1.2!important;letter-spacing:-0.8px!important;color:var(--navy)!important;margin:0!important;padding:0!important;display:block!important;}
+h2.lp-h2--light{color:var(--cream)!important;}
+h3.lp-h3{font-family:"Sora",sans-serif!important;font-size:20px!important;font-weight:600!important;color:var(--cream)!important;line-height:1.25!important;margin:0!important;padding:0!important;display:block!important;}
+.lp-body{font-size:15px;font-weight:300;line-height:1.85;color:var(--text-body);}
+.lp-rule{width:32px;height:2px;background:var(--sky);display:block;margin:14px 0;}
+
+.lp-course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;}
+.lp-course-card{background:var(--navy);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r);padding:28px 24px;transition:var(--t);position:relative;overflow:hidden;}
+.lp-course-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--sky);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;}
+.lp-course-card:hover{border-color:rgba(255,255,255,0.15);box-shadow:0 12px 40px rgba(0,0,0,0.35);transform:translateY(-4px);background:#032652;}
+.lp-course-card:hover::before{transform:scaleX(1);}
+.lp-course-card__thumb{width:calc(100% + 48px);margin:-28px -24px 16px -24px;height:190px;overflow:hidden;position:relative;border-radius:var(--r) var(--r) 0 0;}.lp-course-card__thumb img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:transform 0.5s ease;}.lp-course-card:hover .lp-course-card__thumb img{transform:scale(1.06);}
+
+.lp-course-card__badge{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);display:block;margin-bottom:8px;}
+.lp-course-card__desc{font-size:13px;font-weight:300;line-height:1.75;color:rgba(254,252,251,0.5);margin-top:8px;}
+.lp-course-card__salary{display:block;font-size:12px;font-weight:500;color:#4ade80;margin-top:14px;letter-spacing:0.3px;}
+.lp-course-card__cta{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;margin-top:16px;transition:all var(--t);padding:8px 16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:100px;}
+.lp-course-card__cta:hover{gap:10px;background:var(--white);border-color:var(--white);color:var(--navy);}
+
+/* PROOF */
+.lp-proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(18,130,162,0.15);border-radius:var(--r);overflow:hidden;margin-top:40px;}
+.lp-proof-item{background:var(--navy);padding:36px 24px;text-align:center;}
+.lp-proof-num{font-family:"Sora",sans-serif;font-size:44px;font-weight:200;letter-spacing:-2px;line-height:1;color:var(--cream);margin-bottom:8px;}
+.lp-proof-num span{font-size:26px;}
+.lp-proof-label{font-size:12px;color:rgba(254,252,251,0.38);font-weight:400;line-height:1.5;}
+
+/* PROCESS */
+.lp-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--navy-line);border-radius:var(--rlg);overflow:hidden;margin-top:40px;}
+.lp-step{background:var(--white);padding:32px 24px;}
+.lp-step__num{font-family:"Sora",sans-serif;font-size:40px;font-weight:200;color:var(--sky-dim);letter-spacing:-2px;line-height:1;margin-bottom:16px;}
+.lp-step__title{font-family:"Sora",sans-serif;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.3;}
+.lp-step__body{font-size:13px;font-weight:300;color:var(--text-body);line-height:1.7;}
+
+/* BOTTOM CTA */
+.lp-bottom-cta{background:linear-gradient(135deg,var(--ink) 0%,var(--navy) 60%,var(--mid) 100%);padding:64px 0;position:relative;overflow:hidden;}
+.lp-bottom-cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(254,252,251,0.03) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;}
+.lp-bottom-cta__inner{position:relative;z-index:2;text-align:center;max-width:640px;margin:0 auto;}
+.lp-bottom-cta__h{font-family:"Sora",sans-serif;font-size:clamp(22px,3vw,36px);font-weight:700;color:var(--cream);margin-bottom:12px;letter-spacing:-0.5px;}
+.lp-bottom-cta__p{font-size:15px;font-weight:300;color:rgba(254,252,251,0.55);line-height:1.7;margin-bottom:32px;}
+.lp-bottom-cta__btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+/* urgency */
+.lp-urgency{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--r);padding:14px 20px;display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;}
+.lp-urgency__dot{width:8px;height:8px;border-radius:50%;background:#ef4444;animation:lp-pulse 2s ease-in-out infinite;}
+@keyframes lp-pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.3);}}
+.lp-urgency__text{font-size:13px;font-weight:400;color:rgba(254,252,251,0.65);}
+.lp-urgency__text strong{color:var(--cream);font-weight:600;}
+
+.lp-gallery-track{display:flex;gap:8px;animation:lp-gallery-scroll 45s linear infinite;width:max-content;}
+.lp-gallery-track:hover{animation-play-state:paused;}
+@keyframes lp-gallery-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.lp-gallery-item{width:280px;height:210px;border-radius:var(--r);overflow:hidden;flex-shrink:0;}
+.lp-gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;}
+.lp-gallery-item:hover img{transform:scale(1.04);}
+.lp-carousel-track{display:flex;gap:10px;animation:lp-scroll 40s linear infinite;width:max-content;}
+.lp-carousel-track:hover{animation-play-state:paused;}
+@keyframes lp-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.lp-carousel-item{width:140px;height:210px;border-radius:var(--r);overflow:hidden;flex-shrink:0;}
+.lp-carousel-item img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+@media(max-width:1024px){
+  .lp-hero__inner{grid-template-columns:1fr;gap:32px;}
+  .lp-hero__right{min-height:340px;}
+  .lp-hero-img{width:60%;max-width:320px;}
+  .lp-hero__left{padding-bottom:0;}
+  .lp-course-grid{grid-template-columns:repeat(2,1fr);}
+  .lp-proof-grid{grid-template-columns:repeat(2,1fr);}
+  .lp-steps{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:640px){
+  .lp-wrap{max-width:100%;padding:0 20px;}
+  .lp-hero{padding-bottom:32px;}
+  .lp-hero__inner{display:flex;flex-direction:column;gap:20px;}
+  .lp-hero__left{padding-bottom:0;order:1;}
+  .lp-hero__right{order:2;min-height:300px;}
+  .lp-hero__bottom{order:3;padding-bottom:16px;}
+  .lp-hero-img{width:65%;max-width:260px;}
+  .lp-hero-badge-img{width:80px;height:80px;}
+  .lp-hero-badge-img--spin{width:100px;height:100px;}
+  .lp-hero__stats{display:flex;flex-direction:row;flex-wrap:nowrap;width:100%;gap:0;}
+  .lp-hero__stats .lp-stat{flex:1;padding:12px 6px;min-width:0;}
+  .lp-hero__stats .lp-stat__num{font-size:18px;}
+  .lp-hero__stats .lp-stat__label{font-size:9px;}
+  .lp-sec,.lp-sec--off,.lp-sec--dark{padding:48px 0;}
+  .lp-course-grid{grid-template-columns:1fr;}
+  .lp-steps{grid-template-columns:1fr;}
+  .lp-proof-grid{grid-template-columns:1fr 1fr;}
+  h1.lp-h1{font-size:clamp(26px,8vw,38px)!important;}
+}
+</style>
+
+<div class="lp">
+
+
+<!-- Bar -->
+<div class="lp-bar">
+  <div class="lp-bar__text">
+    <span class="lp-bar__badge">2026 Admissions</span>
+    Now Open · Limited Seats · Kochi &amp; Mahe Campus
+    <span class="lp-bar__badge">Free Counselling</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="lp-hero">
+  <div class="lp-wrap">
+    <div class="lp-hero__inner">
+      <div class="lp-hero__left">
+        <div class="lp-hero__eyebrow">No.1 Aviation College in Kerala</div>
+        <h1 class="lp-h1">Launch Your Aviation Career in 2026</h1>
+        <p class="lp-hero__sub">BBA Aviation · MBA · Cabin Crew · Diploma courses at SkyWings Academy, Kochi &amp; Mahe. 100% Placement Assistance. AI-Integrated Syllabus. CIAL Internships.</p>
+      </div><!-- /.lp-hero__left -->
+
+      <!-- RIGHT: Hero image + badges -->
+      <div class="lp-hero__right">
+        <div class="lp-hero-img-wrap">
+          <img src="https://skywingsacademy.com/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-8.webp"
+               alt="SkyWings Aviation Academy, Best Aviation College in Kerala"
+               class="lp-hero-img">
+          <!-- Star rating badge -->
+          <div class="lp-hero-rating-badge">
+            <span class="lp-hero-rating-badge__stars">★★★★★</span>
+            <span class="lp-hero-rating-badge__text">No.1 in Kerala</span>
+          </div>
+          <!-- Two trust badges -->
+          <div class="lp-hero-badges">
+            <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/pngwing.com_.png"
+              alt="Admissions Open 2026, SkyWings Academy"
+              class="lp-hero-badge-img lp-hero-badge-img--spin">
+            <img src="https://skywingsacademy.com/wp-content/uploads/2025/04/100placementpng.png"
+              alt="100% Placement Guaranteed, SkyWings Academy"
+              class="lp-hero-badge-img lp-hero-badge-img--pulse">
+          </div>
+        </div>
+      </div><!-- /.lp-hero__right -->
+
+      <!-- TRUST + CTA + STATS (below both columns on mobile) -->
+      <div class="lp-hero__bottom">
+        <div class="lp-trust">
+          <span class="lp-trust__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>UGC Recognised</span>
+          <span class="lp-trust__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>IATA Certified Syllabus</span>
+          <span class="lp-trust__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>AI-Integrated Training</span>
+          <span class="lp-trust__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>100% Placement</span>
+        </div>
+        <div class="lp-hero__cta">
+          <a href="tel:+919847163163" class="lp-btn lp-btn--sky">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            Call Now
+          </a>
+          <a href="https://wa.me/919847163163" class="lp-btn lp-btn--wa" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="lp-hero__stats">
+          <div class="lp-stat"><div class="lp-stat__num">2,000+</div><div class="lp-stat__label">Alumni Placed</div></div>
+          <div class="lp-stat"><div class="lp-stat__num">100%</div><div class="lp-stat__label">Placement Help</div></div>
+          <div class="lp-stat"><div class="lp-stat__num">30+</div><div class="lp-stat__label">Yrs Experience</div></div>
+          <div class="lp-stat"><div class="lp-stat__num">15+</div><div class="lp-stat__label">Countries</div></div>
+        </div>
+      </div><!-- /.lp-hero__bottom -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PLACEMENT CAROUSEL — Social Proof Strip
+═══════════════════════════════════════ -->
+<div style="background:var(--white);padding:0;overflow:hidden;border-top:1px solid rgba(0,31,84,0.07);border-bottom:1px solid rgba(0,31,84,0.07);">
+  <div style="padding:28px 0 0;text-align:center;">
+    <span style="font-family:'Sora',sans-serif;font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);">Our Placed Students — 2,000+ Alumni Globally</span>
+  </div>
+  <div style="overflow:hidden;width:100%;padding:20px 0;">
+    <div class="lp-carousel-track">
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/1.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/9.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/2.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/3.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/5.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/7.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/8.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/12.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/10.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/11.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/4.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/6.jpg.webp" alt="Placed student SkyWings"></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/1.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/9.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/2.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/3.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/5.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/7.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/8.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/12.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/10.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/11.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/4.jpg.webp" alt="Placed student SkyWings"></div>
+      <div class="lp-carousel-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/05/6.jpg.webp" alt="Placed student SkyWings"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- COURSES -->
+<section class="lp-sec" style="background:var(--ink);">
+  <div class="lp-wrap">
+    <div class="lp-eyebrow">Our Programmes</div>
+    <h2 class="lp-h2 lp-h2--light">Choose your aviation course for 2026</h2>
+    <span class="lp-rule"></span>
+
+    <div class="lp-course-grid">
+      <div class="lp-course-card">
+        <div class="lp-course-card__thumb"><img src="https://skywingsacademy.com/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-4.webp" alt="BBA Aviation at SkyWings Academy Kerala" loading="lazy"></div>
+        <span class="lp-course-card__badge">3 Years · UG Degree</span>
+        <h3 class="lp-h3">BBA Aviation</h3>
+        <p class="lp-course-card__desc">Kerala's No.1 aviation degree. Airline & Airport Management with IATA training, AI module, and CIAL internship. Eligible after +2 in any stream.</p>
+        <span class="lp-course-card__salary">Starting salary: ₹20,000–₹45,000/month</span>
+        <a href="tel:+919847163163" class="lp-course-card__cta">Enquire <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="lp-course-card">
+        <div class="lp-course-card__thumb"><img src="https://skywingsacademy.com/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-3.webp" alt="Diploma in Cabin Crew SkyWings Kerala" loading="lazy"></div>
+        <span class="lp-course-card__badge">1 Year · Diploma</span>
+        <h3 class="lp-h3">Diploma in Cabin Crew</h3>
+        <p class="lp-course-card__desc">Premier cabin crew training in Kochi. Grooming, safety drills, mock flights, and direct airline placement. Kerala's most popular aviation diploma.</p>
+        <span class="lp-course-card__salary">International salary: ₹1.5L–₹2.5L/month</span>
+        <a href="tel:+919847163163" class="lp-course-card__cta">Enquire <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="lp-course-card">
+        <div class="lp-course-card__thumb"><img src="https://skywingsacademy.com/wp-content/uploads/2026/03/best-aviation-college-in-kerala-3.webp" alt="MBA Aviation SkyWings Academy" loading="lazy"></div>
+        <span class="lp-course-card__badge">2 Years · PG Degree</span>
+        <h3 class="lp-h3">MBA Aviation</h3>
+        <p class="lp-course-card__desc">Advanced postgraduate degree for graduates. Strategic airport management, aviation law, and AI-driven operations. For senior airline roles.</p>
+        <span class="lp-course-card__salary">Starting salary: ₹50,000–₹1.5L/month</span>
+        <a href="tel:+919847163163" class="lp-course-card__cta">Enquire <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="lp-course-card">
+        <div class="lp-course-card__thumb"><img src="https://skywingsacademy.com/wp-content/uploads/2026/03/no.1-premium-aviation-college-in-kerala-skywings-aviation-1.webp" alt="Airline Airport Management Diploma Kerala" loading="lazy"></div>
+        <span class="lp-course-card__badge">1 Year · Diploma</span>
+        <h3 class="lp-h3">Airline & Airport Management Diploma</h3>
+        <p class="lp-course-card__desc">Fast-track ground staff training. DGR, check-in, ramp safety, and terminal ops. Job-ready in 12 months for Indian and Gulf airports.</p>
+        <span class="lp-course-card__salary">Starting salary: ₹20,000–₹50,000/month</span>
+        <a href="tel:+919847163163" class="lp-course-card__cta">Enquire <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="lp-course-card">
+        <div class="lp-course-card__thumb"><img src="https://skywingsacademy.com/wp-content/uploads/2026/03/best-aviation-college-in-kerala-2.webp" alt="BBA Logistics SkyWings Academy" loading="lazy"></div>
+        <span class="lp-course-card__badge">3 Years · UG Degree</span>
+        <h3 class="lp-h3">BBA Logistics & Supply Chain</h3>
+        <p class="lp-course-card__desc">Air cargo, freight, and global trade logistics degree. High demand in Kerala's Gulf corridor and e-commerce economy. AI-integrated.</p>
+        <span class="lp-course-card__salary">Starting salary: ₹25,000–₹70,000/month</span>
+        <a href="tel:+919847163163" class="lp-course-card__cta">Enquire <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="lp-course-card">
+        <div class="lp-course-card__thumb"><img src="https://skywingsacademy.com/wp-content/uploads/2026/03/best-aviation-college-in-kerala-3.webp" alt="Aviation Hospitality Diploma Kerala" loading="lazy"></div>
+        <span class="lp-course-card__badge">6 Months · Fast-Track</span>
+        <h3 class="lp-h3">Aviation & Hospitality Diploma</h3>
+        <p class="lp-course-card__desc">Quickest route into aviation and luxury hospitality. Airport lounge, 5-star hotel, and airline placement in 6 months. Grooming-intensive.</p>
+        <span class="lp-course-card__salary">Abroad salary: ₹80K–₹1.5L/month</span>
+        <a href="tel:+919847163163" class="lp-course-card__cta">Enquire <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="lp-sec--dark">
+  <div class="lp-wrap" style="text-align:center;">
+    <div class="lp-eyebrow" style="color:var(--sky);display:inline-flex;">Why SkyWings</div>
+    <h2 class="lp-h2 lp-h2--light" style="text-align:center;">Kerala's most trusted aviation college — by the numbers</h2>
+    <span class="lp-rule" style="margin:14px auto;"></span>
+    <div class="lp-proof-grid">
+      <div class="lp-proof-item"><div class="lp-proof-num">2,000<span>+</span></div><div class="lp-proof-label">Alumni placed globally with airlines & airports</div></div>
+      <div class="lp-proof-item"><div class="lp-proof-num">100<span>%</span></div><div class="lp-proof-label">Placement assistance for every graduating batch</div></div>
+      <div class="lp-proof-item"><div class="lp-proof-num">15<span>+</span></div><div class="lp-proof-label">Countries where SkyWings alumni work today</div></div>
+      <div class="lp-proof-item"><div class="lp-proof-num">30<span>+</span></div><div class="lp-proof-label">Years combined aviation training experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="lp-sec--off">
+  <div class="lp-wrap">
+    <div class="lp-eyebrow">How to Apply</div>
+    <h2 class="lp-h2">Join SkyWings in 4 simple steps</h2>
+    <span class="lp-rule"></span>
+    <div class="lp-steps">
+      <div class="lp-step"><div class="lp-step__num">01</div><div class="lp-step__title">Free Counselling Call</div><div class="lp-step__body">Call or WhatsApp us. Our counsellor will identify the right course for your profile, goals, and budget.</div></div>
+      <div class="lp-step"><div class="lp-step__num">02</div><div class="lp-step__title">Personal Interview</div><div class="lp-step__body">A short, friendly assessment at our Kochi or Mahe campus — or online. No entrance exam required.</div></div>
+      <div class="lp-step"><div class="lp-step__num">03</div><div class="lp-step__title">Confirm Your Seat</div><div class="lp-step__body">Pay the registration fee and receive your student ID. Loan assistance available for eligible students.</div></div>
+      <div class="lp-step"><div class="lp-step__num">04</div><div class="lp-step__title">Begin Your Journey</div><div class="lp-step__body">Day 1 at SkyWings — orientation, uniforms, and your first step towards an aviation career.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     GALLERY SCROLLER — Campus Life & Events
+═══════════════════════════════════════ -->
+<div style="background:var(--offwhite);padding:56px 0 0;overflow:hidden;">
+  <div class="lp-wrap" style="text-align:center;margin-bottom:28px;">
+    <div class="lp-eyebrow" style="display:inline-flex;">Campus Life &amp; Events</div>
+    <h2 class="lp-h2">Life at SkyWings Academy</h2>
+  </div>
+  <div style="overflow:hidden;width:100%;">
+    <div class="lp-gallery-track">
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/fg.jpg" alt="SkyWings Academy Events Kerala"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/ff.jpg" alt="SkyWings Academy Convocation"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/AJI00248.jpg" alt="SkyWings Aviation Students Kochi"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/AJI00156.jpg" alt="SkyWings Award Ceremony Kerala"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/2024-07-30.jpg" alt="SkyWings Skyfest 2024"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/2022-04-10.jpg" alt="SkyWings Inauguration 2022"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/unnbnamed.jpg" alt="SkyWings Premium Campus Kochi"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/gg.jpg" alt="SkyWings Aviation College Students"></div>
+      <!-- duplicate for seamless loop -->
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/fg.jpg" alt="SkyWings Academy Events Kerala"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/ff.jpg" alt="SkyWings Academy Convocation"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/AJI00248.jpg" alt="SkyWings Aviation Students Kochi"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/AJI00156.jpg" alt="SkyWings Award Ceremony Kerala"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/2024-07-30.jpg" alt="SkyWings Skyfest 2024"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/2022-04-10.jpg" alt="SkyWings Inauguration 2022"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/unnbnamed.jpg" alt="SkyWings Premium Campus Kochi"></div>
+      <div class="lp-gallery-item"><img src="https://skywingsacademy.com/wp-content/uploads/2025/04/gg.jpg" alt="SkyWings Aviation College Students"></div>
+    </div>
+  </div>
+  <div style="height:56px;"></div>
+</div>
+
+
+<!-- BOTTOM CTA -->
+<section class="lp-bottom-cta">
+  <div class="lp-wrap">
+    <div class="lp-bottom-cta__inner">
+      <div class="lp-urgency">
+        <div class="lp-urgency__dot"></div>
+        <div class="lp-urgency__text"><strong>2026 Batch — Limited Seats.</strong> Register today to secure your place.</div>
+      </div>
+      <div class="lp-bottom-cta__h">Ready to take off?</div>
+      <p class="lp-bottom-cta__p">Speak to our admissions counsellor today — free, no commitment, and a genuine conversation about your aviation future.</p>
+      <div class="lp-bottom-cta__btns">
+        <a href="tel:+919847163163" class="lp-btn lp-btn--sky">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          Call: +91 9847 163 163
+        </a>
+        <a href="https://wa.me/919847163163" class="lp-btn lp-btn--wa" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById("lp-form");
+  if(!form) return;
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var btn = document.getElementById("lp-submit");
+    btn.textContent = "Sending...";
+    btn.disabled = true;
+    var fd = new FormData(form);
+    fetch("https://skywingsacademy.com/wp-admin/admin-ajax.php",{method:"POST",body:fd})
+    .catch(function(){return{};})
+    .finally(function(){
+      document.getElementById("lp-success").classList.add("visible");
+      form.style.display = "none";
+      var msg = encodeURIComponent("Hi, I am interested in aviation courses at SkyWings Academy. Please call me back.");
+      setTimeout(function(){ window.open("https://wa.me/919847163163?text="+msg,"_blank"); }, 1500);
+    });
+  });
+})();
+</script>
+</div>

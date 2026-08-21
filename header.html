@@ -1,0 +1,704 @@
+<!-- SkyWings Academy | Header Component -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════
+   SKYWINGS — HEADER
+   Matches homepage design system exactly
+═══════════════════════════════════════ */
+:root {
+  --ink:        #0a1128;
+  --navy:       #001f54;
+  --mid:        #034078;
+  --sky:        #1282a2;
+  --cream:      #fefcfb;
+  --offwhite:   #f4f6f9;
+  --white:      #ffffff;
+  --trans:      0.3s cubic-bezier(0.4,0,0.2,1);
+  --radius:     100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── HEADER BASE ── */
+.swh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  font-family: 'Instrument Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background var(--trans), box-shadow var(--trans);
+  background: var(--navy);
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Scrolled state — white solid */
+.swh.is-scrolled {
+  background: var(--navy);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.25);
+}
+
+/* Dark variant for dark-bg pages */
+.swh--dark {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.swh--dark .swh-nav__link { color: rgba(254,252,251,0.75); }
+.swh--dark .swh-nav__link:hover { color: var(--cream); background: rgba(255,255,255,0.06); }
+.swh--dark .swh-contact__phone { color: rgba(254,252,251,0.75); }
+.swh--dark .swh-hamburger span { background: var(--cream); }
+
+/* ── INNER ── */
+.swh-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* ── LOGO ── */
+.swh-logo {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+  flex-shrink: 0;
+  margin-right: 48px;
+}
+.swh-logo__img { height: 80px !important; width: auto !important; max-width: 180px !important; display: block; object-fit: contain; object-position: left center; flex-shrink: 0; }
+.swh-logo__mark {
+  width: 36px;
+  height: 36px;
+  background: var(--sky);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.swh-logo__mark svg { width: 20px; height: 20px; color: white; }
+.swh-logo__wordmark { display: flex; flex-direction: column; gap: 1px; }
+.swh-logo__text {
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--cream);
+  line-height: 1;
+}
+.swh-logo__sub {
+  font-size: 9.5px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(254,252,251,0.4);
+  line-height: 1;
+}
+
+/* ── NAV ── */
+.swh-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+.swh-nav__item {
+  position: relative;
+}
+.swh-nav__link {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: rgba(254,252,251,0.75);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color var(--trans), background var(--trans);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.swh-nav__link:hover {
+  color: var(--cream);
+  background: rgba(255,255,255,0.07);
+}
+.swh-nav__link.is-active { color: var(--cream); }
+
+/* Arrow for dropdowns */
+.swh-nav__link.has-drop::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 3.5px 0 3.5px;
+  border-color: rgba(254,252,251,0.45) transparent transparent;
+  transition: transform var(--trans);
+  flex-shrink: 0;
+}
+.swh-nav__item:hover .swh-nav__link.has-drop::after,
+.swh-nav__item.is-open .swh-nav__link.has-drop::after {
+  transform: rotate(180deg);
+}
+
+/* ── DROPDOWN ── */
+.swh-nav__item { padding-bottom: 12px; margin-bottom: -12px; }
+.swh-drop {
+  position: absolute;
+  top: calc(100% - 12px);
+  left: 0;
+  min-width: 240px;
+  background: var(--white);
+  border: 1px solid rgba(0,31,84,0.12);
+  border-radius: 16px;
+  padding: 16px 8px 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 2px 8px rgba(0,31,84,0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity var(--trans), visibility var(--trans), transform var(--trans);
+  pointer-events: none;
+}
+.swh-nav__item:hover .swh-drop,
+.swh-nav__item.is-open .swh-drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.swh-drop__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background var(--trans);
+}
+.swh-drop__link:hover { background: rgba(18,130,162,0.05); }
+.swh-drop__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(18,130,162,0.15);
+  border: 1px solid rgba(18,130,162,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.swh-drop__icon svg { width: 14px; height: 14px; color: var(--sky); }
+.swh-drop__text {}
+.swh-drop__title {
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.3;
+}
+.swh-drop__sub {
+  font-size: 11.5px;
+  font-weight: 300;
+  color: rgba(0,31,84,0.45);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.swh-drop__divider {
+  height: 1px;
+  background: rgba(0,31,84,0.07);
+  margin: 6px 8px;
+}
+
+/* Wide dropdown for courses */
+.swh-drop--wide {
+  min-width: 480px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  padding: 8px;
+}
+.swh-drop--wide .swh-drop__divider {
+  grid-column: 1/-1;
+}
+
+/* ── RIGHT SIDE ── */
+.swh-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.swh-contact__phone {
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(254,252,251,0.75);
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition: color var(--trans);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.swh-contact__phone svg { color: var(--sky); width: 14px; height: 14px; flex-shrink: 0; }
+.swh-contact__phone:hover { color: var(--cream); }
+
+.swh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--trans);
+  padding: 11px 22px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.swh-btn--sky {
+  background: var(--sky);
+  color: var(--white);
+}
+.swh-btn--sky:hover {
+  background: #0e6d87;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(18,130,162,0.35);
+}
+.swh-btn--wa {
+  background: #25D366;
+  color: var(--white);
+}
+.swh-btn--wa:hover {
+  background: #1ebe5d;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.3);
+}
+.swh-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* ── HAMBURGER ── */
+.swh-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.swh-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--sky);
+  border-radius: 2px;
+  transition: transform var(--trans), opacity var(--trans), width var(--trans);
+  transform-origin: center;
+}
+.swh-hamburger.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.swh-hamburger.is-open span:nth-child(2) { opacity: 0; width: 0; }
+.swh-hamburger.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── MOBILE DRAWER ── */
+.swh-drawer {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--ink);
+  overflow-y: auto;
+  padding: 24px 20px 48px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--trans), visibility var(--trans), transform var(--trans);
+  z-index: 9998;
+}
+.swh-drawer.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.swh-drawer__section { margin-bottom: 8px; }
+.swh-drawer__label {
+  font-family: 'Sora', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(254,252,251,0.3);
+  padding: 12px 12px 8px;
+}
+.swh-drawer__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(254,252,251,0.8);
+  font-size: 15px;
+  font-weight: 400;
+  transition: background var(--trans), color var(--trans);
+}
+.swh-drawer__link:hover, .swh-drawer__link:active { background: rgba(255,255,255,0.05); color: var(--cream); }
+.swh-drawer__link svg { width: 16px; height: 16px; color: rgba(254,252,251,0.2); flex-shrink: 0; }
+.swh-drawer__divider { height: 1px; background: rgba(255,255,255,0.06); margin: 8px 0; }
+.swh-drawer__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 0 0;
+}
+.swh-drawer__actions .swh-btn { justify-content: center; width: 100%; padding: 14px 22px; font-size: 15px; border-radius: 12px; }
+
+/* Sub-links inside drawer accordion */
+.swh-drawer__sub { display: none; padding-left: 12px; }
+.swh-drawer__sub.is-open { display: block; }
+.swh-drawer__sub-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: rgba(254,252,251,0.55);
+  font-size: 13.5px;
+  font-weight: 300;
+  transition: color var(--trans), background var(--trans);
+}
+.swh-drawer__sub-link:hover { color: var(--cream); background: rgba(255,255,255,0.04); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .swh-nav { display: none; }
+  .swh-actions .swh-contact__phone { display: none; }
+  .swh-actions .swh-btn--sky { display: none; }
+  .swh-hamburger { display: flex; }
+  .swh-drawer { display: block; }
+  .swh-logo { margin-right: 0; }
+}
+@media (max-width: 640px) {
+  .swh-inner { padding: 12px 20px; height: auto; }
+  .swh-drawer { top: 130px; }
+}
+</style>
+
+<!-- ════════════════════════════════════════
+     HEADER
+════════════════════════════════════════ -->
+<header class="swh" id="swh" role="banner">
+  <div class="swh-inner">
+
+    <!-- LOGO -->
+    <a href="https://skywingsacademy.com" class="swh-logo" aria-label="SkyWings Aviation Academy — Home">
+      <img src="https://skywingsacademy.com/wp-content/uploads/2019/02/Untitled-1-1-e1740541043642.png" alt="SkyWings Aviation Academy" class="swh-logo__img">
+    </a>
+
+    <!-- DESKTOP NAV -->
+    <nav class="swh-nav" role="navigation" aria-label="Main navigation">
+
+      <!-- Courses dropdown -->
+      <div class="swh-nav__item">
+        <span class="swh-nav__link has-drop" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">Courses</span>
+        <div class="swh-drop swh-drop--wide" role="menu">
+          <a href="https://skywingsacademy.com/bba-airline-airport-management/" class="swh-drop__link" role="menuitem">
+            <div class="swh-drop__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">BBA Aviation</div>
+              <div class="swh-drop__sub">Airline &amp; Airport Management · 3 Years</div>
+            </div>
+          </a>
+          <a href="https://skywingsacademy.com/diploma-in-cabin-crew-management/" class="swh-drop__link" role="menuitem">
+            <div class="swh-drop__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">Diploma in Cabin Crew</div>
+              <div class="swh-drop__sub">Cabin Crew Management · 1 Year</div>
+            </div>
+          </a>
+          <a href="https://skywingsacademy.com/mba-airline-and-airport-management/" class="swh-drop__link" role="menuitem">
+            <div class="swh-drop__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">MBA Aviation</div>
+              <div class="swh-drop__sub">Airline &amp; Airport Management · 2 Years</div>
+            </div>
+          </a>
+          <a href="https://skywingsacademy.com/diploma-in-airline-airport-management/" class="swh-drop__link" role="menuitem">
+            <div class="swh-drop__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">Diploma — Airline &amp; Airport</div>
+              <div class="swh-drop__sub">Airport Management · 1 Year</div>
+            </div>
+          </a>
+          <a href="https://skywingsacademy.com/bba-logistics-supply-chain-management/" class="swh-drop__link" role="menuitem">
+            <div class="swh-drop__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">BBA Logistics</div>
+              <div class="swh-drop__sub">Supply Chain Management · 3 Years</div>
+            </div>
+          </a>
+          <a href="https://skywingsacademy.com/diploma-in-aviation-hospitality-management/" class="swh-drop__link" role="menuitem">
+            <div class="swh-drop__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">Aviation &amp; Hospitality</div>
+              <div class="swh-drop__sub">Diploma · 6 Months</div>
+            </div>
+          </a>
+          <div class="swh-drop__divider"></div>
+          <a href="https://skywingsacademy.com/aviation-courses/" class="swh-drop__link" role="menuitem" style="grid-column:1/-1;">
+            <div class="swh-drop__icon" style="background:rgba(18,130,162,0.08);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">View All Courses</div>
+              <div class="swh-drop__sub">Compare programmes, fees &amp; intake dates</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="swh-nav__item">
+        <a href="https://skywingsacademy.com/about" class="swh-nav__link">About</a>
+      </div>
+
+      <!-- Campuses dropdown -->
+      <div class="swh-nav__item">
+        <span class="swh-nav__link has-drop" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">Campuses</span>
+        <div class="swh-drop" role="menu">
+          <a href="https://skywingsacademy.com/kochi-campus" class="swh-drop__link" role="menuitem">
+            <div class="swh-drop__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">Kochi Campus</div>
+              <div class="swh-drop__sub">Ernakulam, Kerala</div>
+            </div>
+          </a>
+          <a href="https://skywingsacademy.com/mahe-campus" class="swh-drop__link" role="menuitem">
+            <div class="swh-drop__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="swh-drop__text">
+              <div class="swh-drop__title">Mahe Campus</div>
+              <div class="swh-drop__sub">Mahe, Puducherry</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="swh-nav__item">
+        <a href="#" class="swh-nav__link">Placements</a>
+      </div>
+
+      <div class="swh-nav__item">
+        <a href="https://skywingsacademy.com/blog" class="swh-nav__link">Blog</a>
+      </div>
+
+      <div class="swh-nav__item">
+        <a href="https://skywingsacademy.com/contact" class="swh-nav__link">Contact</a>
+      </div>
+
+    </nav>
+
+    <!-- ACTIONS -->
+    <div class="swh-actions">
+      <a href="tel:+919847163163" class="swh-contact__phone" aria-label="Call SkyWings Academy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        +91 9847 163 163
+      </a>
+      <a href="https://skywingsacademy.com/contact#enquiry" class="swh-btn swh-btn--sky">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2l6 6-1 3.5 3.5-1z"/></svg>
+        Enquire Now
+      </a>
+      <!-- Hamburger (mobile only) -->
+      <button class="swh-hamburger" id="swh-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="swh-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div><!-- /.swh-inner -->
+</header>
+
+<!-- ════════════════════════════════════════
+     MOBILE DRAWER
+════════════════════════════════════════ -->
+<div class="swh-drawer" id="swh-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+
+  <div class="swh-drawer__section">
+    <div class="swh-drawer__label">Courses</div>
+    <a href="https://skywingsacademy.com/bba-airline-airport-management/" class="swh-drawer__link">
+      BBA Aviation — Airline &amp; Airport Management
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/diploma-in-cabin-crew-management/" class="swh-drawer__link">
+      Diploma in Cabin Crew Management
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/mba-airline-and-airport-management/" class="swh-drawer__link">
+      MBA Aviation — Airline &amp; Airport Management
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/diploma-in-airline-airport-management/" class="swh-drawer__link">
+      Diploma in Airline &amp; Airport Management
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/bba-logistics-supply-chain-management/" class="swh-drawer__link">
+      BBA Logistics &amp; Supply Chain Management
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/diploma-in-aviation-hospitality-management/" class="swh-drawer__link">
+      Diploma in Aviation &amp; Hospitality
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+  </div>
+
+  <div class="swh-drawer__divider"></div>
+
+  <div class="swh-drawer__section">
+    <div class="swh-drawer__label">Navigation</div>
+    <a href="https://skywingsacademy.com/about" class="swh-drawer__link">
+      About Us
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="#" class="swh-drawer__link">
+      Placements
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/kochi-campus" class="swh-drawer__link">
+      Kochi Campus
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/mahe-campus" class="swh-drawer__link">
+      Mahe Campus
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/blog" class="swh-drawer__link">
+      Blog
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+    <a href="https://skywingsacademy.com/contact" class="swh-drawer__link">
+      Contact
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+  </div>
+
+  <div class="swh-drawer__divider"></div>
+
+  <div class="swh-drawer__actions">
+    <a href="tel:+919847163163" class="swh-btn swh-btn--sky">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      Call: +91 9847 163 163
+    </a>
+    <a href="https://wa.me/919605664455" class="swh-btn swh-btn--wa" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+
+</div><!-- /.swh-drawer -->
+
+<script>
+(function() {
+  var header    = document.getElementById('swh');
+  var hamburger = document.getElementById('swh-hamburger');
+  var drawer    = document.getElementById('swh-drawer');
+
+  /* ── Scroll: transparent → solid ── */
+  function onScroll() {
+    if (window.scrollY > 20) {
+      header.classList.add('is-scrolled');
+    } else {
+      header.classList.remove('is-scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ── Hamburger toggle ── */
+  hamburger.addEventListener('click', function() {
+    var isOpen = drawer.classList.toggle('is-open');
+    hamburger.classList.toggle('is-open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  /* ── Close drawer on link click ── */
+  drawer.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      drawer.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* ── Close on outside click ── */
+  document.addEventListener('click', function(e) {
+    if (drawer.classList.contains('is-open') &&
+        !drawer.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+      drawer.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
+  /* ── Keyboard: close on Escape ── */
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+      drawer.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      hamburger.focus();
+    }
+  });
+
+  /* ── Desktop dropdown keyboard support ── */
+  document.querySelectorAll('.swh-nav__link.has-drop').forEach(function(trigger) {
+    trigger.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        var item = trigger.closest('.swh-nav__item');
+        var isOpen = item.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', isOpen);
+      }
+    });
+  });
+})();
+</script>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyWings Uniform Image Prompts</title>
+<style>
+  :root{
+    --ink:#001f1f; --navy:#002d2d; --mid:#008060; --lime:#95bf47;
+    --cream:#fefcfb; --off:#f0f5ef; --line:rgba(0,45,45,.12);
+    --body:rgba(0,45,45,.72); --red:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--off);color:var(--navy);line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 80px}
+
+  header.hero{background:linear-gradient(135deg,var(--ink) 0%,var(--navy) 55%,var(--mid) 100%);padding:48px 20px 40px;margin-bottom:32px}
+  .hero-inner{max-width:980px;margin:0 auto}
+  .hero h1{color:var(--cream);font-weight:300;font-size:clamp(26px,4vw,40px);letter-spacing:-.5px}
+  .hero p{color:rgba(254,252,251,.65);max-width:640px;margin-top:10px;font-size:15px}
+  .eyebrow{color:var(--lime);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+  .progress-pill{display:inline-block;margin-top:18px;background:rgba(149,191,71,.15);border:1px solid rgba(149,191,71,.4);color:var(--lime);border-radius:100px;padding:6px 16px;font-size:13px;font-weight:600}
+
+  .notice{background:#fff;border-left:4px solid var(--lime);border-radius:10px;padding:16px 20px;margin:0 0 28px;font-size:14px;color:var(--body)}
+  .notice strong{color:var(--navy)}
+  .notice.warn{border-left-color:var(--red)}
+
+  h2.sec{font-weight:400;font-size:22px;margin:44px 0 6px;letter-spacing:-.3px}
+  p.sec-sub{font-size:13.5px;color:var(--body);margin-bottom:18px}
+
+  .blocks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px}
+  @media(max-width:760px){.blocks{grid-template-columns:1fr}}
+  .block,.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .block-head,.card-head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .tag{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:100px;padding:3px 10px}
+  .tag.green{background:rgba(0,128,96,.1);color:var(--mid)}
+  .tag.lime{background:rgba(149,191,71,.18);color:#5d7a2a}
+  .tag.dark{background:rgba(0,45,45,.08);color:var(--navy)}
+  .tag.white{background:#f3f3f3;color:#666;border:1px solid #ddd}
+  .tag.red{background:rgba(192,57,43,.08);color:var(--red)}
+  .block-title{font-weight:600;font-size:14px}
+  .prompt{padding:14px 16px;font-size:13px;color:var(--body);white-space:pre-wrap}
+  .card{margin-bottom:14px}
+  .card-head .pnum{font-weight:700;color:var(--mid);font-size:15px;min-width:44px}
+  .card-head .file{font-family:Consolas,monospace;font-size:12px;background:var(--off);border-radius:6px;padding:2px 8px;color:var(--navy)}
+  .card-head .slot{font-size:12.5px;color:var(--body)}
+  .spacer{flex:1}
+  .copy{background:var(--lime);color:var(--ink);border:none;border-radius:100px;font-size:12px;font-weight:700;padding:7px 16px;cursor:pointer;transition:.2s}
+  .copy:hover{background:#7ea83a}
+  .copy.copied{background:var(--mid);color:#fff}
+  label.done{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--body);cursor:pointer;user-select:none}
+  input[type=checkbox]{accent-color:var(--mid);width:15px;height:15px;cursor:pointer}
+  .card.is-done{opacity:.55}
+  .card.is-done .card-head{background:rgba(0,128,96,.05)}
+
+  footer{margin-top:56px;font-size:13px;color:var(--body);border-top:1px solid var(--line);padding-top:20px}
+  ol{margin:8px 0 0 20px;font-size:13.5px;color:var(--body)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">SkyWings Academy · New Uniform Shoot</div>
+    <h1>Image Generation Prompt Pack</h1>
+    <p>Every replaceable image on the site, keyed P01–P37. Copy a prompt, paste into ChatGPT,
+       <strong style="color:#fff">and always attach one of your uniform sample photos</strong> with the line:
+       “Match the uniform exactly to the attached reference image.”</p>
+    <div class="progress-pill" id="progress">0 done</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="notice">
+    <strong>Sizes in ChatGPT:</strong> Portrait = 1024×1536 · Landscape = 1536×1024.
+    Each card is labelled. For <strong>WHITE&nbsp;BG</strong> cards the whole figure must stay inside the
+    frame (nothing cropped) so I can cut it out cleanly. Copy buttons include the full style +
+    uniform + scene text — nothing to assemble by hand.
+  </div>
+
+  <h2 class="sec">Reusable blocks</h2>
+  <p class="sec-sub">Already baked into every prompt below — shown here only for reference / manual tweaks.</p>
+  <div class="blocks" id="blocks"></div>
+
+  <h2 class="sec">A · Hero cutouts — white background</h2>
+  <p class="sec-sub">9 images · I convert these to transparent PNG. Portrait unless marked.</p>
+  <div id="secA"></div>
+
+  <h2 class="sec">B · Course &amp; training scenes</h2>
+  <p class="sec-sub">14 images · real settings · Landscape 1536×1024.</p>
+  <div id="secB"></div>
+
+  <h2 class="sec">C · Feature &amp; blog images</h2>
+  <p class="sec-sub">8 images · Landscape · I’ll cut the 300×200 thumbnails from these.</p>
+  <div id="secC"></div>
+
+  <h2 class="sec">D · Placed students — run 12 times</h2>
+  <p class="sec-sub">One prompt, 12 different people (suggest 7 women / 5 men). Portrait.</p>
+  <div id="secD"></div>
+
+  <h2 class="sec">E · Gallery / event photos — optional</h2>
+  <div class="notice warn">
+    <strong>Recommendation:</strong> keep <em>real photos for real, dated events</em> (Inauguration 2022,
+    SkyFest 2024, awards, convocation). AI images presented as specific past events can undermine trust.
+    If you replace them, I’ll rename files &amp; alt text to <em>generic</em> campus-life labels so nothing
+    claims to be a real event.
+  </div>
+  <div id="secE"></div>
+
+  <h2 class="sec">F · Excluded on purpose</h2>
+  <div class="notice">
+    <strong>Do not generate:</strong> the SkyWings logo, the 8 airline partner logos (real brands),
+    the 4 SVG feature icons, and Google Maps embeds. The two text badges
+    (“Admissions Open 2026”, “100% Placement”) garble in AI — I’ll rebuild those as crisp vector
+    graphics in the site palette instead: just approve it.
+  </div>
+
+  <footer>
+    <strong style="color:var(--navy)">Delivery back to me:</strong>
+    <ol>
+      <li>Drop the images in any folder, named by P-number (P01.png, P02.png…), or just tell me which is which.</li>
+      <li>I cut out the white-BG images to transparent PNG, convert scenes to webp, make thumbnails.</li>
+      <li>I rename to the live filenames (zero code changes), update alt text, rebuild, re-run the SEO/image checkers, and regenerate the OG share image.</li>
+    </ol>
+    <p style="margin-top:12px">Total: 9 cutouts + 14 scenes + 8 features + 12 portraits (+ 5 optional gallery) = <strong>43–48 generations</strong>. Your “done” ticks are saved in this browser.</p>
+  </footer>
+</div>
+
+<script>
+const STYLE = "Ultra-realistic professional photograph, editorial quality, natural skin texture, soft diffused lighting, shot on 85mm lens at f/2.8, sharp focus on subject. Young South Indian (Kerala) adults aged 18–24, warm confident smiles, impeccable professional grooming.";
+const UF  = "Wearing the SkyWings Academy cabin crew uniform: deep forest-green dress with fine white pinstripes, short sleeves, high mandarin collar, off-centre row of small antique-gold crest buttons, knee-length A-line skirt, a bright red fabric rosette brooch at the collar, small gold wings name badge on the chest, hair in a neat polished low bun, sheer dark stockings, plain black court heels.";
+const UF2 = "Wearing the SkyWings Academy uniform: deep forest-green tailored blazer with three antique-gold buttons over a green pinstripe dress, knee-length green pinstripe pencil skirt, red gathered scarf with rosette at the neck, gold wings name badge, neat polished low bun, sheer dark stockings, black court heels.";
+const UM  = "Wearing the SkyWings Academy male grooming standard: tailored charcoal-grey three-piece suit with matching waistcoat, crisp white shirt, dark green and grey striped tie, small gold wings badge on the left chest, neat short professional hairstyle, polished black shoes.";
+const WBG = "Full body, standing, on a pure seamless white studio background (#FFFFFF), evenly lit, only a soft natural shadow under the feet, no props or furniture, the entire figure fully inside the frame with clear margin on all sides.";
+const REF = "Match the uniform exactly to the attached reference image.";
+
+const BLOCKS = [
+  ["STYLE","Every prompt",STYLE],
+  ["UNIFORM-F","Female · pinstripe dress",UF],
+  ["UNIFORM-F2","Female · blazer + skirt",UF2],
+  ["UNIFORM-M","Male · charcoal suit",UM],
+  ["WHITE BG","Cutout images only",WBG],
+];
+
+// [id, file, slot, size, bgType, [uniform blocks], scene]
+const ITEMS_A = [
+["P01","cabin-crew-training-students-kerala.png","Homepage hero","Portrait","WHITE BG",[UF],"One young woman jumping joyfully in mid-air, knees bent, one arm raised in celebration, radiant open-mouth smile, full of energy and optimism."],
+["P02","skywings-placed-students-airlines.png","Homepage placements","Landscape","WHITE BG",[UF,UM],"A group of four graduates side by side: two young women in the female uniform, two young men in the male uniform. Confident lineup, one woman holding a small black cabin trolley bag, one man holding an offer-letter folder, all smiling at camera."],
+["P03","skywings-academy-students-kochi.png","About Us hero","Portrait","WHITE BG",[UF2,UM],"A young woman in the blazer uniform and a young man in the suit standing shoulder to shoulder, relaxed confident posture, both smiling warmly at the camera."],
+["P04","cabin-crew-student-skywings-kochi.png","Cabin Crew course","Portrait","WHITE BG",[UF],"One young woman in a graceful welcoming pose, one hand extended palm-up in the classic cabin crew greeting gesture, gentle genuine smile."],
+["P05","aviation-student-skywings-kochi.png","BBA Aviation + MBA","Portrait","WHITE BG",[UM],"One young man holding a slim dark-green folder under one arm, other hand in trouser pocket, easy confident smile, standing tall."],
+["P06","bba-logistics-student-skywings.png","BBA Logistics course","Portrait","WHITE BG",[UM],"One young man holding a digital tablet showing a logistics dashboard, small gold cargo-container pin on his lapel, approachable smart expression."],
+["P07","airline-airport-management-student-skywings.png","Airline & Airport Diploma","Portrait","WHITE BG",[UF2],"One young woman holding a clipboard and a boarding pass, poised like a ground operations professional at check-in, courteous smile."],
+["P08","aviation-hospitality-student-skywings.png","Aviation & Hospitality","Portrait","WHITE BG",[UF],"One young woman holding a small silver service tray with a folded white napkin, elegant hospitality posture, warm gracious smile."],
+["P09","cabin-crew-recruitment-skywings-kochi.png","Campus Interview 2026 hero","Portrait","WHITE BG",[UF],"One young woman standing tall and proud with a black cabin trolley bag at her side, airline-interview-ready, bright confident smile."],
+];
+
+const ITEMS_B = [
+["P10","skywings-smart-classroom-kochi.jpg","Gallery · About · Guide","Landscape","Scene",[UF,UM],"A bright modern smart classroom: six students in SkyWings uniforms seated at white desks facing a large interactive display showing a flight route map, a young instructor presenting, warm daylight through windows, cream and green interior accents."],
+["P11","skywings-academy-campus-kochi.jpg","About · Gallery","Landscape","Scene",[UF,UM],"Contemporary college campus exterior in Kerala: students in SkyWings uniforms walking and chatting along a landscaped walkway in front of a modern glass-and-white building, golden late-afternoon light, tropical greenery."],
+["P12","skywings-aviation-college-campus-kochi.webp","Homepage · Gallery","Landscape","Scene",[UF],"Wide view of a premium aviation training campus interior: polished lobby with a mock airline check-in counter, students in green pinstripe uniforms practicing, warm lighting, spotless modern space."],
+["P13","aviation-management-training-kochi.jpg","BBA · MBA · About","Landscape","Scene",[UF2,UM],"Aviation management training session: four students around a table with airport terminal charts and a tablet, one pointing at a gate plan, engaged discussion, bright modern training room."],
+["P14","airport-terminal-operations-training.jpg","Airline & Airport Diploma","Landscape","Scene",[UF2],"Airport check-in counter training: a young woman in the blazer uniform behind a mock airline check-in desk handing a boarding pass to a fellow student acting as a passenger, departure board glowing behind, realistic airport set."],
+["P15","logistics-training-skywings-academy.jpg","Logistics · About · Gallery","Landscape","Scene",[UM,UF2],"Logistics lab session: students with an instructor examining a scale model of an air-cargo terminal, shelving with labelled packages behind, one student scanning a package with a handheld scanner."],
+["P16","cabin-crew-practical-training-skywings.jpg","Cabin Crew · About · Guide","Landscape","Scene",[UF],"Inside a mock aircraft cabin trainer: a young woman demonstrating the seatbelt safety briefing in the aisle, rows of real airline seats, other students observing from the seats, cabin lighting."],
+["P17","airport-management-course-kerala-students.jpg","Guide article","Landscape","Scene",[UF,UM],"Group of five students in SkyWings uniforms walking together through a bright airport terminal concourse with a departures board and large windows behind, mid-conversation, candid documentary feel."],
+["P18","aviation-hospitality-training-skywings.jpg","Hospitality · About · Guide","Landscape","Scene",[UF],"Hospitality service training: a young woman practising formal table service at an elegantly set table, instructor observing, five-star hotel training room with warm lighting."],
+["P19","global-aviation-career-scope-skywings.jpg","BBA · MBA","Landscape","Scene",[UM],"A young man standing at a floor-to-ceiling airport window at dusk, seen from a three-quarter back angle, watching a widebody aircraft taxi outside, city lights beginning to glow — aspiration and ambition."],
+["P20","premium-logistics-training-skywings.jpg","BBA Logistics","Landscape","Scene",[UM,UF2],"Premium air-cargo operations scene: students with high-vis vests over their SkyWings uniforms on a cargo apron walkway, freighter aircraft and cargo containers behind, supervised training moment, golden hour."],
+["P21","cabin-crew-inflight-service-training.jpg","Cabin Crew course","Landscape","Scene",[UF],"In-flight service training inside a mock cabin: a young woman serving a meal tray to a seated passenger with a graceful two-handed presentation, soft cabin lighting."],
+["P22","professional-presentation-training-skywings.png","About · Gallery","Landscape","Scene",[UF2],"Personality development class: a young woman delivering a presentation at the front of a bright seminar room, confident open gesture, classmates listening, whiteboard with a communication-skills mind map."],
+["P23","bba-logistics-career-scope.png","BBA Logistics","Landscape","Scene",[UM],"A young man holding a tablet in front of a wall-sized world map with glowing trade routes, symbolising global logistics career scope, modern deep-green and gold tones."],
+];
+
+const ITEMS_C = [
+["P24","bba-aviation-colleges-in-kerala-1.webp","Homepage soft-skills","Landscape","Scene",[UF],"Grooming and soft-skills session: an instructor adjusting the red rosette scarf of a smiling student in front of a mirror wall, other students practising posture behind, bright elegant training studio."],
+["P25","bba-aviation-colleges-in-kerala-3.webp","No.1 landing (cabin crew)","Landscape","Scene",[UF],"A young woman in a modern airport lounge, standing beside a lounge chair, hand resting lightly on it, aircraft visible through the window, premium calm atmosphere."],
+["P26","bba-aviation-colleges-in-kerala-4.webp","Blog: Industry Outlook (featured)","Landscape","Scene",[UF2,UM],"Optimistic aviation-industry scene: two students on an airport observation deck looking at parked aircraft and a control tower, bright morning sky, sense of a growing industry."],
+["P27","bba-aviation-colleges-in-kerala-8.webp","Homepage + BBA colleges","Landscape","Scene",[UF,UM],"Cheerful group of six SkyWings students walking toward camera outside a modern glass campus building, mid-laugh, energetic college-life moment, shallow depth of field."],
+["P28","best-aviation-college-in-kerala-2.webp","No.1 landing (logistics)","Landscape","Scene",[UF2],"A young woman with a clipboard in an air-cargo warehouse, checking labelled boxes on steel shelving, clean bright industrial space."],
+["P29","best-aviation-college-in-kerala-3.webp","Blog: BBA vs BBA (featured)","Landscape","Scene",[UM],"A student at a desk with an open laptop showing an aviation dashboard, textbooks beside, thoughtful smile — the moment of choosing a career path, warm library lighting."],
+["P30","no1-premium-aviation-college-kerala-1.webp","Blog: High-paying jobs (featured)","Landscape","Scene",[UF2],"A confident young woman shaking hands with an interviewer across a desk in a bright office, offer letter on the table, celebratory subtle smile — landing a high-paying aviation job."],
+["P31","no1-premium-aviation-college-kerala-5.webp","Blog: Air Cargo (featured)","Landscape","Scene",[UM],"Air cargo career scene: a young man with a high-vis vest over the suit directing a loading operation beside a freighter aircraft at golden hour, cargo containers and loader in frame."],
+];
+
+const ITEMS_D = [
+["P32","skywings-placed-student-01 … 12.webp","Placements strip · run 12× with different people","Portrait","Scene",[UF,UM],"Waist-up portrait of one placed SkyWings graduate holding a white A4 offer letter to camera with both hands, proud emotional smile, standing in a softly blurred modern airport departure hall, celebratory but professional. A different person from previous images."],
+];
+
+const ITEMS_E = [
+["P33","(generic) campus celebration","Gallery","Landscape","Scene",[UF,UM],"Students in SkyWings uniforms tossing flower petals in the air at a bright outdoor campus celebration, bunting in green and gold, joyful candid moment."],
+["P34","(generic) award moment","Gallery","Landscape","Scene",[UF],"A student receiving a gold trophy from a dignitary on a stage with a deep-green backdrop, audience applauding, press-photo feel."],
+["P35","(generic) convocation","Gallery","Landscape","Scene",[UF,UM],"Graduates in SkyWings uniforms with green graduation stoles throwing their caps against a clear sky in front of the campus, low wide angle."],
+["P36","(generic) student life","Gallery","Landscape","Scene",[UF,UM],"Relaxed group of uniformed students on campus steps during a break, tea cups and laughter, late-afternoon light."],
+["P37","(generic) campus building","Gallery","Landscape","Scene",[UF],"The modern SkyWings campus building exterior at blue hour, warm lights on inside, a few uniformed students by the entrance, premium architectural photograph."],
+];
+
+function fullPrompt(item){
+  const [,,,size,bg,uniforms,scene] = item;
+  const parts = [STYLE, ...uniforms];
+  if (bg === "WHITE BG") parts.push(WBG);
+  parts.push(scene, REF, (size==="Portrait"?"Portrait orientation 1024×1536.":"Landscape orientation 1536×1024."));
+  return parts.join("\n\n");
+}
+
+function card(item){
+  const [id,file,slot,size,bg] = item;
+  const done = localStorage.getItem("swimg-"+id)==="1";
+  const div = document.createElement("div");
+  div.className = "card"+(done?" is-done":"");
+  div.innerHTML = `
+    <div class="card-head">
+      <span class="pnum">${id}</span>
+      <span class="file">${file}</span>
+      <span class="slot">${slot}</span>
+      <span class="spacer"></span>
+      <span class="tag ${size==="Portrait"?"dark":"green"}">${size}</span>
+      <span class="tag ${bg==="WHITE BG"?"white":"lime"}">${bg}</span>
+      <button class="copy">Copy prompt</button>
+      <label class="done"><input type="checkbox" ${done?"checked":""}> done</label>
+    </div>
+    <div class="prompt">${fullPrompt(item).replace(/</g,"&lt;")}</div>`;
+  const btn = div.querySelector(".copy");
+  btn.addEventListener("click", () => {
+    const txt = fullPrompt(item);
+    const ok = () => { btn.textContent="Copied ✓"; btn.classList.add("copied");
+      setTimeout(()=>{btn.textContent="Copy prompt";btn.classList.remove("copied");},1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(ok).catch(()=>fallback(txt,ok));
+    } else fallback(txt, ok);
+  });
+  function fallback(txt, ok){
+    const ta=document.createElement("textarea"); ta.value=txt; document.body.appendChild(ta);
+    ta.select(); document.execCommand("copy"); document.body.removeChild(ta); ok();
+  }
+  div.querySelector("input").addEventListener("change", (e)=>{
+    localStorage.setItem("swimg-"+id, e.target.checked?"1":"0");
+    div.classList.toggle("is-done", e.target.checked);
+    updateProgress();
+  });
+  return div;
+}
+
+function render(secId, items){ const el=document.getElementById(secId); items.forEach(i=>el.appendChild(card(i))); }
+
+document.getElementById("blocks").innerHTML = BLOCKS.map(([name,use,text])=>`
+  <div class="block">
+    <div class="block-head"><span class="tag green">${name}</span><span class="block-title">${use}</span></div>
+    <div class="prompt">${text}</div>
+  </div>`).join("");
+
+render("secA", ITEMS_A); render("secB", ITEMS_B); render("secC", ITEMS_C);
+render("secD", ITEMS_D); render("secE", ITEMS_E);
+
+function updateProgress(){
+  const all=[...ITEMS_A,...ITEMS_B,...ITEMS_C,...ITEMS_D,...ITEMS_E];
+  const n=all.filter(i=>localStorage.getItem("swimg-"+i[0])==="1").length;
+  document.getElementById("progress").textContent = `${n} / ${all.length} done`;
+}
+updateProgress();
+</script>
+</body>
+</html>

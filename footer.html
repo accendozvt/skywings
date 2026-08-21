@@ -1,0 +1,452 @@
+<!-- SkyWings Academy | Footer Component -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════
+   SKYWINGS — FOOTER
+═══════════════════════════════════════ */
+:root {
+  --ink:        #0a1128;
+  --navy:       #001f54;
+  --mid:        #034078;
+  --sky:        #1282a2;
+  --cream:      #fefcfb;
+  --offwhite:   #f4f6f9;
+  --white:      #ffffff;
+  --trans:      0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.swf * { box-sizing: border-box; margin: 0; padding: 0; }
+.swf {
+  font-family: 'Instrument Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--ink);
+  color: var(--cream);
+  width: 100%;
+}
+
+.swf-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── TOP STRIP ── */
+.swf-top {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 56px 0 52px;
+}
+.swf-top-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* ── BRAND COL ── */
+.swf-brand {}
+.swf-logo {
+  display: block;
+  margin-bottom: 20px;
+}
+.swf-logo img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  object-position: left;
+  /* invert white logo on dark bg if needed */
+  filter: brightness(0) invert(1);
+}
+.swf-tagline {
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(254,252,251,0.45);
+  max-width: 260px;
+  margin-bottom: 28px;
+}
+
+/* Social icons */
+.swf-social {
+  display: flex;
+  gap: 10px;
+}
+.swf-social__link {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgba(254,252,251,0.5);
+  transition: background var(--trans), color var(--trans), border-color var(--trans), transform var(--trans);
+  flex-shrink: 0;
+}
+.swf-social__link:hover {
+  background: rgba(18,130,162,0.2);
+  border-color: rgba(18,130,162,0.4);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+.swf-social__link svg { width: 15px; height: 15px; }
+
+/* ── NAV COLS ── */
+.swf-col {}
+.swf-col__title {
+  font-family: 'Sora', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--sky);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.swf-col__title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(18,130,162,0.25);
+}
+.swf-col__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.swf-col__list li a {
+  font-size: 13.5px;
+  font-weight: 300;
+  color: rgba(254,252,251,0.55);
+  text-decoration: none;
+  padding: 5px 0;
+  display: block;
+  transition: color var(--trans), padding-left var(--trans);
+  line-height: 1.4;
+}
+.swf-col__list li a:hover {
+  color: var(--cream);
+  padding-left: 6px;
+}
+
+/* ── ADDRESS ITEMS ── */
+.swf-address-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.swf-address-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.swf-address-item__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(18,130,162,0.12);
+  border: 1px solid rgba(18,130,162,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.swf-address-item__icon svg { width: 13px; height: 13px; color: var(--sky); }
+.swf-address-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.swf-address-item__label {
+  font-family: 'Sora', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(254,252,251,0.3);
+  line-height: 1;
+}
+.swf-address-item__value {
+  font-size: 12.5px;
+  font-weight: 300;
+  color: rgba(254,252,251,0.55);
+  line-height: 1.5;
+}
+.swf-address-item__value a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--trans);
+}
+.swf-address-item__value a:hover { color: var(--cream); }
+
+/* ── CTA BAND ── */
+.swf-cta {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--mid) 100%);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 36px 0;
+}
+.swf-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.swf-cta__text {}
+.swf-cta__heading {
+  font-family: 'Sora', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
+.swf-cta__sub {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(254,252,251,0.5);
+}
+.swf-cta__btns {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.swf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  padding: 11px 22px;
+  border-radius: 100px;
+  transition: all var(--trans);
+  white-space: nowrap;
+}
+.swf-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+.swf-btn--sky { background: var(--sky); color: var(--white); }
+.swf-btn--sky:hover { background: #0e6d87; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(18,130,162,0.35); }
+.swf-btn--wa { background: #25D366; color: var(--white); }
+.swf-btn--wa:hover { background: #1ebe5d; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+
+/* ── BOTTOM BAR ── */
+.swf-bottom {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.swf-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.swf-copyright {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(254,252,251,0.3);
+}
+.swf-copyright a { color: rgba(254,252,251,0.45); text-decoration: none; transition: color var(--trans); }
+.swf-copyright a:hover { color: var(--cream); }
+.swf-legal {
+  display: flex;
+  gap: 20px;
+}
+.swf-legal a {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(254,252,251,0.3);
+  text-decoration: none;
+  transition: color var(--trans);
+}
+.swf-legal a:hover { color: rgba(254,252,251,0.7); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .swf-top-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 48px;
+  }
+  .swf-brand { grid-column: 1 / -1; }
+  .swf-tagline { max-width: 100%; }
+  .swf-cta-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 640px) {
+  .swf-wrap { padding: 0 20px; }
+  .swf-top { padding: 44px 0 40px; }
+  .swf-top-inner { grid-template-columns: 1fr; gap: 32px; }
+  .swf-brand { grid-column: 1; }
+  .swf-cta__btns { flex-direction: column; width: 100%; }
+  .swf-btn { justify-content: center; }
+  .swf-bottom-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .swf-legal { flex-wrap: wrap; gap: 12px; }
+}
+</style>
+
+<!-- ════════════════════════════════════════
+     CTA BAND
+════════════════════════════════════════ -->
+<div class="swf">
+
+  <div class="swf-cta">
+    <div class="swf-wrap">
+      <div class="swf-cta-inner">
+        <div class="swf-cta__text">
+          <div class="swf-cta__heading">Ready to start your aviation career?</div>
+          <div class="swf-cta__sub">Admissions open for 2025–26 · Kochi &amp; Mahe campuses</div>
+        </div>
+        <div class="swf-cta__btns">
+          <a href="tel:+919847163163" class="swf-btn swf-btn--sky">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            Call Us
+          </a>
+          <a href="https://wa.me/919605664455" class="swf-btn swf-btn--wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       MAIN FOOTER
+  ════════════════════════════════════════ -->
+  <div class="swf-top">
+    <div class="swf-wrap">
+      <div class="swf-top-inner">
+
+        <!-- BRAND -->
+        <div class="swf-brand">
+          <a href="https://skywingsacademy.com" class="swf-logo">
+            <img src="https://skywingsacademy.com/wp-content/uploads/2019/02/Untitled-1-1-e1740541043642.png" alt="SkyWings Aviation Academy">
+          </a>
+          <p class="swf-tagline">Kerala's leading aviation academy — shaping global careers in aviation, hospitality &amp; logistics since 2012.</p>
+          <div class="swf-social">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/skywingsaviation/" class="swf-social__link" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/skywings_aviation_college/" class="swf-social__link" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@Skywingsaviation" class="swf-social__link" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <!-- Google Maps / Review -->
+            <a href="https://share.google/IetFcKV1yV9FnrdPQ" class="swf-social__link" target="_blank" rel="noopener" aria-label="Google Reviews">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- COURSES -->
+        <div class="swf-col">
+          <div class="swf-col__title">Courses</div>
+          <ul class="swf-col__list">
+            <li><a href="https://skywingsacademy.com/bba-airline-airport-management/">BBA Aviation</a></li>
+            <li><a href="https://skywingsacademy.com/diploma-in-cabin-crew-management/">Diploma in Cabin Crew</a></li>
+            <li><a href="https://skywingsacademy.com/mba-airline-and-airport-management/">MBA Aviation</a></li>
+            <li><a href="https://skywingsacademy.com/diploma-in-airline-airport-management/">Diploma — Airline &amp; Airport</a></li>
+            <li><a href="https://skywingsacademy.com/bba-logistics-supply-chain-management/">BBA Logistics</a></li>
+            <li><a href="https://skywingsacademy.com/diploma-in-aviation-hospitality-management/">Aviation &amp; Hospitality</a></li>
+            <li><a href="https://skywingsacademy.com/aviation-courses/">View All Courses →</a></li>
+          </ul>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="swf-col">
+          <div class="swf-col__title">Academy</div>
+          <ul class="swf-col__list">
+            <li><a href="https://skywingsacademy.com/about">About Us</a></li>
+            <li><a href="https://skywingsacademy.com/kochi-campus">Kochi Campus</a></li>
+            <li><a href="https://skywingsacademy.com/mahe-campus">Mahe Campus</a></li>
+            <li><a href="https://skywingsacademy.com/blog">Blog &amp; News</a></li>
+            <li><a href="https://skywingsacademy.com/contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="swf-col">
+          <div class="swf-col__title">Contact</div>
+          <ul class="swf-address-list">
+
+            <li class="swf-address-item">
+              <div class="swf-address-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              </div>
+              <div class="swf-address-item__text">
+                <span class="swf-address-item__label">Phone</span>
+                <span class="swf-address-item__value">
+                  <a href="tel:+919847163163">+91 9847 163 163</a>
+                </span>
+              </div>
+            </li>
+
+            <li class="swf-address-item">
+              <div class="swf-address-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="swf-address-item__text">
+                <span class="swf-address-item__label">Email</span>
+                <span class="swf-address-item__value">
+                  <a href="mailto:info@skywingsacademy.com">info@skywingsacademy.com</a>
+                </span>
+              </div>
+            </li>
+
+            <li class="swf-address-item">
+              <div class="swf-address-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="swf-address-item__text">
+                <span class="swf-address-item__label">Kochi Campus</span>
+                <span class="swf-address-item__value">Pallissery Road, NH bypass,<br>behind Starbucks, Kochi 682032</span>
+              </div>
+            </li>
+
+            <li class="swf-address-item">
+              <div class="swf-address-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="swf-address-item__text">
+                <span class="swf-address-item__label">Mahe Campus</span>
+                <span class="swf-address-item__value">Lalu's Business Park, Opp. Sreenarayana Guru College, Mahe</span>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BOTTOM BAR ── -->
+  <div class="swf-bottom">
+    <div class="swf-wrap">
+      <div class="swf-bottom-inner">
+        <p class="swf-copyright">© 2025 <a href="https://skywingsacademy.com">SkyWings Aviation Academy</a>. All rights reserved.</p>
+        <nav class="swf-legal" aria-label="Legal">
+          <a href="https://skywingsacademy.com/privacy-policy">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Refund Policy</a>
+          <a href="https://skywingsacademy.com/sitemap.xml">Sitemap</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.swf -->
