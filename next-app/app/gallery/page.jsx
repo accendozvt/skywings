@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import GalleryBehavior from '@/components/GalleryBehavior';
 import './page.css';
 
 export const metadata = pageMetadata('gallery');
@@ -24,12 +25,12 @@ export default function Page_gallery() {
 <div className="glr-filters">
   <div className="glr-wrap">
     <div className="glr-filters-inner">
-      <button className="glr-cat-btn active">All Photos <span className="glr-cat-btn__count" id="cnt-all">0</span></button>
-      <button className="glr-cat-btn">Campus &amp; Classrooms <span className="glr-cat-btn__count" id="cnt-campus">0</span></button>
-      <button className="glr-cat-btn">Events &amp; Ceremonies <span className="glr-cat-btn__count" id="cnt-events">0</span></button>
-      <button className="glr-cat-btn">Placements <span className="glr-cat-btn__count" id="cnt-placements">0</span></button>
-      <button className="glr-cat-btn">Grooming &amp; Training <span className="glr-cat-btn__count" id="cnt-grooming">0</span></button>
-      <button className="glr-cat-btn">Student Life <span className="glr-cat-btn__count" id="cnt-students">0</span></button>
+      <button className="glr-cat-btn active" data-cat="all">All Photos <span className="glr-cat-btn__count" id="cnt-all">0</span></button>
+      <button className="glr-cat-btn" data-cat="campus">Campus &amp; Classrooms <span className="glr-cat-btn__count" id="cnt-campus">0</span></button>
+      <button className="glr-cat-btn" data-cat="events">Events &amp; Ceremonies <span className="glr-cat-btn__count" id="cnt-events">0</span></button>
+      <button className="glr-cat-btn" data-cat="placements">Placements <span className="glr-cat-btn__count" id="cnt-placements">0</span></button>
+      <button className="glr-cat-btn" data-cat="grooming">Grooming &amp; Training <span className="glr-cat-btn__count" id="cnt-grooming">0</span></button>
+      <button className="glr-cat-btn" data-cat="students">Student Life <span className="glr-cat-btn__count" id="cnt-students">0</span></button>
     </div>
   </div>
 </div>
@@ -259,7 +260,7 @@ export default function Page_gallery() {
   <button className="glr-lightbox__nav glr-lightbox__prev">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
   </button>
-  <img className="glr-lightbox__img" id="glr-lightbox-img" src="" alt="SkyWings Aviation Academy" />
+  <img className="glr-lightbox__img" id="glr-lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="SkyWings Aviation Academy" />
   <button className="glr-lightbox__nav glr-lightbox__next">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
   </button>
@@ -282,6 +283,7 @@ export default function Page_gallery() {
 </div>
 
 </div>
+      <GalleryBehavior />
     </>
   );
 }
