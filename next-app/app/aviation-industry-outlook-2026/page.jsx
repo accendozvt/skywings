@@ -46,11 +46,11 @@ export default function Page_aviation_industry_outlook_2026() {
             
 
             
-            <aside style={{ border: '1px solid rgba(0,45,45,0.12)', borderRadius: '16px', padding: '32px 28px', background: '#f0f5ef', textAlign: 'center', margin: '40px 0' }}>
-  <p style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '17px', color: '#002d2d', margin: '0 0 6px' }}>Have questions about your aviation career?</p>
-  <p style={{ fontSize: '14px', color: 'rgba(0,45,45,0.6)', margin: '0 0 20px' }}>Talk to our admissions team, free career counselling for 2026 batches.</p>
-  <a href="tel:+919847163163" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: '500', textDecoration: 'none', padding: '12px 24px', borderRadius: '100px', background: '#95bf47', color: '#001f1f', margin: '4px' }}>Call +91 9847 163 163</a>
-  <a href="/contact/" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: '500', textDecoration: 'none', padding: '12px 24px', borderRadius: '100px', background: '#002d2d', color: '#fefcfb', margin: '4px' }}>Enquire Online</a>
+            <aside style={{ border: '1px solid rgba(20,25,34,0.12)', borderRadius: '16px', padding: '32px 28px', background: '#f8f6f1', textAlign: 'center', margin: '40px 0' }}>
+  <p style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '17px', color: '#141922', margin: '0 0 6px' }}>Have questions about your aviation career?</p>
+  <p style={{ fontSize: '14px', color: 'rgba(20,25,34,0.6)', margin: '0 0 20px' }}>Talk to our admissions team, free career counselling for 2026 batches.</p>
+  <a href="tel:+919847163163" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: '500', textDecoration: 'none', padding: '12px 24px', borderRadius: '100px', background: '#c0a562', color: '#0c0e13', margin: '4px' }}>Call +91 9847 163 163</a>
+  <a href="/contact/" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: '500', textDecoration: 'none', padding: '12px 24px', borderRadius: '100px', background: '#141922', color: '#fefcfb', margin: '4px' }}>Enquire Online</a>
 </aside>            
                         
 

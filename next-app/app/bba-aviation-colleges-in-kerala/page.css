@@ -1,17 +1,17 @@
 
 :root {
-  --ink:       #001f1f;
-  --navy:      #002d2d;
-  --mid:       #008060;
-  --sky:       #95bf47;
+  --ink:       #0c0e13;
+  --navy:      #141922;
+  --mid:       #2c3547;
+  --sky:       #c0a562;
   --cream:     #fefcfb;
-  --offwhite:  #f0f5ef;
+  --offwhite:  #f8f6f1;
   --white:     #ffffff;
-  --sky-dim:   rgba(149,191,71,0.10);
-  --sky-line:  rgba(149,191,71,0.20);
-  --navy-line: rgba(0,45,45,0.09);
-  --text-body: rgba(0,45,45,0.65);
-  --text-light:rgba(0,45,45,0.40);
+  --sky-dim:   rgba(192,165,98,0.10);
+  --sky-line:  rgba(192,165,98,0.20);
+  --navy-line: rgba(20,25,34,0.09);
+  --text-body: rgba(20,25,34,0.65);
+  --text-light:rgba(20,25,34,0.40);
   --radius:    12px;
   --radius-lg: 20px;
   --trans:     0.3s cubic-bezier(0.4,0,0.2,1);
@@ -43,7 +43,7 @@
 /* Buttons */
 .bck-btn { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-body); font-size: 13px; font-weight: 500; letter-spacing: 0.4px; text-decoration: none; cursor: pointer; border: none; transition: var(--trans); padding: 14px 28px; border-radius: 100px; white-space: nowrap; }
 .bck-btn--sky { background: var(--sky); color: var(--ink); }
-.bck-btn--sky:hover { background: #7ea83a; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(149,191,71,0.3); }
+.bck-btn--sky:hover { background: #a3894a; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(192,165,98,0.3); }
 .bck-btn--wa { background: #25D366; color: var(--white); }
 .bck-btn--wa:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(37,211,102,0.3); }
 .bck-btn--ghost { background: transparent; color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.2); }
@@ -57,7 +57,7 @@
 .bck-hero__left { padding-bottom: 72px; }
 
 h1.bck-h1 { font-family: var(--font-sora) !important; font-size: clamp(30px,4.2vw,58px) !important; font-weight: 300 !important; line-height: 1.1 !important; letter-spacing: -1.5px !important; color: var(--cream) !important; margin: 0 0 8px !important; padding: 0 !important; display: block !important; }
-.bck-h1-sub { font-family: var(--font-sora); font-size: 13px; font-weight: 400; color: rgba(149,191,71,0.8); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; display: block; }
+.bck-h1-sub { font-family: var(--font-sora); font-size: 13px; font-weight: 400; color: rgba(192,165,98,0.8); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; display: block; }
 .bck-hero__lead { font-size: 16px; font-weight: 300; line-height: 1.75; color: rgba(254,252,251,0.55); max-width: 480px; margin: 20px 0 36px; }
 .bck-hero__cta { display: flex; gap: 10px; flex-wrap: wrap; }
 .bck-hero__right { display: flex; flex-direction: column; gap: 12px; padding-bottom: 40px; }
@@ -103,7 +103,7 @@ h3.bck-h3--light { color: var(--cream) !important; }
 .bck-table th { background: var(--navy); color: var(--cream); font-family: var(--font-sora); font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; padding: 16px 20px; text-align: left; }
 .bck-table td { padding: 16px 20px; border-bottom: 1px solid var(--navy-line); color: var(--text-body); font-weight: 300; vertical-align: middle; line-height: 1.5; }
 .bck-table tr:last-child td { border-bottom: none; }
-.bck-table tr.bck-table__highlight td { background: rgba(149,191,71,0.06); font-weight: 400; }
+.bck-table tr.bck-table__highlight td { background: rgba(192,165,98,0.06); font-weight: 400; }
 .bck-table tr.bck-table__highlight td:first-child { font-weight: 600; color: var(--navy); }
 .bck-check { color: #16a34a; font-size: 16px; }
 .bck-cross { color: #dc2626; font-size: 16px; }
@@ -111,22 +111,22 @@ h3.bck-h3--light { color: var(--cream) !important; }
 /* ── CAREER SCOPE ── */
 .bck-career-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 48px; }
 .bck-career-card { background: var(--white); border: 1px solid var(--navy-line); border-radius: var(--radius); padding: 28px 22px; transition: var(--trans); }
-.bck-career-card:hover { border-color: var(--sky-line); box-shadow: 0 8px 32px rgba(0,45,45,0.08); transform: translateY(-4px); }
+.bck-career-card:hover { border-color: var(--sky-line); box-shadow: 0 8px 32px rgba(20,25,34,0.08); transform: translateY(-4px); }
 .bck-career-card__icon { width: 44px; height: 44px; background: var(--sky-dim); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--sky); margin-bottom: 16px; }
 .bck-career-card__icon svg { width: 20px; height: 20px; }
 .bck-career-card__salary { font-size: 11px; font-weight: 500; color: #16a34a; letter-spacing: 0.5px; margin-top: 6px; display: block; }
 
 /* ── WHY SKYWINGS IS NO.1 ── */
 .bck-reasons { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: rgba(254,252,251,0.07); border-radius: var(--radius-lg); overflow: hidden; margin-top: 48px; }
-.bck-reason { background: rgba(0,128,96,0.4); padding: 36px 32px; transition: background var(--trans); }
-.bck-reason:hover { background: rgba(0,128,96,0.65); }
+.bck-reason { background: rgba(44,53,71,0.4); padding: 36px 32px; transition: background var(--trans); }
+.bck-reason:hover { background: rgba(44,53,71,0.65); }
 .bck-reason__num { font-family: var(--font-sora); font-size: 13px; font-weight: 500; color: var(--sky); letter-spacing: 2px; margin-bottom: 14px; display: block; }
 .bck-reason__body { font-size: 14px; font-weight: 300; line-height: 1.8; color: rgba(254,252,251,0.5); margin-top: 8px; }
 
 /* ── FAQ ── */
 .bck-faq { display: flex; flex-direction: column; gap: 2px; background: var(--navy-line); border-radius: var(--radius); overflow: hidden; margin-top: 48px; }
 .bck-faq-item { background: var(--white); overflow: hidden; }
-.bck-faq-item[open] { background: rgba(149,191,71,0.025); }
+.bck-faq-item[open] { background: rgba(192,165,98,0.025); }
 .bck-faq-summary { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-sora); font-size: 14px; font-weight: 400; color: var(--navy); list-style: none; gap: 16px; line-height: 1.4; }
 .bck-faq-summary::-webkit-details-marker { display: none; }
 .bck-faq-arrow { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--navy-line); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sky); transition: var(--trans); }

@@ -94,7 +94,7 @@ export default function Header() {
                 ))}
                 <div className="swh-drop__divider" />
                 <Link href="/aviation-courses-in-kerala" className="swh-drop__link" role="menuitem" style={{ gridColumn: '1/-1' }}>
-                  <div className="swh-drop__icon" style={{ background: 'rgba(149,191,71,0.08)' }}>
+                  <div className="swh-drop__icon" style={{ background: 'rgba(192,165,98,0.08)' }}>
                     <svg viewBox="0 0 24 24" {...S}><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </div>
                   <div className="swh-drop__text">

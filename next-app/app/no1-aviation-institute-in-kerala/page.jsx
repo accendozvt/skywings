@@ -84,7 +84,7 @@ export default function Page_no1_aviation_institute_in_kerala() {
 </section>
 
 
-<div style={{ background: 'var(--white)', padding: '0', overflow: 'hidden', borderTop: '1px solid rgba(0,45,45,0.07)', borderBottom: '1px solid rgba(0,45,45,0.07)' }}>
+<div style={{ background: 'var(--white)', padding: '0', overflow: 'hidden', borderTop: '1px solid rgba(20,25,34,0.07)', borderBottom: '1px solid rgba(20,25,34,0.07)' }}>
   <div style={{ padding: '28px 0 0', textAlign: 'center' }}>
     <span style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '10px', fontWeight: '500', letterSpacing: '2.5px', textTransform: 'uppercase', color: 'var(--sky)' }}>Our Placed Students, 2,000+ Alumni Globally</span>
   </div>

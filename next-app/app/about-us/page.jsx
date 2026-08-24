@@ -17,7 +17,7 @@ export default function Page_about_us() {
     <div className="sw-hero__left">
       <div className="sw-hero__eyebrow">No. 1 Aviation Academy, Kochi, Kerala</div>
       <h1 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(36px,5.5vw,68px)', fontWeight: '300', lineHeight: '1.1', letterSpacing: '-1.5px', color: '#fefcfb', margin: '0', padding: '0', display: 'block' }}>Where Kerala's<br />Aviation Careers<br />Begin.</h1>
-      <p style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '13px', fontWeight: '400', color: 'rgba(149,191,71,0.75)', letterSpacing: '1.5px', textTransform: 'uppercase', marginTop: '14px', marginBottom: '0', lineHeight: '1.5', display: 'block' }}>Premier Institute for Aviation Courses in Kerala</p>
+      <p style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '13px', fontWeight: '400', color: 'rgba(192,165,98,0.75)', letterSpacing: '1.5px', textTransform: 'uppercase', marginTop: '14px', marginBottom: '0', lineHeight: '1.5', display: 'block' }}>Premier Institute for Aviation Courses in Kerala</p>
       <p className="sw-hero__lead">SkyWings Academy of Aviation &amp; Logistics is not simply a training institute, it is the launchpad from which over 2,000 aviation professionals have taken flight, building careers with the world's top airlines, airports, and logistics firms.</p>
       <div className="sw-hero__cta">
         <a href="#enquire" className="sw-btn sw-btn--sky">
@@ -75,7 +75,7 @@ export default function Page_about_us() {
 
         <div className="sw-story__content">
           <div className="sw-eyebrow">Our Story</div>
-          <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(26px,3.8vw,46px)', fontWeight: '300', lineHeight: '1.15', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Built to be the Premier Institute for Aviation Courses in Kerala.</h2>
+          <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(26px,3.8vw,46px)', fontWeight: '300', lineHeight: '1.15', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Built to be the Premier Institute for Aviation Courses in Kerala.</h2>
           <span className="sw-rule"></span>
           <p className="sw-body">SkyWings Academy was born from a single, powerful conviction: that talent in Kerala is immense, but opportunity is not always equally distributed. Our founders, seasoned aviation and safety professionals with over 30 years of combined experience, recognised a glaring gap between what colleges were teaching and what airlines were actually hiring for.</p>
           <p className="sw-body" style={{ marginTop: '16px' }}>They built SkyWings to close that gap. Not with empty promises, but with rigorous, industry-aligned training, real-world exposure at Cochin International Airport (CIAL), and a placement network forged through genuine industry relationships.</p>
@@ -99,7 +99,7 @@ export default function Page_about_us() {
       <div className="sw-why-header">
         <div>
           <div className="sw-eyebrow" style={{ color: 'var(--sky)' }}>Why SkyWings</div>
-          <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(26px,3.8vw,46px)', fontWeight: '300', lineHeight: '1.15', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Why serious students choose Kerala's Premier Institute for Aviation Courses.</h2>
+          <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(26px,3.8vw,46px)', fontWeight: '300', lineHeight: '1.15', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Why serious students choose Kerala's Premier Institute for Aviation Courses.</h2>
         </div>
         <div className="sw-why-header__right">
           <p className="sw-body">In a market flooded with general institutes, SkyWings Academy stands apart. Here is why thousands of students trust us with their careers.</p>
@@ -277,7 +277,7 @@ export default function Page_about_us() {
 
         
         <div className="sw-course" style={{ background: 'var(--navy)', borderColor: 'transparent', justifyContent: 'center', padding: '40px 32px', textAlign: 'center', alignItems: 'center', gap: '0' }}>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(149,191,71,0.6)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '20px' }}><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(192,165,98,0.6)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '20px' }}><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           <h3 className="sw-h3" style={{ color: 'var(--cream)', marginBottom: '12px' }}>Not sure which course is right for you?</h3>
           <p className="sw-body--sm" style={{ color: 'rgba(254,252,251,0.45)', marginBottom: '28px' }}>Speak to our academic counsellor for free guidance on the right aviation course for your profile and goals.</p>
           <a href="tel:+919847163163" className="sw-btn sw-btn--sky">Get Free Counselling</a>

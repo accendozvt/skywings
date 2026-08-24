@@ -10,7 +10,7 @@ export default function NotFound() {
     <div
       style={{
         fontFamily: 'var(--font-body)',
-        background: 'linear-gradient(135deg, #001f1f 0%, #002d2d 60%, #008060 100%)',
+        background: 'linear-gradient(135deg, #0c0e13 0%, #141922 60%, #2c3547 100%)',
         minHeight: '60vh',
         display: 'flex',
         alignItems: 'center',
@@ -20,7 +20,7 @@ export default function NotFound() {
       }}
     >
       <div>
-        <div style={{ fontFamily: 'var(--font-sora)', fontSize: 72, fontWeight: 300, color: '#95bf47', lineHeight: 1 }}>404</div>
+        <div style={{ fontFamily: 'var(--font-sora)', fontSize: 72, fontWeight: 300, color: '#c0a562', lineHeight: 1 }}>404</div>
         <div style={{ fontFamily: 'var(--font-sora)', fontSize: 22, fontWeight: 300, color: '#fefcfb', margin: '16px 0 8px' }}>
           This page has flown elsewhere.
         </div>
@@ -36,8 +36,8 @@ export default function NotFound() {
             textDecoration: 'none',
             padding: '12px 26px',
             borderRadius: 100,
-            background: '#95bf47',
-            color: '#001f1f',
+            background: '#c0a562',
+            color: '#0c0e13',
           }}
         >
           Back to Homepage

@@ -1,22 +1,22 @@
 /* ═══════════════════════════════════════════════════════════
    SKYWINGS — GLOBAL DESIGN TOKENS & BASE
-   Shopify-inspired palette: dark teal / action green / lime
+   Midnight & Champagne: midnight navy / blue-slate / champagne brass
 ═══════════════════════════════════════════════════════════ */
 :root {
-  --ink:        #001f1f;   /* near-black teal */
-  --navy:       #002d2d;   /* primary: header, hero, footer */
-  --mid:        #008060;   /* action green: gradients, panels */
-  --sky:        #95bf47;   /* lime accent: buttons, icons, links */
-  --sky-hover:  #7ea83a;
+  --ink:        #0c0e13;   /* midnight black */
+  --navy:       #141922;   /* primary: header, hero, footer (midnight navy) */
+  --mid:        #2c3547;   /* deep blue-slate: gradients, panels */
+  --sky:        #c0a562;   /* champagne brass accent: buttons, icons, links */
+  --sky-hover:  #a3894a;
   --cream:      #fefcfb;
-  --offwhite:   #f0f5ef;
+  --offwhite:   #f8f6f1;
   --white:      #ffffff;
 
-  --sky-dim:    rgba(149,191,71,0.10);
-  --sky-line:   rgba(149,191,71,0.20);
-  --navy-line:  rgba(0,45,45,0.09);
-  --text-body:  rgba(0,45,45,0.65);
-  --text-light: rgba(0,45,45,0.40);
+  --sky-dim:    rgba(192,165,98,0.10);
+  --sky-line:   rgba(192,165,98,0.20);
+  --navy-line:  rgba(20,25,34,0.09);
+  --text-body:  rgba(20,25,34,0.65);
+  --text-light: rgba(20,25,34,0.40);
 
   --radius:     12px;
   --radius-lg:  20px;

@@ -1,5 +1,5 @@
 
-:root{--ink:#001f1f;--navy:#002d2d;--mid:#008060;--sky:#95bf47;--cream:#fefcfb;--offwhite:#f0f5ef;--white:#ffffff;--navy-line:rgba(0,45,45,0.09);--text-body:rgba(0,45,45,0.65);--trans:0.3s cubic-bezier(0.4,0,0.2,1);}
+:root{--ink:#0c0e13;--navy:#141922;--mid:#2c3547;--sky:#c0a562;--cream:#fefcfb;--offwhite:#f8f6f1;--white:#ffffff;--navy-line:rgba(20,25,34,0.09);--text-body:rgba(20,25,34,0.65);--trans:0.3s cubic-bezier(0.4,0,0.2,1);}
 .art *{box-sizing:border-box;margin:0;padding:0;}
 .art{font-family:var(--font-body);color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased;width:100%;overflow-x: clip;}
 .art-hero{background:linear-gradient(135deg,var(--ink) 0%,var(--navy) 55%,var(--mid) 100%);padding:88px 0 72px;position:relative;overflow:hidden;}
@@ -17,11 +17,11 @@
 .art-body p,.art-body li{font-size:15.5px;font-weight:300;line-height:1.85;color:var(--text-body);}
 .art-body ul,.art-body ol{padding-left:22px;}
 .art-body li+li{margin-top:8px;}
-.art-body a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(149,191,71,0.3);transition:var(--trans);}
-.art-body a:hover{color:#7ea83a;border-color:#7ea83a;}
+.art-body a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(192,165,98,0.3);transition:var(--trans);}
+.art-body a:hover{color:#a3894a;border-color:#a3894a;}
 .art-body img{max-width:100%;height:auto;border-radius:16px;display:block;margin:32px auto;}
 .art-body figure{margin:32px 0;}
-.art-body figcaption{font-size:12.5px;color:rgba(0,45,45,0.4);text-align:center;margin-top:10px;}
+.art-body figcaption{font-size:12.5px;color:rgba(20,25,34,0.4);text-align:center;margin-top:10px;}
 .art-body table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
 .art-body table th{font-family:var(--font-sora);font-weight:500;text-align:left;background:var(--navy);color:var(--cream);padding:12px 16px;}
 .art-body table td{padding:12px 16px;border:1px solid var(--navy-line);color:var(--text-body);font-weight:300;vertical-align:top;}
@@ -33,7 +33,7 @@
 .art-cta__btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
 .art-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:13.5px;font-weight:500;text-decoration:none;padding:12px 24px;border-radius:100px;transition:var(--trans);white-space:nowrap;}
 .art-btn--sky{background:var(--sky);color:var(--ink);}
-.art-btn--sky:hover{background:#7ea83a;transform:translateY(-1px);box-shadow:0 8px 24px rgba(149,191,71,0.35);}
+.art-btn--sky:hover{background:#a3894a;transform:translateY(-1px);box-shadow:0 8px 24px rgba(192,165,98,0.35);}
 .art-btn--ghost{background:transparent;color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.2);}
 .art-btn--ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.5);}
 @media (max-width:640px){.art-wrap{padding:0 20px;}.art-hero{padding:64px 0 52px;}.art-body{padding:44px 0 60px;}}

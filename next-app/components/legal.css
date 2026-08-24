@@ -9,6 +9,6 @@
 .legal-body p { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--text-body); margin: 0 0 14px; }
 .legal-body ul { padding-left: 22px; margin: 0 0 14px; }
 .legal-body li { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--text-body); }
-.legal-body a { color: var(--mid); text-decoration: none; border-bottom: 1px solid rgba(0, 128, 96, 0.3); }
+.legal-body a { color: var(--mid); text-decoration: none; border-bottom: 1px solid rgba(44,53,71, 0.3); }
 .legal-body a:hover { color: var(--sky-hover); }
 @media (max-width: 640px) { .legal-wrap { padding: 0 20px; } .legal-hero { padding: 56px 0 44px; } }

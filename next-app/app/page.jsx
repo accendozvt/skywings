@@ -25,13 +25,13 @@ export default function Page_home() {
 <section className="sw-hero">
   <div className="sw-hero__waves" aria-hidden="true">
     <svg className="sw-wave sw-wave--1" viewBox="0 0 2880 320" preserveAspectRatio="none">
-      <path d="M0 160 Q 180 70 360 160 T 720 160 T 1080 160 T 1440 160 T 1800 160 T 2160 160 T 2520 160 T 2880 160" fill="none" stroke="rgba(149,191,71,0.30)" strokeWidth="2.5" />
+      <path d="M0 160 Q 180 70 360 160 T 720 160 T 1080 160 T 1440 160 T 1800 160 T 2160 160 T 2520 160 T 2880 160" fill="none" stroke="rgba(192,165,98,0.30)" strokeWidth="2.5" />
     </svg>
     <svg className="sw-wave sw-wave--2" viewBox="0 0 2880 320" preserveAspectRatio="none">
-      <path d="M0 170 Q 240 90 480 170 T 960 170 T 1440 170 T 1920 170 T 2400 170 T 2880 170" fill="none" stroke="rgba(0,128,96,0.45)" strokeWidth="2" />
+      <path d="M0 170 Q 240 90 480 170 T 960 170 T 1440 170 T 1920 170 T 2400 170 T 2880 170" fill="none" stroke="rgba(44,53,71,0.45)" strokeWidth="2" />
     </svg>
     <svg className="sw-wave sw-wave--3" viewBox="0 0 2880 320" preserveAspectRatio="none">
-      <path d="M0 150 Q 150 220 300 150 T 600 150 T 900 150 T 1200 150 T 1500 150 T 1800 150 T 2100 150 T 2400 150 T 2700 150 T 2880 150" fill="none" stroke="rgba(149,191,71,0.16)" strokeWidth="1.5" />
+      <path d="M0 150 Q 150 220 300 150 T 600 150 T 900 150 T 1200 150 T 1500 150 T 1800 150 T 2100 150 T 2400 150 T 2700 150 T 2880 150" fill="none" stroke="rgba(192,165,98,0.16)" strokeWidth="1.5" />
     </svg>
   </div>
   <div className="sw-hero__inner">
@@ -141,7 +141,7 @@ export default function Page_home() {
       </div>
       <div>
         <div className="sw-eyebrow">About SkyWings</div>
-        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Wings of Confidence,<br />Skies of Opportunity.</h2>
+        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Wings of Confidence,<br />Skies of Opportunity.</h2>
         <span className="sw-rule"></span>
         <p className="sw-body">SkyWings Aviation, recognised as the Best Premium Aviation College in Kerala, is a premier professional training institute dedicated to preparing aspiring candidates for successful careers in the aviation industry. Our programmes are tailored to equip students for airline and airport interviews, ground staff roles, and cabin crew positions, ensuring they are industry-ready from day one.</p>
         <p className="sw-body" style={{ marginTop: '16px' }}>Our team of highly qualified trainers brings professional experience from leading airlines and airports across India and abroad. We bridge the gap between academic learning and real-world aviation operations.</p>
@@ -207,7 +207,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c">Our Programmes</div>
-      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Premium Aviation &amp; Logistics Courses</h2>
+      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Premium Aviation &amp; Logistics Courses</h2>
       <h4 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '13px', fontWeight: '400', color: 'var(--text-light)', letterSpacing: '1.2px', textTransform: 'uppercase', margin: '12px 0 20px' }}>Best Aviation College in Kerala · BBA · MBA · Cabin Crew · Logistics</h4>
       <span className="sw-rule" style={{ margin: '0 auto 24px' }}></span>
       <p className="sw-body" style={{ maxWidth: '580px', margin: '0 auto' }}>As Kerala's premier aviation college, we offer a range of undergraduate, postgraduate, and diploma courses designed for the modern aviation industry.</p>
@@ -392,7 +392,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c">Why Choose Skywings, No.1 Premium Aviation College In Kerala?</div>
-      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>World-Class Infrastructure &amp; Facilities<span className="sw-h2-kw">No.1 Premium Aviation College in Kerala</span></h2>
+      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>World-Class Infrastructure &amp; Facilities<span className="sw-h2-kw">No.1 Premium Aviation College in Kerala</span></h2>
       <span className="sw-rule" style={{ margin: '20px auto' }}></span>
       <p className="sw-body" style={{ maxWidth: '660px', margin: '0 auto', color: 'var(--text-muted)' }}>To train the best, you need the best facilities. Sky Wings Academy boasts a state-of-the-art campus designed to simulate a real airport environment, ensuring our status as the No.1 Premium Aviation College in Kerala.</p>
     </div>
@@ -524,7 +524,7 @@ export default function Page_home() {
       </div>
       <div>
         <div className="sw-eyebrow">Placement Assistance</div>
-        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>100% Placement Assistance for Every Student.</h2>
+        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>100% Placement Assistance for Every Student.</h2>
         <span className="sw-rule"></span>
         <p className="sw-body">Our corporate placement tie-ups ensure every student who completes their course is connected with the right opportunity, from domestic airlines to international carriers and logistics companies.</p>
 
@@ -621,7 +621,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c">How to Join</div>
-      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Admission Process for 2026</h2>
+      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Admission Process for 2026</h2>
       <span className="sw-rule" style={{ margin: '20px auto' }}></span>
       <p className="sw-body" style={{ maxWidth: '540px', margin: '0 auto' }}>Securing a seat is a competitive but straightforward process. We follow a merit-based selection system to ensure quality.</p>
     </div>
@@ -656,7 +656,7 @@ export default function Page_home() {
     <div className="sw-apart-split">
       <div className="sw-apart-left">
         <div className="sw-eyebrow">Specialized Programs For Every Career Path</div>
-        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>What Sets Us Apart?</h2>
+        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>What Sets Us Apart?</h2>
         <span className="sw-rule"></span>
         <ul className="sw-apart-list">
           <li><strong>Industry-Embedded Curriculum:</strong> Unlike standard colleges, our syllabus is updated annually to match the changing trends of airlines like Indigo, Air India, and Emirates.</li>
@@ -678,7 +678,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c">Our Partnerships</div>
-      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Our Recruitment Partners</h2>
+      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Our Recruitment Partners</h2>
       <span className="sw-rule" style={{ margin: '20px auto' }}></span>
       <p className="sw-body" style={{ maxWidth: '560px', margin: '0 auto' }}>When you join SkyWings, you join a network connected to leading airlines, airports, ground handling agencies, and luxury hospitality groups across the world.</p>
     </div>
@@ -700,7 +700,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c">Kerala's Aviation Outlook 2026</div>
-      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Why Now is the Best Time to Study Aviation in Kerala<span className="sw-h2-kw">No.1 Premium Aviation College in Kerala · 2026 Admissions Open</span></h2>
+      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Why Now is the Best Time to Study Aviation in Kerala<span className="sw-h2-kw">No.1 Premium Aviation College in Kerala · 2026 Admissions Open</span></h2>
       <span className="sw-rule" style={{ margin: '20px auto' }}></span>
       <p className="sw-body" style={{ maxWidth: '580px', margin: '0 auto' }}>The aviation sector in Kerala is witnessing a historic boom. With new airlines launching and airports expanding, the demand for skilled professionals has never been higher.</p>
     </div>
@@ -732,7 +732,7 @@ export default function Page_home() {
       </div>
       <div>
         <div className="sw-eyebrow">Soft Skills &amp; Personality Development</div>
-        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>In Aviation, Your Personality is Your CV.</h2>
+        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>In Aviation, Your Personality is Your CV.</h2>
         <span className="sw-rule"></span>
         <p className="sw-body">At SkyWings, we focus heavily on soft skills to transform you into a global professional. Airlines don't just hire qualifications, they hire presence, communication, and confidence.</p>
 
@@ -775,7 +775,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c">Common Questions</div>
-      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Frequently Asked Questions</h2>
+      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Frequently Asked Questions</h2>
       <p className="sw-body" style={{ textAlign: 'center', color: 'var(--text-light)', maxWidth: '500px', margin: '12px auto 0' }}>Everything you need to know about Aviation Courses at SkyWings Academy, Kerala</p>
     </div>
 
@@ -950,7 +950,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c" style={{ justifyContent: 'center' }}>Get in Touch</div>
-      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Enquire About Admissions</h2>
+      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Enquire About Admissions</h2>
       <p className="sw-body" style={{ textAlign: 'center', color: 'var(--text-light)', maxWidth: '500px', margin: '12px auto 0' }}>Our admissions team will call you back within 24 hours with the right guidance.</p>
     </div>
 
@@ -964,37 +964,37 @@ export default function Page_home() {
             
             <defs>
               <pattern id="dot-map" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <circle cx="10" cy="10" r="1.5" fill="rgba(149,191,71,0.6)"/>
+                <circle cx="10" cy="10" r="1.5" fill="rgba(192,165,98,0.6)"/>
               </pattern>
             </defs>
             
             <rect width="1000" height="500" fill="url(#dot-map)"/>
             
-            <rect x="0" y="0" width="1000" height="500" fill="#001f1f" opacity="0.55"/>
+            <rect x="0" y="0" width="1000" height="500" fill="#0c0e13" opacity="0.55"/>
             
             
-            <ellipse cx="490" cy="180" rx="80" ry="70" fill="rgba(149,191,71,0.08)" stroke="rgba(149,191,71,0.2)" strokeWidth="1"/>
-            <ellipse cx="500" cy="310" rx="70" ry="90" fill="rgba(149,191,71,0.06)" stroke="rgba(149,191,71,0.15)" strokeWidth="1"/>
+            <ellipse cx="490" cy="180" rx="80" ry="70" fill="rgba(192,165,98,0.08)" stroke="rgba(192,165,98,0.2)" strokeWidth="1"/>
+            <ellipse cx="500" cy="310" rx="70" ry="90" fill="rgba(192,165,98,0.06)" stroke="rgba(192,165,98,0.15)" strokeWidth="1"/>
             
-            <ellipse cx="680" cy="190" rx="130" ry="80" fill="rgba(149,191,71,0.08)" stroke="rgba(149,191,71,0.2)" strokeWidth="1"/>
+            <ellipse cx="680" cy="190" rx="130" ry="80" fill="rgba(192,165,98,0.08)" stroke="rgba(192,165,98,0.2)" strokeWidth="1"/>
             
-            <ellipse cx="240" cy="220" rx="100" ry="110" fill="rgba(149,191,71,0.06)" stroke="rgba(149,191,71,0.15)" strokeWidth="1"/>
+            <ellipse cx="240" cy="220" rx="100" ry="110" fill="rgba(192,165,98,0.06)" stroke="rgba(192,165,98,0.15)" strokeWidth="1"/>
             
-            <ellipse cx="780" cy="340" rx="60" ry="40" fill="rgba(149,191,71,0.07)" stroke="rgba(149,191,71,0.15)" strokeWidth="1"/>
+            <ellipse cx="780" cy="340" rx="60" ry="40" fill="rgba(192,165,98,0.07)" stroke="rgba(192,165,98,0.15)" strokeWidth="1"/>
             
-            <path d="M670 230 Q 580 120 490 180" fill="none" stroke="rgba(149,191,71,0.5)" strokeWidth="1" strokeDasharray="4 4"/>
-            <path d="M670 230 Q 750 280 780 340" fill="none" stroke="rgba(149,191,71,0.5)" strokeWidth="1" strokeDasharray="4 4"/>
-            <path d="M670 230 Q 540 180 240 200" fill="none" stroke="rgba(149,191,71,0.4)" strokeWidth="1" strokeDasharray="4 4"/>
-            <path d="M670 230 Q 670 120 490 160" fill="none" stroke="rgba(149,191,71,0.3)" strokeWidth="1" strokeDasharray="4 4"/>
+            <path d="M670 230 Q 580 120 490 180" fill="none" stroke="rgba(192,165,98,0.5)" strokeWidth="1" strokeDasharray="4 4"/>
+            <path d="M670 230 Q 750 280 780 340" fill="none" stroke="rgba(192,165,98,0.5)" strokeWidth="1" strokeDasharray="4 4"/>
+            <path d="M670 230 Q 540 180 240 200" fill="none" stroke="rgba(192,165,98,0.4)" strokeWidth="1" strokeDasharray="4 4"/>
+            <path d="M670 230 Q 670 120 490 160" fill="none" stroke="rgba(192,165,98,0.3)" strokeWidth="1" strokeDasharray="4 4"/>
             
             <circle cx="670" cy="230" r="6" fill="var(--sky)" opacity="0.9"/>
-            <circle cx="670" cy="230" r="14" fill="rgba(149,191,71,0.25)" stroke="rgba(149,191,71,0.5)" strokeWidth="1"/>
+            <circle cx="670" cy="230" r="14" fill="rgba(192,165,98,0.25)" stroke="rgba(192,165,98,0.5)" strokeWidth="1"/>
             
-            <circle cx="490" cy="178" r="4" fill="rgba(149,191,71,0.7)"/>
-            <circle cx="250" cy="200" r="4" fill="rgba(149,191,71,0.7)"/>
-            <circle cx="780" cy="340" r="4" fill="rgba(149,191,71,0.7)"/>
-            <circle cx="610" cy="150" r="4" fill="rgba(149,191,71,0.7)"/>
-            <circle cx="720" cy="180" r="4" fill="rgba(149,191,71,0.7)"/>
+            <circle cx="490" cy="178" r="4" fill="rgba(192,165,98,0.7)"/>
+            <circle cx="250" cy="200" r="4" fill="rgba(192,165,98,0.7)"/>
+            <circle cx="780" cy="340" r="4" fill="rgba(192,165,98,0.7)"/>
+            <circle cx="610" cy="150" r="4" fill="rgba(192,165,98,0.7)"/>
+            <circle cx="720" cy="180" r="4" fill="rgba(192,165,98,0.7)"/>
           </svg>
         </div>
 
@@ -1053,7 +1053,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c">Join The Leaders In Aviation Education</div>
-      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>News &amp; Articles</h2>
+      <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>News &amp; Articles</h2>
       <span className="sw-rule" style={{ margin: '20px auto' }}></span>
     </div>
     <div className="sw-blog-scroller">

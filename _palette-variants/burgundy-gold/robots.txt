@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /skywings-feedback-form/
+Disallow: /cdn-cgi/
+
+Sitemap: https://skywingsacademy.com/sitemap.xml

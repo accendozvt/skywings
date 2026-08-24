@@ -93,7 +93,7 @@ export default function Page_contact() {
         <div className="swc-form-info">
           <div className="swc-form-info__inner">
             <div className="swc-info-eyebrow">Admissions Open</div>
-            <h3 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '16px', fontWeight: '400', color: '#002d2d', lineHeight: '1.35', margin: '0', padding: '0', display: 'block', color: '#fefcfb' }}>Send us an enquiry, Contact SkyWings Aviation Academy</h3>
+            <h3 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '16px', fontWeight: '400', color: '#141922', lineHeight: '1.35', margin: '0', padding: '0', display: 'block', color: '#fefcfb' }}>Send us an enquiry, Contact SkyWings Aviation Academy</h3>
             <div className="swc-info-sub">Fill out the form and our admissions counsellor will get back to you within 24 hours.</div>
 
             <div className="swc-info-items">
@@ -154,7 +154,7 @@ export default function Page_contact() {
 
         
         <div className="swc-form-panel">
-          <h3 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '16px', fontWeight: '400', color: '#002d2d', lineHeight: '1.35', margin: '0', padding: '0', display: 'block' }}>Enquiry Form, Contact SkyWings Aviation Academy</h3>
+          <h3 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '16px', fontWeight: '400', color: '#141922', lineHeight: '1.35', margin: '0', padding: '0', display: 'block' }}>Enquiry Form, Contact SkyWings Aviation Academy</h3>
           <div className="swc-form-sub">Tell us about yourself and we'll get back to you with all the information you need.</div>
 
           <div id="swc-form-wrap">
@@ -243,7 +243,7 @@ export default function Page_contact() {
   <section className="swc-maps">
     <div className="swc-wrap">
       <div className="swc-section-head">
-        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#002d2d', margin: '0', padding: '0', display: 'block' }}>Contact SkyWings Aviation Academy, Find Our Campuses</h2>
+        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Contact SkyWings Aviation Academy, Find Our Campuses</h2>
         <p className="swc-section-sub">Two campuses across Kerala &amp; Puducherry, find the one closest to you.</p>
       </div>
       <div className="swc-maps-grid">

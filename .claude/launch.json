@@ -18,6 +18,30 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["--prefix", "next-app", "run", "start", "--", "-p", "3201"],
       "port": 3201
+    },
+    {
+      "name": "palette-graphite-gold",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "http-server", "_palette-variants/graphite-gold", "-p", "8801", "-c-1"],
+      "port": 8801
+    },
+    {
+      "name": "palette-slate-spruce",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "http-server", "_palette-variants/slate-spruce", "-p", "8802", "-c-1"],
+      "port": 8802
+    },
+    {
+      "name": "palette-midnight-champagne",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "http-server", "_palette-variants/midnight-champagne", "-p", "8803", "-c-1"],
+      "port": 8803
+    },
+    {
+      "name": "palette-burgundy-gold",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "http-server", "_palette-variants/burgundy-gold", "-p", "8804", "-c-1"],
+      "port": 8804
     }
   ]
 }

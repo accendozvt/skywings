@@ -1,20 +1,20 @@
 
 /* ═══════════════════════════════════════
    SKYWINGS CABIN CREW PAGE
-   Palette: #001f1f | #002d2d | #008060 | #95bf47 | #fefcfb
+   Palette: #0c0e13 | #141922 | #2c3547 | #c0a562 | #fefcfb
    Fonts: Sora (headings) | Instrument Sans (body)
 ═══════════════════════════════════════ */
 :root {
-  --ink:        #001f1f;
-  --navy:       #002d2d;
-  --mid:        #008060;
-  --sky:        #95bf47;
+  --ink:        #0c0e13;
+  --navy:       #141922;
+  --mid:        #2c3547;
+  --sky:        #c0a562;
   --cream:      #fefcfb;
-  --sky-dim:    rgba(149,191,71,0.12);
-  --navy-line:  rgba(0,45,45,0.1);
+  --sky-dim:    rgba(192,165,98,0.12);
+  --navy-line:  rgba(20,25,34,0.1);
   --white:      #ffffff;
-  --text-body:  rgba(0,45,45,0.68);
-  --text-light: rgba(0,45,45,0.42);
+  --text-body:  rgba(20,25,34,0.68);
+  --text-light: rgba(20,25,34,0.42);
   --radius:     12px;
   --radius-lg:  20px;
   --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -153,10 +153,10 @@
   color: var(--ink);
 }
 .cc-btn--sky:hover {
-  background: #7ea83a;
+  background: #a3894a;
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(149,191,71,0.3);
+  box-shadow: 0 12px 30px rgba(192,165,98,0.3);
 }
 .cc-btn--solid {
   background: var(--navy);
@@ -166,7 +166,7 @@
   background: var(--ink);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0,45,45,0.25);
+  box-shadow: 0 12px 30px rgba(20,25,34,0.25);
 }
 .cc-btn--ghost-light {
   background: transparent;
@@ -205,8 +205,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(149,191,71,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(149,191,71,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(192,165,98,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192,165,98,0.04) 1px, transparent 1px);
   background-size: 56px 56px;
   pointer-events: none;
   z-index: 0;
@@ -264,7 +264,7 @@
   position: absolute;
   top: 10%; bottom: 10%; left: 0;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(149,191,71,0.2) 30%, rgba(149,191,71,0.2) 70%, transparent);
+  background: linear-gradient(to bottom, transparent, rgba(192,165,98,0.2) 30%, rgba(192,165,98,0.2) 70%, transparent);
 }
 .cc-hero__right img {
   position: absolute;
@@ -348,11 +348,11 @@
   margin-top: 64px;
 }
 .cc-ai-card {
-  background: rgba(0,128,96,0.4);
+  background: rgba(44,53,71,0.4);
   padding: 40px 36px;
   transition: background var(--transition);
 }
-.cc-ai-card:hover { background: rgba(0,128,96,0.65); }
+.cc-ai-card:hover { background: rgba(44,53,71,0.65); }
 .cc-ai-card__heading {
   font-family: var(--font-sora);
   font-size: 13px;
@@ -386,7 +386,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(149,191,71,0.15);
+  background: rgba(192,165,98,0.15);
   color: var(--sky);
   display: flex;
   align-items: center;
@@ -426,8 +426,8 @@
   transition: var(--transition);
 }
 .cc-why-card:hover {
-  border-color: rgba(149,191,71,0.3);
-  box-shadow: 0 12px 40px rgba(0,45,45,0.07);
+  border-color: rgba(192,165,98,0.3);
+  box-shadow: 0 12px 40px rgba(20,25,34,0.07);
   transform: translateY(-4px);
 }
 .cc-why-card__icon {
@@ -511,7 +511,7 @@
   transition: var(--transition);
 }
 .cc-check-item:hover {
-  border-color: rgba(149,191,71,0.3);
+  border-color: rgba(192,165,98,0.3);
   background: var(--sky-dim);
   transform: translateX(4px);
 }
@@ -557,7 +557,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  background: rgba(149,191,71,0.15);
+  background: rgba(192,165,98,0.15);
   border-radius: var(--radius);
   overflow: hidden;
   margin-top: 56px;
@@ -567,7 +567,7 @@
   padding: 48px 32px;
   transition: background var(--transition);
 }
-.cc-number-item:hover { background: #012727; }
+.cc-number-item:hover { background: #12151d; }
 .cc-number-item__num {
   font-family: var(--font-sora);
   font-size: 48px;
@@ -603,7 +603,7 @@
   overflow: hidden;
 }
 .cc-faq-item[open] {
-  background: rgba(149,191,71,0.03);
+  background: rgba(192,165,98,0.03);
 }
 .cc-faq-summary {
   padding: 22px 28px;

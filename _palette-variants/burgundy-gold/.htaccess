@@ -1,0 +1,122 @@
+# SkyWings Aviation Academy — static Next.js export
+# Prefer our static pages over any leftover CMS index files
+DirectoryIndex index.html index.php
+
+ErrorDocument 404 /404.html
+
+# ── 301 redirects: old WordPress URLs ──
+RedirectMatch 301 ^/about/?$ /about-us/
+RedirectMatch 301 ^/aviation-courses/?$ /aviation-courses-in-kerala/
+RedirectMatch 301 ^/courses/?$ /aviation-courses-in-kerala/
+RedirectMatch 301 ^/bba-airline-airport-management/?$ /bba-aviation/
+RedirectMatch 301 ^/blogs-articles-aviation-hospitality/?$ /articles-and-news/
+RedirectMatch 301 ^/blog/?$ /articles-and-news/
+RedirectMatch 301 ^/skywings-aviation-college-kochi-campus/?$ /kochi-campus/
+RedirectMatch 301 ^/skywings-aviation-college-mahe/?$ /mahe-campus/
+RedirectMatch 301 ^/aviation-courses-in-kerala-2/?$ /aviation-courses-in-kerala/
+RedirectMatch 301 ^/enquire-now/?$ /contact/
+RedirectMatch 301 ^/home-copy/?$ /
+RedirectMatch 301 ^/uncategorized/?$ /articles-and-news/
+RedirectMatch 301 ^/design-branding/?$ /articles-and-news/
+RedirectMatch 301 ^/business/?$ /articles-and-news/
+
+# Old media library URLs -> renamed assets
+RedirectMatch 301 ^/wp-content/uploads/2019/02/Untitled-1-1-e1740541043642\.png$ /assets/images/skywings-aviation-academy-logo.png
+RedirectMatch 301 ^/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-4\.webp$ /assets/images/bba-aviation-colleges-in-kerala-4.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/best-aviation-college-in-kerala-3\.webp$ /assets/images/best-aviation-college-in-kerala-3.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/no\.1-premium-aviation-college-in-kerala-skywings-aviation-5\.webp$ /assets/images/no1-premium-aviation-college-kerala-5.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/no\.1-premium-aviation-college-in-kerala-skywings-aviation-1\.webp$ /assets/images/no1-premium-aviation-college-kerala-1.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/04/2024-07-30\.jpg$ /assets/images/skywings-skyfest-2024.jpg
+RedirectMatch 301 ^/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-8\.webp$ /assets/images/bba-aviation-colleges-in-kerala-8.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/training-1\.svg$ /assets/images/expert-trainers-icon.svg
+RedirectMatch 301 ^/wp-content/uploads/2026/03/university-1\.svg$ /assets/images/best-aviation-college-icon.svg
+RedirectMatch 301 ^/wp-content/uploads/2026/03/placement-1\.svg$ /assets/images/placement-assistance-icon.svg
+RedirectMatch 301 ^/wp-content/uploads/2026/03/homework\.svg$ /assets/images/modern-campus-icon.svg
+RedirectMatch 301 ^/wp-content/uploads/2026/02/06-copy\.webp$ /assets/images/skywings-aviation-college-campus-kochi.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/04/PAI07836-min\.png$ /assets/images/skywings-placed-students-airlines.png
+RedirectMatch 301 ^/wp-content/uploads/2025/05/1\.jpg\.webp$ /assets/images/skywings-placed-student-01.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/9\.jpg\.webp$ /assets/images/skywings-placed-student-09.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/2\.jpg\.webp$ /assets/images/skywings-placed-student-02.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/3\.jpg\.webp$ /assets/images/skywings-placed-student-03.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/5\.jpg\.webp$ /assets/images/skywings-placed-student-05.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/7\.jpg\.webp$ /assets/images/skywings-placed-student-07.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/8\.jpg\.webp$ /assets/images/skywings-placed-student-08.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/12\.jpg\.webp$ /assets/images/skywings-placed-student-12.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/10\.jpg\.webp$ /assets/images/skywings-placed-student-10.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/11\.jpg\.webp$ /assets/images/skywings-placed-student-11.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/4\.jpg\.webp$ /assets/images/skywings-placed-student-04.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/05/6\.jpg\.webp$ /assets/images/skywings-placed-student-06.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/04/PAI08074-min-1443x1536\.png$ /assets/images/cabin-crew-training-students-kerala.png
+RedirectMatch 301 ^/wp-content/uploads/2022/05/827da0_fed55c07ed78468eb832cce4446ace80_mv2\.webp$ /assets/images/airline-recruitment-partner-8.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/05/827da0_09b32ab65fb84033a9612026a98f3e0c_mv2\.webp$ /assets/images/airline-recruitment-partner-2.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/05/827da0_9866cde8af9f423e998626b77107d907_mv2\.webp$ /assets/images/airline-recruitment-partner-5.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/05/827da0_924c641370e244b1b1d43f5c2ee67a7b_mv2\.webp$ /assets/images/airline-recruitment-partner-4.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/05/827da0_1461ab3ab8394b7dbc0b026c83391726_mv2\.webp$ /assets/images/airline-recruitment-partner-3.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/05/827da0_e7d4e06cad84411fb32293692310cebc_mv2\.webp$ /assets/images/airline-recruitment-partner-6.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/05/827da0_08dc6a84744b4e0f8dd0387368808ebc_mv2\.webp$ /assets/images/airline-recruitment-partner-1.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/05/827da0_ef384940151b4986861af9979680f619_mv2\.webp$ /assets/images/airline-recruitment-partner-7.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-1\.webp$ /assets/images/bba-aviation-colleges-in-kerala-1.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/07/PAI01337\.jpg$ /assets/images/skywings-smart-classroom-kochi.jpg
+RedirectMatch 301 ^/wp-content/uploads/2025/04/PAI07914-min\.png$ /assets/images/skywings-academy-students-kochi.png
+RedirectMatch 301 ^/wp-content/uploads/2026/01/freepik__design-editorial-soft-studio-light-photography-hig__41438\.png$ /assets/images/professional-presentation-training-skywings.webp
+RedirectMatch 301 ^/wp-content/uploads/2022/07/PAI01272\.jpg$ /assets/images/aviation-management-training-kochi.jpg
+RedirectMatch 301 ^/wp-content/uploads/2022/07/PAI01209\.jpg$ /assets/images/cabin-crew-practical-training-skywings.jpg
+RedirectMatch 301 ^/wp-content/uploads/2022/07/PAI00978\.jpg$ /assets/images/logistics-training-skywings-academy.jpg
+RedirectMatch 301 ^/wp-content/uploads/2022/07/PAI00910-acopy-Copy\.jpg$ /assets/images/aviation-hospitality-training-skywings.jpg
+RedirectMatch 301 ^/wp-content/uploads/2022/07/PAI01543\.jpg$ /assets/images/skywings-academy-campus-kochi.jpg
+RedirectMatch 301 ^/wp-content/uploads/2026/02/02\.png$ /assets/images/aviation-student-skywings-kochi.png
+RedirectMatch 301 ^/wp-content/uploads/2025/04/ADA05317\.jpg$ /assets/images/global-aviation-career-scope-skywings.jpg
+RedirectMatch 301 ^/wp-content/uploads/2026/02/01\.png$ /assets/images/cabin-crew-student-skywings-kochi.png
+RedirectMatch 301 ^/wp-content/uploads/2026/02/05\.png$ /assets/images/airline-airport-management-student-skywings.png
+RedirectMatch 301 ^/wp-content/uploads/2022/07/PAI00924\.jpg$ /assets/images/airport-terminal-operations-training.jpg
+RedirectMatch 301 ^/wp-content/uploads/2026/02/04\.png$ /assets/images/bba-logistics-student-skywings.png
+RedirectMatch 301 ^/wp-content/uploads/2026/01/02\.png$ /assets/images/bba-logistics-career-scope.webp
+RedirectMatch 301 ^/wp-content/uploads/2025/04/ADA05353\.jpg$ /assets/images/premium-logistics-training-skywings.jpg
+RedirectMatch 301 ^/wp-content/uploads/2026/02/06\.png$ /assets/images/aviation-hospitality-student-skywings.png
+RedirectMatch 301 ^/wp-content/uploads/2025/04/fg\.jpg$ /assets/images/skywings-annual-event-kerala.jpg
+RedirectMatch 301 ^/wp-content/uploads/2025/04/ff\.jpg$ /assets/images/skywings-convocation-ceremony.jpg
+RedirectMatch 301 ^/wp-content/uploads/2025/04/AJI00248\.jpg$ /assets/images/skywings-aviation-students-event.jpg
+RedirectMatch 301 ^/wp-content/uploads/2025/04/AJI00156\.jpg$ /assets/images/skywings-award-ceremony-kerala.jpg
+RedirectMatch 301 ^/wp-content/uploads/2025/04/2022-04-10\.jpg$ /assets/images/skywings-inauguration-2022.jpg
+RedirectMatch 301 ^/wp-content/uploads/2025/04/unnbnamed\.jpg$ /assets/images/skywings-premium-campus-kochi.jpg
+RedirectMatch 301 ^/wp-content/uploads/2025/04/gg\.jpg$ /assets/images/skywings-aviation-college-students.jpg
+RedirectMatch 301 ^/wp-content/uploads/2025/04/pngwing\.com_\.png$ /assets/images/admissions-open-2026-badge.png
+RedirectMatch 301 ^/wp-content/uploads/2025/04/100placementpng\.png$ /assets/images/100-percent-placement-badge.png
+RedirectMatch 301 ^/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-3\.webp$ /assets/images/bba-aviation-colleges-in-kerala-3.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/best-aviation-college-in-kerala-2\.webp$ /assets/images/best-aviation-college-in-kerala-2.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/05/layer-3\.png$ /assets/images/cabin-crew-recruitment-skywings-kochi.png
+RedirectMatch 301 ^/wp-content/uploads/2022/07/PAI01209-768x512\.jpg$ /assets/images/airport-management-course-kerala-students.jpg
+RedirectMatch 301 ^/wp-content/uploads/2026/03/no\.1-premium-aviation-college-in-kerala-skywings-aviation-5-300x200\.webp$ /assets/images/no1-premium-aviation-college-kerala-5-300x200.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/bba-aviation-colleges-in-kerala-4-300x200\.webp$ /assets/images/bba-aviation-colleges-in-kerala-4-300x200.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/best-aviation-college-in-kerala-3-300x200\.webp$ /assets/images/best-aviation-college-in-kerala-3-300x200.webp
+RedirectMatch 301 ^/wp-content/uploads/2026/03/no\.1-premium-aviation-college-in-kerala-skywings-aviation-1-300x200\.webp$ /assets/images/no1-premium-aviation-college-kerala-1-300x200.webp
+
+# Archive/system prefixes
+RedirectMatch 301 ^/tag/.* /articles-and-news/
+RedirectMatch 301 ^/category/.* /articles-and-news/
+RedirectMatch 301 ^/type/.* /articles-and-news/
+RedirectMatch 301 ^/author/.* /articles-and-news/
+RedirectMatch 301 ^/elementor-hf/.* /
+RedirectMatch 301 ^/wp-content/.* /
+RedirectMatch 301 ^/wp-admin/.* /
+RedirectMatch 301 ^/wp-json/.* /articles-and-news/
+
+# ── Caching ──
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
+
+# hashed Next.js build assets are immutable
+<IfModule mod_headers.c>
+  <FilesMatch "\.(woff2|webp|png|jpe?g|svg)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+</IfModule>
