@@ -107,6 +107,9 @@ export const PAGE_META = {
   'skywings-feedback-form': { title: 'SkyWings Feedback Form | SkyWings Aviation Academy', desc: 'Internal student feedback form for SkyWings Aviation Academy.', noindex: true },
 };
 
+const OG_ALT = 'SkyWings Aviation Academy students in uniform at the Kochi campus';
+const OG_FALLBACK_JPG = '/assets/opengraph/preview.jpg';
+
 /**
  * Build a Next.js Metadata object for a given page slug ('' = homepage).
  * Optionally override the OG image (e.g. a blog article's featured image).
@@ -114,7 +117,15 @@ export const PAGE_META = {
 export function pageMetadata(slug, { ogImage } = {}) {
   const m = PAGE_META[slug] || { title: `${SITE_NAME}`, desc: GENERIC_DESC };
   const path = slug ? `/${slug}/` : '/';
-  const images = [...new Set([ogImage, OG_DEFAULT].filter(Boolean))];
+
+  // Page-specific featured image first (articles), then the site preview
+  // (webp + jpeg fallback for platforms that reject webp).
+  const images = [];
+  if (ogImage && ogImage !== OG_DEFAULT) {
+    images.push({ url: ogImage, width: 1600, height: 1073, alt: m.title, type: 'image/webp' });
+  }
+  images.push({ url: OG_DEFAULT, width: 1200, height: 630, alt: OG_ALT, type: 'image/webp' });
+  images.push({ url: OG_FALLBACK_JPG, width: 1200, height: 630, alt: OG_ALT, type: 'image/jpeg' });
 
   return {
     title: m.title,
@@ -134,13 +145,13 @@ export function pageMetadata(slug, { ogImage } = {}) {
       title: m.title,
       description: m.desc,
       url: path,
-      images: images.map((url) => ({ url })),
+      images,
     },
     twitter: {
       card: 'summary_large_image',
       title: m.title,
       description: m.desc,
-      images: [images[0]],
+      images: [{ url: images[0].url, alt: images[0].alt }],
     },
   };
 }
