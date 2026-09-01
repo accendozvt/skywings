@@ -1,5 +1,5 @@
 
-:root{--ink:#0c0e13;--navy:#141922;--mid:#2c3547;--sky:#c0a562;--cream:#fefcfb;--offwhite:#f8f6f1;--white:#ffffff;--sky-dim:rgba(192,165,98,0.10);--navy-line:rgba(20,25,34,0.09);--text-body:rgba(20,25,34,0.65);--text-light:rgba(20,25,34,0.40);--r:12px;--rlg:20px;--t:0.3s cubic-bezier(0.4,0,0.2,1);}
+:root{--ink:#0c0e13;--navy:#141922;--mid:#2c3547;--sky:#c0a562;--cream:#fefcfb;--offwhite:#f8f6f1;--white:#ffffff;--sky-dim:rgba(192,165,98,0.10);--navy-line:rgba(20,25,34,0.09);--text-body:rgba(20,25,34,0.65);--text-light:rgba(20,25,34,0.60);--r:12px;--rlg:20px;--t:0.3s cubic-bezier(0.4,0,0.2,1);}
 .blg*{box-sizing:border-box;margin:0;padding:0;}
 .blg{font-family:"Instrument Sans",sans-serif;color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1;width:100%;overflow-x: clip;margin:0!important;padding:0!important;}
 .blg-wrap{max-width:1100px;margin:0 auto;padding:0 32px;}
@@ -10,7 +10,7 @@
 .blg-hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(254,252,251,0.04) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
 .blg-hero__inner{position:relative;z-index:2;max-width:640px;}
 h1.blg-h1{font-family:"Sora",sans-serif!important;font-size:clamp(28px,4vw,52px)!important;font-weight:300!important;line-height:1.1!important;letter-spacing:-1.5px!important;color:var(--cream)!important;margin:0 0 14px!important;padding:0!important;display:block!important;}
-.blg-hero__lead{font-size:15px;font-weight:300;line-height:1.75;color:rgba(254,252,251,0.5);margin-bottom:0;}
+.blg-hero__lead{font-size:15px;font-weight:300;line-height:1.75;color:rgba(254,252,251,0.68);margin-bottom:0;}
 h2.blg-h2{font-family:"Sora",sans-serif!important;font-size:clamp(20px,2.8vw,34px)!important;font-weight:300!important;line-height:1.2!important;letter-spacing:-0.8px!important;color:var(--navy)!important;margin:0!important;padding:0!important;display:block!important;}
 /* FILTERS */
 .blg-filters{padding:28px 0;border-bottom:1px solid var(--navy-line);background:var(--white);position:sticky;top:0;z-index:10;}
@@ -53,6 +53,33 @@ h2.blg-h2{font-family:"Sora",sans-serif!important;font-size:clamp(20px,2.8vw,34p
 .blg-btn--solid{background:var(--navy);color:var(--cream);}
 .blg-btn--solid:hover{background:var(--ink);transform:translateY(-2px);}
 .blg-btn--ghost{background:transparent;color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.25);}
-.blg-btn--ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.5);transform:translateY(-2px);}
+.blg-btn--ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.72);transform:translateY(-2px);}
 @media(max-width:1024px){.blg-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:640px){.blg-wrap{padding:0 20px;}.blg-grid{grid-template-columns:1fr;padding:32px 0;}.blg-cta__inner{flex-direction:column;}.blg-filters-inner{gap:6px;}}
+
+/* a11y-champagne active */
+html body .active h2, html body .active h3, html body .active .sw-h2 { color: var(--ink); }
+html body .active p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne blg-card__cat */
+html body .blg-card__cat h2, html body .blg-card__cat h3, html body .blg-card__cat .sw-h2 { color: var(--ink); }
+html body .blg-card__cat p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne blg-cta */
+html body .blg-cta h2, html body .blg-cta h3, html body .blg-cta .sw-h2 { color: var(--ink); }
+html body .blg-cta p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne2 active */
+html body .active h2, html body .active h3 { color: var(--ink); }
+html body .active p { color: rgba(12,14,19,0.78); }
+html body .active [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 blg-card__cat */
+html body .blg-card__cat h2, html body .blg-card__cat h3 { color: var(--ink); }
+html body .blg-card__cat p { color: rgba(12,14,19,0.78); }
+html body .blg-card__cat [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 blg-cta */
+html body .blg-cta h2, html body .blg-cta h3 { color: var(--ink); }
+html body .blg-cta p { color: rgba(12,14,19,0.78); }
+html body .blg-cta [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }

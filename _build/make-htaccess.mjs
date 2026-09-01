@@ -19,6 +19,22 @@ DirectoryIndex index.html index.php
 
 ErrorDocument 404 /404.html
 
+# ── Canonical host: force HTTPS and non-www in a single 301 ──
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\\. [NC]
+RewriteRule ^(.*)$ https://skywingsacademy.com/$1 [R=301,L]
+
+# ── Security headers ──
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+</IfModule>
+
 # ── 301 redirects: old WordPress URLs ──
 `;
 for (const [from, to] of pageRedirects) {

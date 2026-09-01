@@ -302,21 +302,21 @@ export default function Page_bba_logistics_supply_chain_management() {
           </div>
           <p className="log-body--sm" style={{ marginTop: '8px', marginBottom: '28px' }}>Start your journey in 3 simple steps. Seats fill quickly, apply early.</p>
           <div className="log-step">
-            <div className="log-step__num">1</div>
+            <div className="log-step__num" aria-hidden="true">1</div>
             <div>
               <div className="log-step__title">Eligibility Check</div>
               <p className="log-body--sm">Verification of +2 marks (Minimum 50%) from any stream.</p>
             </div>
           </div>
           <div className="log-step">
-            <div className="log-step__num">2</div>
+            <div className="log-step__num" aria-hidden="true">2</div>
             <div>
               <div className="log-step__title">Merit Selection</div>
               <p className="log-body--sm">Shortlisting based on academic performance and overall profile.</p>
             </div>
           </div>
           <div className="log-step">
-            <div className="log-step__num">3</div>
+            <div className="log-step__num" aria-hidden="true">3</div>
             <div>
               <div className="log-step__title">GD &amp; Personal Interview</div>
               <p className="log-body--sm">Assessment of communication skills, aptitude, and career goals.</p>

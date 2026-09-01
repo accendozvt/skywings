@@ -14,7 +14,7 @@
   --sky-line:   rgba(192,165,98,0.20);
   --navy-line:  rgba(20,25,34,0.09);
   --text-body:  rgba(20,25,34,0.65);
-  --text-light: rgba(20,25,34,0.40);
+  --text-light: rgba(20,25,34,0.60);
   --radius:     12px;
   --radius-lg:  20px;
   --trans:      0.3s cubic-bezier(0.4,0,0.2,1);
@@ -95,7 +95,7 @@
 .swc-hero__sub {
   font-size: 15px;
   font-weight: 300;
-  color: rgba(254,252,251,0.5);
+  color: rgba(254,252,251,0.68);
   line-height: 1.7;
   max-width: 420px;
   margin-bottom: 36px;
@@ -141,7 +141,7 @@
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(254,252,251,0.35);
+  color: rgba(254,252,251,0.68);
   line-height: 1;
   margin-bottom: 3px;
 }
@@ -152,7 +152,7 @@
   line-height: 1.3;
 }
 .swc-quick-link__arrow {
-  color: rgba(254,252,251,0.25);
+  color: rgba(254,252,251,0.72);
   flex-shrink: 0;
 }
 .swc-quick-link__arrow svg { width: 14px; height: 14px; }
@@ -191,7 +191,7 @@
 .swc-campus-card__addr {
   font-size: 12.5px;
   font-weight: 300;
-  color: rgba(254,252,251,0.45);
+  color: rgba(254,252,251,0.68);
   line-height: 1.5;
 }
 .swc-campus-card__map {
@@ -277,7 +277,7 @@
 .swc-info-sub {
   font-size: 13px;
   font-weight: 300;
-  color: rgba(254,252,251,0.45);
+  color: rgba(254,252,251,0.68);
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -311,7 +311,7 @@
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(254,252,251,0.3);
+  color: rgba(254,252,251,0.68);
   line-height: 1;
   margin-bottom: 4px;
 }
@@ -346,7 +346,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: rgba(254,252,251,0.45);
+  color: rgba(254,252,251,0.68);
   transition: background var(--trans), color var(--trans), border-color var(--trans);
 }
 .swc-info-social__link:hover {
@@ -552,7 +552,7 @@ textarea.swc-input { resize: vertical; min-height: 110px; line-height: 1.6; }
 .swc-map-card__addr {
   font-size: 12px;
   font-weight: 300;
-  color: rgba(254,252,251,0.45);
+  color: rgba(254,252,251,0.68);
   line-height: 1;
 }
 .swc-map-card__info { flex: 1; }
@@ -586,7 +586,7 @@ textarea.swc-input { resize: vertical; min-height: 110px; line-height: 1.6; }
 .swc-wa-sub {
   font-size: 13px;
   font-weight: 300;
-  color: rgba(254,252,251,0.45);
+  color: rgba(254,252,251,0.68);
   line-height: 1.5;
 }
 .swc-wa-btns {
@@ -616,3 +616,30 @@ textarea.swc-input { resize: vertical; min-height: 110px; line-height: 1.6; }
   .swc-btn { justify-content: center; }
   .swc-wa-btns { flex-direction: column; width: 100%; }
 }
+
+/* a11y-champagne swc-campus-card__dot */
+html body .swc-campus-card__dot h2, html body .swc-campus-card__dot h3, html body .swc-campus-card__dot .sw-h2 { color: var(--ink); }
+html body .swc-campus-card__dot p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne swc-btn--sky */
+html body .swc-btn--sky h2, html body .swc-btn--sky h3, html body .swc-btn--sky .sw-h2 { color: var(--ink); }
+html body .swc-btn--sky p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne swc-map-card__dot */
+html body .swc-map-card__dot h2, html body .swc-map-card__dot h3, html body .swc-map-card__dot .sw-h2 { color: var(--ink); }
+html body .swc-map-card__dot p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne2 swc-campus-card__dot */
+html body .swc-campus-card__dot h2, html body .swc-campus-card__dot h3 { color: var(--ink); }
+html body .swc-campus-card__dot p { color: rgba(12,14,19,0.78); }
+html body .swc-campus-card__dot [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 swc-btn--sky */
+html body .swc-btn--sky h2, html body .swc-btn--sky h3 { color: var(--ink); }
+html body .swc-btn--sky p { color: rgba(12,14,19,0.78); }
+html body .swc-btn--sky [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 swc-map-card__dot */
+html body .swc-map-card__dot h2, html body .swc-map-card__dot h3 { color: var(--ink); }
+html body .swc-map-card__dot p { color: rgba(12,14,19,0.78); }
+html body .swc-map-card__dot [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }

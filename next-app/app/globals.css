@@ -16,7 +16,7 @@
   --sky-line:   rgba(192,165,98,0.20);
   --navy-line:  rgba(20,25,34,0.09);
   --text-body:  rgba(20,25,34,0.65);
-  --text-light: rgba(20,25,34,0.40);
+  --text-light: rgba(20,25,34,0.60);
 
   --radius:     12px;
   --radius-lg:  20px;
@@ -77,4 +77,16 @@ main section:not(:first-of-type) {
 
 /* Accessible accent for TEXT on light surfaces (champagne #c0a562 is 2.1:1
    on white; #8a7440 is 4.6:1+). Dark-surface text/icons keep --sky. */
-:root { --sky-text: #8a7440; }
+:root { --sky-text: #7a6638; }
+
+/* a11y: WhatsApp-green buttons need dark text (white on #25D366 is ~2:1) */
+[class*='btn--wa'], [class*='btn--whatsapp'] { color: #0b3323 !important; }
+
+/* a11y-champagne skip-link */
+html body .skip-link h2, html body .skip-link h3, html body .skip-link .sw-h2 { color: var(--ink); }
+html body .skip-link p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne2 skip-link */
+html body .skip-link h2, html body .skip-link h3 { color: var(--ink); }
+html body .skip-link p { color: rgba(12,14,19,0.78); }
+html body .skip-link [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }

@@ -206,12 +206,12 @@ export default function Page_mba_airline_and_airport_management() {
       </div>
       <div className="mba-cert-grid">
         <div className="mba-cert-card">
-          <div className="mba-cert-card__num">01</div>
+          <div className="mba-cert-card__num" aria-hidden="true">01</div>
           <div className="mba-cert-card__title">MBA Degree, UGC Recognised University</div>
           <p className="mba-body--sm">A full-time MBA degree from a UGC Recognised Government University (e.g. Bharathiar University), valid for government jobs, UPSC exams, and higher studies abroad (PhD / Executive programmes).</p>
         </div>
         <div className="mba-cert-card">
-          <div className="mba-cert-card__num">02</div>
+          <div className="mba-cert-card__num" aria-hidden="true">02</div>
           <div className="mba-cert-card__title">Certificate of Accomplishment, SkyWings Aviation</div>
           <p className="mba-body--sm">Issued by SkyWings Aviation &amp; Logistics Academy, certifying your practical skills in Airport Management, AI for Aviation, and Cargo Operations, recognised by leading industry employers.</p>
         </div>

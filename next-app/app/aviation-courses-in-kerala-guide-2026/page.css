@@ -3,7 +3,7 @@
   --ink:#0c0e13;--navy:#141922;--mid:#2c3547;--sky:#c0a562;--cream:#fefcfb;
   --offwhite:#f8f6f1;--white:#ffffff;--sky-dim:rgba(192,165,98,0.10);
   --sky-line:rgba(192,165,98,0.20);--navy-line:rgba(20,25,34,0.09);
-  --text-body:rgba(20,25,34,0.65);--text-light:rgba(20,25,34,0.40);
+  --text-body:rgba(20,25,34,0.65);--text-light:rgba(20,25,34,0.60);
   --radius:12px;--radius-lg:20px;--trans:0.3s cubic-bezier(0.4,0,0.2,1);
 }
 .gak * { box-sizing:border-box; margin:0; padding:0; }
@@ -22,7 +22,7 @@
 .gak-btn--wa { background:#25D366; color:var(--white); }
 .gak-btn--wa:hover { background:#1ebe5d; transform:translateY(-2px); }
 .gak-btn--ghost { background:transparent; color:rgba(255,255,255,0.75); border:1px solid rgba(255,255,255,0.2); }
-.gak-btn--ghost:hover { color:var(--white); border-color:rgba(255,255,255,0.5); transform:translateY(-2px); }
+.gak-btn--ghost:hover { color:var(--white); border-color:rgba(255,255,255,0.72); transform:translateY(-2px); }
 .gak-btn svg { flex-shrink:0; }
 
 /* HERO */
@@ -31,14 +31,14 @@
 .gak-hero__inner { position:relative; z-index:2; max-width:700px; }
 h1.gak-h1 { font-family:var(--font-sora)!important; font-size:clamp(30px,4.5vw,60px)!important; font-weight:300!important; line-height:1.1!important; letter-spacing:-1.5px!important; color:var(--cream)!important; margin:0 0 16px!important; padding:0!important; display:block!important; }
 .gak-hero__sub { font-family:var(--font-sora); font-size:13px; font-weight:400; color:rgba(192,165,98,0.8); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:20px; display:block; }
-.gak-hero__lead { font-size:16px; font-weight:300; line-height:1.8; color:rgba(254,252,251,0.55); max-width:600px; margin-bottom:36px; }
+.gak-hero__lead { font-size:16px; font-weight:300; line-height:1.8; color:rgba(254,252,251,0.68); max-width:600px; margin-bottom:36px; }
 .gak-hero__cta { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:48px; }
 .gak-hero__stats { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; max-width:600px; }
 .gak-hero__stat { background:rgba(254,252,251,0.05); border:1px solid rgba(254,252,251,0.08); padding:16px 14px; text-align:center; }
 .gak-hero__stat:first-child { border-radius:var(--radius) 0 0 var(--radius); }
 .gak-hero__stat:last-child { border-radius:0 var(--radius) var(--radius) 0; }
 .gak-stat-num { font-family:var(--font-sora); font-size:22px; font-weight:300; color:var(--cream); letter-spacing:-0.5px; line-height:1; margin-bottom:4px; }
-.gak-stat-label { font-size:10px; color:rgba(254,252,251,0.35); font-weight:400; letter-spacing:0.3px; }
+.gak-stat-label { font-size:10px; color:rgba(254,252,251,0.68); font-weight:400; letter-spacing:0.3px; }
 
 /* COURSE CARDS */
 h2.gak-h2 { font-family:var(--font-sora)!important; font-size:clamp(22px,3vw,38px)!important; font-weight:300!important; line-height:1.2!important; letter-spacing:-0.8px!important; color:var(--navy)!important; margin:0!important; padding:0!important; display:block!important; }
@@ -61,7 +61,7 @@ h3.gak-h3--light { color:var(--cream)!important; }
 .gak-course__link:hover { color:#a3894a; }
 .gak-course__link svg { width:13px; height:13px; transition:transform var(--trans); }
 .gak-course__link:hover svg { transform:translateX(3px); }
-.gak-course__salary { font-size:11px; font-weight:500; color:#16a34a; letter-spacing:0.3px; }
+.gak-course__salary { font-size:11px; font-weight:500; color:#0e7a37; letter-spacing:0.3px; }
 
 /* WHY KERALA */
 .gak-outlook-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--navy-line); border-radius:var(--radius-lg); overflow:hidden; margin-top:48px; }
@@ -76,7 +76,7 @@ h3.gak-h3--light { color:var(--cream)!important; }
 .gak-salary-item:hover { background:rgba(44,53,71,0.65); }
 .gak-salary-item__role { font-family:var(--font-sora); font-size:14px; font-weight:500; color:var(--cream); margin-bottom:8px; }
 .gak-salary-item__range { font-family:var(--font-sora); font-size:22px; font-weight:300; color:var(--sky); letter-spacing:-0.5px; line-height:1; margin-bottom:6px; }
-.gak-salary-item__note { font-size:12px; font-weight:300; color:rgba(254,252,251,0.4); line-height:1.5; }
+.gak-salary-item__note { font-size:12px; font-weight:300; color:rgba(254,252,251,0.68); line-height:1.5; }
 
 /* FAQ */
 .gak-faq { display:flex; flex-direction:column; gap:2px; background:var(--navy-line); border-radius:var(--radius); overflow:hidden; margin-top:48px; }
@@ -90,8 +90,8 @@ h3.gak-h3--light { color:var(--cream)!important; }
 
 /* FINAL CTA */
 .gak-finalcta { background:var(--sky); padding:64px 0; text-align:center; }
-.gak-finalcta__h { font-family:var(--font-sora); font-size:clamp(22px,3vw,36px); font-weight:300; color:var(--white); margin-bottom:12px; letter-spacing:-0.5px; }
-.gak-finalcta__p { font-size:15px; font-weight:300; color:rgba(255,255,255,0.65); line-height:1.7; margin-bottom:32px; }
+.gak-finalcta__h { font-family:var(--font-sora); font-size:clamp(22px,3vw,36px); font-weight:300; color:var(--ink); margin-bottom:12px; letter-spacing:-0.5px; }
+.gak-finalcta__p { font-size:15px; font-weight:300; color:rgba(12,14,19,0.78); line-height:1.7; margin-bottom:32px; }
 .gak-finalcta__btns { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
 
 @media (max-width:1024px) {
@@ -106,3 +106,43 @@ h3.gak-h3--light { color:var(--cream)!important; }
   .gak-hero__stats { grid-template-columns:1fr 1fr; }
   h1.gak-h1 { font-size:clamp(28px,8vw,38px)!important; }
 }
+
+/* a11y: ghost button on champagne CTA needs dark text */
+.gak-finalcta .gak-btn--ghost{color:rgba(12,14,19,0.85);border:1px solid rgba(12,14,19,0.45);}
+.gak-finalcta .gak-btn--ghost:hover{color:var(--ink);border-color:var(--ink);}
+
+/* a11y-champagne gak-rule */
+html body .gak-rule h2, html body .gak-rule h3, html body .gak-rule .sw-h2 { color: var(--ink); }
+html body .gak-rule p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne gak-btn--sky */
+html body .gak-btn--sky h2, html body .gak-btn--sky h3, html body .gak-btn--sky .sw-h2 { color: var(--ink); }
+html body .gak-btn--sky p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne gak-faq-arrow */
+html body .gak-faq-arrow h2, html body .gak-faq-arrow h3, html body .gak-faq-arrow .sw-h2 { color: var(--ink); }
+html body .gak-faq-arrow p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne gak-finalcta */
+html body .gak-finalcta h2, html body .gak-finalcta h3, html body .gak-finalcta .sw-h2 { color: var(--ink); }
+html body .gak-finalcta p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne2 gak-rule */
+html body .gak-rule h2, html body .gak-rule h3 { color: var(--ink); }
+html body .gak-rule p { color: rgba(12,14,19,0.78); }
+html body .gak-rule [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 gak-btn--sky */
+html body .gak-btn--sky h2, html body .gak-btn--sky h3 { color: var(--ink); }
+html body .gak-btn--sky p { color: rgba(12,14,19,0.78); }
+html body .gak-btn--sky [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 gak-faq-arrow */
+html body .gak-faq-arrow h2, html body .gak-faq-arrow h3 { color: var(--ink); }
+html body .gak-faq-arrow p { color: rgba(12,14,19,0.78); }
+html body .gak-faq-arrow [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 gak-finalcta */
+html body .gak-finalcta h2, html body .gak-finalcta h3 { color: var(--ink); }
+html body .gak-finalcta p { color: rgba(12,14,19,0.78); }
+html body .gak-finalcta [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }

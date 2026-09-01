@@ -1,0 +1,25 @@
+/* Hand-curated contrast fixes for one-off cases the generated file can't
+   safely express (dual-context classes scoped to their failing parent). */
+
+/* champagne text button on light page background */
+html body .sw-btn--white { color: var(--sky-text); }
+
+/* eyebrows inside the champagne CTA bands: ink, matching the band's ink text */
+html body .bba-cta__inner .bba-eyebrow,
+html body .cc-cta__inner .cc-eyebrow,
+html body .mba-cta__inner .mba-eyebrow,
+html body .aam-cta__inner .aam-eyebrow,
+html body .ah-cta__inner .ah-eyebrow,
+html body .log-cta__inner .log-eyebrow,
+html body .cl-midcta__inner .cl-eyebrow { color: var(--ink); }
+
+/* sky-text eyebrows that sit inside DARK section wrappers: restore bright */
+html body [class*='finalcta'] [class*='-eyebrow'],
+html body .lp-hero .lp-eyebrow,
+html body .lp-dark .lp-eyebrow { color: var(--sky); }
+
+/* dim navy body text used inside dark final CTA */
+html body .cl-finalcta .cl-body { color: rgba(254, 252, 251, 0.8); }
+
+/* champagne badge on the dark course card strip (home) */
+html body .sw-course-card .sw-course-card__badge { color: #d8c088; }

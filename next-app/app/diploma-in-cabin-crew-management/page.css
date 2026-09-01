@@ -14,7 +14,7 @@
   --navy-line:  rgba(20,25,34,0.1);
   --white:      #ffffff;
   --text-body:  rgba(20,25,34,0.68);
-  --text-light: rgba(20,25,34,0.42);
+  --text-light: rgba(20,25,34,0.62);
   --radius:     12px;
   --radius-lg:  20px;
   --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -105,7 +105,7 @@
   font-family: var(--font-sora) !important;
   font-size: 14px !important;
   font-weight: 400 !important;
-  color: rgba(254,252,251,0.35) !important;
+  color: rgba(254,252,251,0.68) !important;
   letter-spacing: 1px !important;
   margin-top: 12px !important;
   margin-bottom: 0 !important;
@@ -175,7 +175,7 @@
 }
 .cc-btn--ghost-light:hover {
   color: var(--white);
-  border-color: rgba(255,255,255,0.5);
+  border-color: rgba(255,255,255,0.72);
   transform: translateY(-2px);
 }
 .cc-btn--whatsapp {
@@ -302,7 +302,7 @@
 }
 .cc-hero__stat-label {
   font-size: 10px;
-  color: rgba(254,252,251,0.35);
+  color: rgba(254,252,251,0.68);
   font-weight: 400;
   letter-spacing: 0.3px;
 }
@@ -406,7 +406,7 @@
   font-size: 13px;
   font-weight: 300;
   line-height: 1.75;
-  color: rgba(254,252,251,0.45);
+  color: rgba(254,252,251,0.68);
 }
 
 /* ══════════════════════════════════════
@@ -546,8 +546,8 @@
   justify-content: space-between;
   gap: 48px;
 }
-.cc-cta__text .cc-h2 { color: var(--white); font-size: clamp(22px, 3vw, 36px); }
-.cc-cta__text p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.65); margin-top: 10px; line-height: 1.7; }
+.cc-cta__text .cc-h2 { color: var(--ink); font-size: clamp(22px, 3vw, 36px); }
+.cc-cta__text p { font-size: 15px; font-weight: 300; color: rgba(12,14,19,0.78); margin-top: 10px; line-height: 1.7; }
 .cc-cta__actions { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
 
 /* ══════════════════════════════════════
@@ -580,7 +580,7 @@
 .cc-number-item__num span { font-size: 28px; }
 .cc-number-item__label {
   font-size: 13px;
-  color: rgba(254,252,251,0.38);
+  color: rgba(254,252,251,0.72);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -692,7 +692,7 @@
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: rgba(254,252,251,0.35);
+  color: rgba(254,252,251,0.68);
   font-weight: 400;
 }
 .cc-trust-item svg { color: var(--sky); opacity: 0.6; width: 13px; height: 13px; }
@@ -708,7 +708,7 @@
 }
 .cc-phonestrip__text {
   font-size: 14px;
-  color: rgba(254,252,251,0.55);
+  color: rgba(254,252,251,0.68);
   font-weight: 300;
   display: flex;
   align-items: center;
@@ -781,3 +781,39 @@
   /* split image, fixed min-height so it doesn't collapse */
   .cc-split__img { aspect-ratio: unset; min-height: 300px; height: 300px; }
 }
+
+/* a11y-champagne cc-rule */
+html body .cc-rule h2, html body .cc-rule h3, html body .cc-rule .sw-h2 { color: var(--ink); }
+html body .cc-rule p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne cc-btn--sky */
+html body .cc-btn--sky h2, html body .cc-btn--sky h3, html body .cc-btn--sky .sw-h2 { color: var(--ink); }
+html body .cc-btn--sky p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne cc-cta */
+html body .cc-cta h2, html body .cc-cta h3, html body .cc-cta .sw-h2 { color: var(--ink); }
+html body .cc-cta p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne cc-faq-summary__arrow */
+html body .cc-faq-summary__arrow h2, html body .cc-faq-summary__arrow h3, html body .cc-faq-summary__arrow .sw-h2 { color: var(--ink); }
+html body .cc-faq-summary__arrow p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne2 cc-rule */
+html body .cc-rule h2, html body .cc-rule h3 { color: var(--ink); }
+html body .cc-rule p { color: rgba(12,14,19,0.78); }
+html body .cc-rule [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 cc-btn--sky */
+html body .cc-btn--sky h2, html body .cc-btn--sky h3 { color: var(--ink); }
+html body .cc-btn--sky p { color: rgba(12,14,19,0.78); }
+html body .cc-btn--sky [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 cc-cta */
+html body .cc-cta h2, html body .cc-cta h3 { color: var(--ink); }
+html body .cc-cta p { color: rgba(12,14,19,0.78); }
+html body .cc-cta [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 cc-faq-summary__arrow */
+html body .cc-faq-summary__arrow h2, html body .cc-faq-summary__arrow h3 { color: var(--ink); }
+html body .cc-faq-summary__arrow p { color: rgba(12,14,19,0.78); }
+html body .cc-faq-summary__arrow [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }

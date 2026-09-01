@@ -95,7 +95,7 @@ export default function Page_aviation_courses_in_kerala() {
           </div>
           <span className="cl-course-card__badge">3 Years · UG Degree</span>
           <h3 className="cl-course-card__title">BBA Aviation, Airline &amp; Airport Management</h3>
-          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 3 Years · UG Degree</p>
+          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky-text)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 3 Years · UG Degree</p>
           <p className="cl-course-card__sub">The Top Choice for BBA Aviation in Kerala</p>
           <p className="cl-course-card__desc">Our flagship 3-year undergraduate program blends core business administration principles with specialised airline and airport operations training. Prepare for dynamic managerial roles and master airport planning, safety, alongside our exclusive AI module.</p>
           <div className="cl-course-card__meta">
@@ -129,7 +129,7 @@ export default function Page_aviation_courses_in_kerala() {
           </div>
           <span className="cl-course-card__badge">1 Year · Diploma</span>
           <h3 className="cl-course-card__title">Diploma in Cabin Crew Operations</h3>
-          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 1 Year · Diploma</p>
+          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky-text)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 1 Year · Diploma</p>
           <p className="cl-course-card__sub">Premier Cabin Crew Training in Kochi</p>
           <p className="cl-course-card__desc">Dreaming of travelling the world? We transform your personality through intensive grooming, communicative English training, in-flight safety drills, and mock flight scenarios to crack interviews with top international carriers.</p>
           <div className="cl-course-card__meta">
@@ -163,7 +163,7 @@ export default function Page_aviation_courses_in_kerala() {
           </div>
           <span className="cl-course-card__badge">2 Years · PG Degree</span>
           <h3 className="cl-course-card__title">MBA Aviation, Airline &amp; Airport Management</h3>
-          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 2 Years · PG Degree</p>
+          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky-text)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 2 Years · PG Degree</p>
           <p className="cl-course-card__sub">Advanced Leadership for Professionals</p>
           <p className="cl-course-card__desc">For ambitious graduates who want to lead the industry. This programme dives deep into strategic airport planning, aviation law, global logistics, and AI-driven business intelligence. Paves the way for C-suite executive roles.</p>
           <div className="cl-course-card__meta">
@@ -197,7 +197,7 @@ export default function Page_aviation_courses_in_kerala() {
           </div>
           <span className="cl-course-card__badge">1 Year · Diploma</span>
           <h3 className="cl-course-card__title">Diploma in Airline and Airport Management</h3>
-          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 1 Year · Diploma</p>
+          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky-text)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 1 Year · Diploma</p>
           <p className="cl-course-card__sub">Fast-Track Your Career in 1 Year</p>
           <p className="cl-course-card__desc">Enter the aviation workforce quickly! Covering the A-to-Z of ground handling, terminal operations, baggage management, and IATA safety protocols, this course gets you hired at major airports in record time.</p>
           <div className="cl-course-card__meta">
@@ -231,7 +231,7 @@ export default function Page_aviation_courses_in_kerala() {
           </div>
           <span className="cl-course-card__badge">3 Years · UG Degree</span>
           <h3 className="cl-course-card__title">BBA Logistics &amp; Supply Chain Management</h3>
-          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 3 Years · UG Degree</p>
+          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky-text)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 3 Years · UG Degree</p>
           <p className="cl-course-card__sub">Mastering Global Trade and Cargo</p>
           <p className="cl-course-card__desc">Focuses on the systematised flow of goods, airfreight logistics, shipping, and warehousing. Integrated with AI training for smart supply chains, this course opens doors to the booming e-commerce and global trade industries.</p>
           <div className="cl-course-card__meta">
@@ -265,7 +265,7 @@ export default function Page_aviation_courses_in_kerala() {
           </div>
           <span className="cl-course-card__badge">6 Months · Diploma</span>
           <h3 className="cl-course-card__title">Diploma in Aviation &amp; Hospitality Management</h3>
-          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 6 Months · Diploma</p>
+          <p style={{ fontSize: '12px', fontWeight: '400', color: 'var(--sky-text)', letterSpacing: '0.5px', margin: '-4px 0 14px', lineHeight: '1.3' }}>Aviation Course in Kerala · 6 Months · Diploma</p>
           <p className="cl-course-card__sub">6-Month Fast-Track Aviation Diploma</p>
           <p className="cl-course-card__desc">Combine the prestige of aviation with luxury hospitality. Tailored for working in premium airport lounges, VIP guest relations, and luxury hotels. Learn "White Glove Service," grooming, and crisis management.</p>
           <div className="cl-course-card__meta">
@@ -447,7 +447,7 @@ export default function Page_aviation_courses_in_kerala() {
     <div className="cl-finalcta__inner">
       <div className="cl-eyebrow cl-eyebrow--center" style={{ justifyContent: 'center' }}>Admissions Open, 2026 Batch</div>
       <h2 className="cl-h2 cl-h2--light" style={{ marginBottom: '16px' }}>Your runway to a global career starts here.</h2>
-      <p className="cl-body" style={{ color: 'rgba(254,252,251,0.45)' }}>Kochi & Mahe campuses · UGC Recognised · AI-Integrated · 100% Placement Assistance</p>
+      <p className="cl-body" style={{ color: 'rgba(254,252,251,0.72)' }}>Kochi & Mahe campuses · UGC Recognised · AI-Integrated · 100% Placement Assistance</p>
 
       <div className="cl-finalcta__actions">
         <a href="tel:+919847163163" className="cl-btn cl-btn--sky">

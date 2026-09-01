@@ -1,4 +1,6 @@
 import './globals.css';
+import './a11y-contrast.css';
+import './a11y-manual.css';
 import { sora, instrumentSans } from './fonts';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';

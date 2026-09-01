@@ -11,7 +11,7 @@
   --sky-line:  rgba(192,165,98,0.20);
   --navy-line: rgba(20,25,34,0.09);
   --text-body: rgba(20,25,34,0.65);
-  --text-light:rgba(20,25,34,0.40);
+  --text-light:rgba(20,25,34,0.60);
   --radius:    12px;
   --radius-lg: 20px;
   --trans:     0.3s cubic-bezier(0.4,0,0.2,1);
@@ -47,7 +47,7 @@
 .bck-btn--wa { background: #25D366; color: var(--white); }
 .bck-btn--wa:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(37,211,102,0.3); }
 .bck-btn--ghost { background: transparent; color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.2); }
-.bck-btn--ghost:hover { color: var(--white); border-color: rgba(255,255,255,0.5); transform: translateY(-2px); }
+.bck-btn--ghost:hover { color: var(--white); border-color: rgba(255,255,255,0.72); transform: translateY(-2px); }
 .bck-btn svg { flex-shrink: 0; }
 
 /* ── HERO ── */
@@ -58,7 +58,7 @@
 
 h1.bck-h1 { font-family: var(--font-sora) !important; font-size: clamp(30px,4.2vw,58px) !important; font-weight: 300 !important; line-height: 1.1 !important; letter-spacing: -1.5px !important; color: var(--cream) !important; margin: 0 0 8px !important; padding: 0 !important; display: block !important; }
 .bck-h1-sub { font-family: var(--font-sora); font-size: 13px; font-weight: 400; color: rgba(192,165,98,0.8); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; display: block; }
-.bck-hero__lead { font-size: 16px; font-weight: 300; line-height: 1.75; color: rgba(254,252,251,0.55); max-width: 480px; margin: 20px 0 36px; }
+.bck-hero__lead { font-size: 16px; font-weight: 300; line-height: 1.75; color: rgba(254,252,251,0.68); max-width: 480px; margin: 20px 0 36px; }
 .bck-hero__cta { display: flex; gap: 10px; flex-wrap: wrap; }
 .bck-hero__right { display: flex; flex-direction: column; gap: 12px; padding-bottom: 40px; }
 
@@ -74,7 +74,7 @@ h1.bck-h1 { font-family: var(--font-sora) !important; font-size: clamp(30px,4.2v
 .bck-fact { padding: 28px 24px; border-right: 1px solid rgba(255,255,255,0.08); text-align: center; }
 .bck-fact:last-child { border-right: none; }
 .bck-fact__num { font-family: var(--font-sora); font-size: 26px; font-weight: 300; color: var(--cream); letter-spacing: -0.5px; line-height: 1; margin-bottom: 6px; }
-.bck-fact__label { font-size: 11px; font-weight: 400; color: rgba(254,252,251,0.45); letter-spacing: 0.3px; line-height: 1.4; }
+.bck-fact__label { font-size: 11px; font-weight: 400; color: rgba(254,252,251,0.68); letter-spacing: 0.3px; line-height: 1.4; }
 
 /* ── WHAT IS BBA AVIATION ── */
 h2.bck-h2 { font-family: var(--font-sora) !important; font-size: clamp(22px,3vw,38px) !important; font-weight: 300 !important; line-height: 1.2 !important; letter-spacing: -0.8px !important; color: var(--navy) !important; margin: 0 !important; padding: 0 !important; display: block !important; }
@@ -105,7 +105,7 @@ h3.bck-h3--light { color: var(--cream) !important; }
 .bck-table tr:last-child td { border-bottom: none; }
 .bck-table tr.bck-table__highlight td { background: rgba(192,165,98,0.06); font-weight: 400; }
 .bck-table tr.bck-table__highlight td:first-child { font-weight: 600; color: var(--navy); }
-.bck-check { color: #16a34a; font-size: 16px; }
+.bck-check { color: #0e7a37; font-size: 16px; }
 .bck-cross { color: #dc2626; font-size: 16px; }
 
 /* ── CAREER SCOPE ── */
@@ -114,14 +114,14 @@ h3.bck-h3--light { color: var(--cream) !important; }
 .bck-career-card:hover { border-color: var(--sky-line); box-shadow: 0 8px 32px rgba(20,25,34,0.08); transform: translateY(-4px); }
 .bck-career-card__icon { width: 44px; height: 44px; background: var(--sky-dim); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--sky); margin-bottom: 16px; }
 .bck-career-card__icon svg { width: 20px; height: 20px; }
-.bck-career-card__salary { font-size: 11px; font-weight: 500; color: #16a34a; letter-spacing: 0.5px; margin-top: 6px; display: block; }
+.bck-career-card__salary { font-size: 11px; font-weight: 500; color: #0e7a37; letter-spacing: 0.5px; margin-top: 6px; display: block; }
 
 /* ── WHY SKYWINGS IS NO.1 ── */
 .bck-reasons { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: rgba(254,252,251,0.07); border-radius: var(--radius-lg); overflow: hidden; margin-top: 48px; }
 .bck-reason { background: rgba(44,53,71,0.4); padding: 36px 32px; transition: background var(--trans); }
 .bck-reason:hover { background: rgba(44,53,71,0.65); }
 .bck-reason__num { font-family: var(--font-sora); font-size: 13px; font-weight: 500; color: var(--sky); letter-spacing: 2px; margin-bottom: 14px; display: block; }
-.bck-reason__body { font-size: 14px; font-weight: 300; line-height: 1.8; color: rgba(254,252,251,0.5); margin-top: 8px; }
+.bck-reason__body { font-size: 14px; font-weight: 300; line-height: 1.8; color: rgba(254,252,251,0.68); margin-top: 8px; }
 
 /* ── FAQ ── */
 .bck-faq { display: flex; flex-direction: column; gap: 2px; background: var(--navy-line); border-radius: var(--radius); overflow: hidden; margin-top: 48px; }
@@ -156,3 +156,39 @@ h3.bck-h3--light { color: var(--cream) !important; }
   .bck-career-grid { grid-template-columns: 1fr 1fr; }
   h1.bck-h1 { font-size: clamp(28px,8vw,40px) !important; }
 }
+
+/* a11y-champagne bck-btn--sky */
+html body .bck-btn--sky h2, html body .bck-btn--sky h3, html body .bck-btn--sky .sw-h2 { color: var(--ink); }
+html body .bck-btn--sky p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne bck-rule */
+html body .bck-rule h2, html body .bck-rule h3, html body .bck-rule .sw-h2 { color: var(--ink); }
+html body .bck-rule p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne bck-faq-arrow */
+html body .bck-faq-arrow h2, html body .bck-faq-arrow h3, html body .bck-faq-arrow .sw-h2 { color: var(--ink); }
+html body .bck-faq-arrow p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne bck-finalcta */
+html body .bck-finalcta h2, html body .bck-finalcta h3, html body .bck-finalcta .sw-h2 { color: var(--ink); }
+html body .bck-finalcta p { color: rgba(12,14,19,0.78); }
+
+/* a11y-champagne2 bck-btn--sky */
+html body .bck-btn--sky h2, html body .bck-btn--sky h3 { color: var(--ink); }
+html body .bck-btn--sky p { color: rgba(12,14,19,0.78); }
+html body .bck-btn--sky [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 bck-rule */
+html body .bck-rule h2, html body .bck-rule h3 { color: var(--ink); }
+html body .bck-rule p { color: rgba(12,14,19,0.78); }
+html body .bck-rule [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 bck-faq-arrow */
+html body .bck-faq-arrow h2, html body .bck-faq-arrow h3 { color: var(--ink); }
+html body .bck-faq-arrow p { color: rgba(12,14,19,0.78); }
+html body .bck-faq-arrow [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }
+
+/* a11y-champagne2 bck-finalcta */
+html body .bck-finalcta h2, html body .bck-finalcta h3 { color: var(--ink); }
+html body .bck-finalcta p { color: rgba(12,14,19,0.78); }
+html body .bck-finalcta [class*='--ghost'] { color: rgba(12,14,19,0.85); border-color: rgba(12,14,19,0.45); }

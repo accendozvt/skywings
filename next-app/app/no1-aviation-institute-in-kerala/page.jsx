@@ -88,7 +88,7 @@ export default function Page_no1_aviation_institute_in_kerala() {
 
 <div style={{ background: 'var(--white)', padding: '0', overflow: 'hidden', borderTop: '1px solid rgba(20,25,34,0.07)', borderBottom: '1px solid rgba(20,25,34,0.07)' }}>
   <div style={{ padding: '28px 0 0', textAlign: 'center' }}>
-    <span style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '10px', fontWeight: '500', letterSpacing: '2.5px', textTransform: 'uppercase', color: 'var(--sky)' }}>Our Placed Students, 2,000+ Alumni Globally</span>
+    <span style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '10px', fontWeight: '500', letterSpacing: '2.5px', textTransform: 'uppercase', color: 'var(--sky-text)' }}>Our Placed Students, 2,000+ Alumni Globally</span>
   </div>
   <div style={{ overflow: 'hidden', width: '100%', padding: '20px 0' }}>
     <div className="lp-carousel-track">
@@ -125,7 +125,7 @@ export default function Page_no1_aviation_institute_in_kerala() {
 
 <section className="lp-sec" style={{ background: 'var(--ink)' }}>
   <div className="lp-wrap">
-    <div className="lp-eyebrow">Our Programmes</div>
+    <div className="lp-eyebrow" style={{ color: 'var(--sky)' }}>Our Programmes</div>
     <h2 className="lp-h2 lp-h2--light">Choose your aviation course for 2026</h2>
     <span className="lp-rule"></span>
 
@@ -204,10 +204,10 @@ export default function Page_no1_aviation_institute_in_kerala() {
     <h2 className="lp-h2">Join SkyWings in 4 simple steps</h2>
     <span className="lp-rule"></span>
     <div className="lp-steps">
-      <div className="lp-step"><div className="lp-step__num">01</div><div className="lp-step__title">Free Counselling Call</div><div className="lp-step__body">Call or WhatsApp us. Our counsellor will identify the right course for your profile, goals, and budget.</div></div>
-      <div className="lp-step"><div className="lp-step__num">02</div><div className="lp-step__title">Personal Interview</div><div className="lp-step__body">A short, friendly assessment at our Kochi or Mahe campus, or online. No entrance exam required.</div></div>
-      <div className="lp-step"><div className="lp-step__num">03</div><div className="lp-step__title">Confirm Your Seat</div><div className="lp-step__body">Pay the registration fee and receive your student ID. Loan assistance available for eligible students.</div></div>
-      <div className="lp-step"><div className="lp-step__num">04</div><div className="lp-step__title">Begin Your Journey</div><div className="lp-step__body">Day 1 at SkyWings, orientation, uniforms, and your first step towards an aviation career.</div></div>
+      <div className="lp-step"><div className="lp-step__num" aria-hidden="true">01</div><div className="lp-step__title">Free Counselling Call</div><div className="lp-step__body">Call or WhatsApp us. Our counsellor will identify the right course for your profile, goals, and budget.</div></div>
+      <div className="lp-step"><div className="lp-step__num" aria-hidden="true">02</div><div className="lp-step__title">Personal Interview</div><div className="lp-step__body">A short, friendly assessment at our Kochi or Mahe campus, or online. No entrance exam required.</div></div>
+      <div className="lp-step"><div className="lp-step__num" aria-hidden="true">03</div><div className="lp-step__title">Confirm Your Seat</div><div className="lp-step__body">Pay the registration fee and receive your student ID. Loan assistance available for eligible students.</div></div>
+      <div className="lp-step"><div className="lp-step__num" aria-hidden="true">04</div><div className="lp-step__title">Begin Your Journey</div><div className="lp-step__body">Day 1 at SkyWings, orientation, uniforms, and your first step towards an aviation career.</div></div>
     </div>
   </div>
 </section>

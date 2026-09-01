@@ -629,22 +629,22 @@ export default function Page_home() {
     </div>
     <div className="sw-steps">
       <div className="sw-step">
-        <div className="sw-step__num">01</div>
+        <div className="sw-step__num" aria-hidden="true">01</div>
         <h3 className="sw-step__title">Online Registration</h3>
         <p className="sw-body--sm" style={{ marginTop: '8px' }}>Fill out the application form at skywingsacademy.com or walk into our Kochi or Mahe campus.</p>
       </div>
       <div className="sw-step">
-        <div className="sw-step__num">02</div>
+        <div className="sw-step__num" aria-hidden="true">02</div>
         <h3 className="sw-step__title">Free Counselling Session</h3>
         <p className="sw-body--sm" style={{ marginTop: '8px' }}>Attend a free career counselling session with our admissions experts to choose the right programme.</p>
       </div>
       <div className="sw-step">
-        <div className="sw-step__num">03</div>
+        <div className="sw-step__num" aria-hidden="true">03</div>
         <h3 className="sw-step__title">Personal Interview</h3>
         <p className="sw-body--sm" style={{ marginTop: '8px' }}>A basic assessment of your communication skills and aptitude, no entrance exams required.</p>
       </div>
       <div className="sw-step">
-        <div className="sw-step__num">04</div>
+        <div className="sw-step__num" aria-hidden="true">04</div>
         <h3 className="sw-step__title">Confirm Your Seat</h3>
         <p className="sw-body--sm" style={{ marginTop: '8px' }}>Pay the fees and receive your student ID to officially join the No.1 aviation college in Kerala.</p>
       </div>

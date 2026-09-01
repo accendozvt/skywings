@@ -342,7 +342,7 @@ export default function Page_about_us() {
     <div className="sw-wrap">
 
       <div style={{ marginBottom: '60px' }}>
-        <div className="sw-eyebrow" style={{ color: 'var(--sky)' }}>Campus &amp; Facilities</div>
+        <div className="sw-eyebrow" style={{ color: 'var(--sky-text)' }}>Campus &amp; Facilities</div>
         <h2 className="sw-h2">Life at SkyWings Academy, Kochi.</h2>
         <span className="sw-rule"></span>
         <p className="sw-body" style={{ maxWidth: '520px' }}>Our modern campus is designed to simulate the professional environment our students are preparing to enter. This is not just a classroom, it is a rehearsal space for your career.</p>
@@ -437,27 +437,27 @@ export default function Page_about_us() {
 
       <div className="sw-who-grid">
         <div className="sw-who-item">
-          <div className="sw-who-item__num">01</div>
+          <div className="sw-who-item__num" aria-hidden="true">01</div>
           <p className="sw-body--sm"><strong>Class 12 graduates</strong> seeking a career-focused degree in aviation or airline management who want a head start before their peers.</p>
         </div>
         <div className="sw-who-item">
-          <div className="sw-who-item__num">02</div>
+          <div className="sw-who-item__num" aria-hidden="true">02</div>
           <p className="sw-body--sm"><strong>Graduates</strong> who want a short diploma to qualify for cabin crew or airport ground staff roles quickly, without spending three more years in college.</p>
         </div>
         <div className="sw-who-item">
-          <div className="sw-who-item__num">03</div>
+          <div className="sw-who-item__num" aria-hidden="true">03</div>
           <p className="sw-body--sm"><strong>Working professionals</strong> looking to pivot into aviation, logistics, or supply chain management with industry-recognised certification.</p>
         </div>
         <div className="sw-who-item">
-          <div className="sw-who-item__num">04</div>
+          <div className="sw-who-item__num" aria-hidden="true">04</div>
           <p className="sw-body--sm"><strong>Students from across Kerala</strong>, Thiruvananthapuram, Kozhikode, Thrissur, Kottayam, who want the best aviation training in the state, in one place.</p>
         </div>
         <div className="sw-who-item">
-          <div className="sw-who-item__num">05</div>
+          <div className="sw-who-item__num" aria-hidden="true">05</div>
           <p className="sw-body--sm"><strong>Students with modest academic records</strong> who have the drive to succeed and simply need the right platform, the right training, and the right guidance.</p>
         </div>
         <div className="sw-who-item">
-          <div className="sw-who-item__num">06</div>
+          <div className="sw-who-item__num" aria-hidden="true">06</div>
           <p className="sw-body--sm"><strong>Aspiring cabin crew and air hostesses</strong> who want to be fully prepared in grooming, language, service, and safety before stepping into any airline interview.</p>
         </div>
       </div>
