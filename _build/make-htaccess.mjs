@@ -43,6 +43,7 @@ for (const [from, to] of pageRedirects) {
 }
 h += `\n# Leftover static-template files still on the server -> real pages\n`;
 const templateRedirects = [
+  ['sitemap_index.xml', '/sitemap.xml'], // old Yoast sitemap URL, still polled by Google
   ['about.html', '/about-us/'], ['contact.html', '/contact/'],
   ['privacy.html', '/privacy-policy/'], ['academics.html', '/aviation-courses-in-kerala/'],
   ['admissions.html', '/contact/'], ['faculty-staff.html', '/about-us/'],
