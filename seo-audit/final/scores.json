@@ -1,0 +1,370 @@
+[
+  {
+    "page": "(home)",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "(home)",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "about-us",
+    "preset": "mobile",
+    "performance": 96,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "about-us",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "contact",
+    "preset": "mobile",
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "contact",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "aviation-courses-in-kerala",
+    "preset": "mobile",
+    "performance": 97,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "aviation-courses-in-kerala",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "bba-aviation",
+    "preset": "mobile",
+    "performance": 96,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "bba-aviation",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "diploma-in-cabin-crew-management",
+    "preset": "mobile",
+    "performance": 93,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "diploma-in-cabin-crew-management",
+    "preset": "desktop",
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "mba-airline-and-airport-management",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "mba-airline-and-airport-management",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "diploma-in-airline-airport-management",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "diploma-in-airline-airport-management",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "bba-logistics-supply-chain-management",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "bba-logistics-supply-chain-management",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "diploma-in-aviation-hospitality-management",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "diploma-in-aviation-hospitality-management",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "articles-and-news",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "articles-and-news",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "gallery",
+    "preset": "mobile",
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "gallery",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "kochi-campus",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "kochi-campus",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "mahe-campus",
+    "preset": "mobile",
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "mahe-campus",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "no1-aviation-institute-in-kerala",
+    "preset": "mobile",
+    "performance": 94,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "no1-aviation-institute-in-kerala",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "bba-aviation-colleges-in-kerala",
+    "preset": "mobile",
+    "performance": 95,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "bba-aviation-colleges-in-kerala",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "airline-campus-interview-2026-cabin-crew-recruitment",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "airline-campus-interview-2026-cabin-crew-recruitment",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "privacy-policy",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "privacy-policy",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "aviation-courses-in-kerala-guide-2026",
+    "preset": "mobile",
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "aviation-courses-in-kerala-guide-2026",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "aviation-industry-outlook-2026",
+    "preset": "mobile",
+    "performance": 92,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "aviation-industry-outlook-2026",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "bba-with-aviation-vs-general-bba",
+    "preset": "mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "bba-with-aviation-vs-general-bba",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "career-in-air-cargo-logistics-2026",
+    "preset": "mobile",
+    "performance": 93,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "career-in-air-cargo-logistics-2026",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "high-paying-aviation-jobs-in-kerala-2026",
+    "preset": "mobile",
+    "performance": 98,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  {
+    "page": "high-paying-aviation-jobs-in-kerala-2026",
+    "preset": "desktop",
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  }
+]
