@@ -127,17 +127,28 @@ export function pageMetadata(slug, { ogImage } = {}) {
   images.push({ url: OG_DEFAULT, width: 1200, height: 630, alt: OG_ALT, type: 'image/webp' });
   images.push({ url: OG_FALLBACK_JPG, width: 1200, height: 630, alt: OG_ALT, type: 'image/jpeg' });
 
+  // Private pages: noindex, and no OG/Twitter tags that invite sharing.
+  // Explicit nulls clear metadata inherited from the root layout.
+  if (m.noindex) {
+    return {
+      title: m.title,
+      description: m.desc,
+      robots: { index: false, follow: false },
+      alternates: null,
+      openGraph: null,
+      twitter: null,
+    };
+  }
+
   return {
     title: m.title,
     description: m.desc,
     alternates: { canonical: path },
-    robots: m.noindex
-      ? { index: false, follow: false }
-      : {
-          index: true,
-          follow: true,
-          googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
-        },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+    },
     openGraph: {
       type: m.article ? 'article' : 'website',
       siteName: SITE_NAME,

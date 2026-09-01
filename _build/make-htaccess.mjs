@@ -34,6 +34,13 @@ for (const [from, to] of wildcardRedirects) {
   h += `RedirectMatch 301 ^${escRe(prefix)}.* ${dest}\n`;
 }
 h += `
+# ── noindex headers for private pages (belt + braces with the meta tag) ──
+<IfModule mod_headers.c>
+  SetEnvIf Request_URI "^/skywings-feedback-form" NOINDEX_PAGE
+  SetEnvIf Request_URI "^/404" NOINDEX_PAGE
+  Header set X-Robots-Tag "noindex, nofollow" env=NOINDEX_PAGE
+</IfModule>
+
 # ── Caching ──
 <IfModule mod_expires.c>
   ExpiresActive On
