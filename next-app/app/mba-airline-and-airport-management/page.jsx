@@ -412,7 +412,7 @@ export default function Page_mba_airline_and_airport_management() {
           <h2 className="mba-h2 mba-h2--light">The aviation leadership opportunity.</h2>
         </div>
         <div>
-          <p className="mba-body" style={{ color: 'rgba(254,252,251,0.38)' }}>The Indian aviation sector is booming, and SkyWings MBA graduates are ready to lead it.</p>
+          <p className="mba-body" style={{ color: 'rgba(254,252,251,0.72)' }}>The Indian aviation sector is booming, and SkyWings MBA graduates are ready to lead it.</p>
         </div>
       </div>
       <div className="mba-numbers">

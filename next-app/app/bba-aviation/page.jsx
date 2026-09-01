@@ -366,7 +366,7 @@ export default function Page_bba_aviation() {
           <h2 className="bba-h2 bba-h2--light">Numbers that speak for themselves.</h2>
         </div>
         <div>
-          <p className="bba-body" style={{ color: 'rgba(254,252,251,0.38)' }}>At SkyWings, we do not make vague promises. These are the real outcomes of a decade of dedicated aviation education in Kerala.</p>
+          <p className="bba-body" style={{ color: 'rgba(254,252,251,0.72)' }}>At SkyWings, we do not make vague promises. These are the real outcomes of a decade of dedicated aviation education in Kerala.</p>
         </div>
       </div>
       <div className="bba-numbers">

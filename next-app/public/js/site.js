@@ -201,4 +201,18 @@
       if (e.key === 'Escape') closeBox();
     });
   }
+
+  /* ── Deferred map embeds: load only when scrolled near the viewport ── */
+  var maps = $$('iframe[data-src]');
+  if (maps.length) {
+    var loadMap = function (el) { if (el.dataset.src) { el.src = el.dataset.src; delete el.dataset.src; } };
+    if ('IntersectionObserver' in window) {
+      var mo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { loadMap(en.target); mo.unobserve(en.target); } });
+      }, { rootMargin: '600px' });
+      maps.forEach(function (el) { mo.observe(el); });
+    } else {
+      maps.forEach(loadMap);
+    }
+  }
 })();

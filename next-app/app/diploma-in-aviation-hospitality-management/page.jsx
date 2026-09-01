@@ -325,7 +325,7 @@ export default function Page_diploma_in_aviation_hospitality_management() {
           <h2 className="ah-h2 ah-h2--light">Numbers that speak for themselves.</h2>
         </div>
         <div>
-          <p className="ah-body" style={{ color: 'rgba(254,252,251,0.38)' }}>Real outcomes from a decade of dedicated aviation and hospitality training in Kerala.</p>
+          <p className="ah-body" style={{ color: 'rgba(254,252,251,0.72)' }}>Real outcomes from a decade of dedicated aviation and hospitality training in Kerala.</p>
         </div>
       </div>
       <div className="ah-numbers">

@@ -298,7 +298,7 @@ export default function Page_about_us() {
           <h2 className="sw-h2" style={{ color: 'var(--cream)' }}>Decades of excellence in aviation education.</h2>
         </div>
         <div>
-          <p className="sw-body" style={{ color: 'rgba(254,252,251,0.38)' }}>At SkyWings, we do not hide behind vague claims. Here is what a decade of dedication to aviation education has produced.</p>
+          <p className="sw-body" style={{ color: 'rgba(254,252,251,0.72)' }}>At SkyWings, we do not hide behind vague claims. Here is what a decade of dedication to aviation education has produced.</p>
         </div>
       </div>
       <div className="sw-numbers__grid">

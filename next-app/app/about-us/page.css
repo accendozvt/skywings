@@ -624,7 +624,7 @@
   gap: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: var(--sky);
+  color: var(--sky-text);
   text-decoration: none;
   transition: gap var(--transition);
 }

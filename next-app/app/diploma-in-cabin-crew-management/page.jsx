@@ -368,7 +368,7 @@ export default function Page_diploma_in_cabin_crew_management() {
           <h2 className="cc-h2 cc-h2--light">Numbers that speak for themselves.</h2>
         </div>
         <div>
-          <p className="cc-body" style={{ color: 'rgba(254,252,251,0.38)' }}>At SkyWings, we don't make vague promises. These are the real outcomes of a decade of dedicated aviation training in Kerala.</p>
+          <p className="cc-body" style={{ color: 'rgba(254,252,251,0.72)' }}>At SkyWings, we don't make vague promises. These are the real outcomes of a decade of dedicated aviation training in Kerala.</p>
         </div>
       </div>
       <div className="cc-numbers">

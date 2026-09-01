@@ -97,7 +97,7 @@ export default function Page_kochi_campus() {
     <span className="kc-rule"></span>
     <p className="kc-body">Our Kochi campus is located on Pallissery Road, NH Bypass, behind Starbucks Coffee, easily accessible from all parts of Ernakulam. CIAL airport is just 3 km away.</p>
     <div className="kc-map">
-      <iframe src="https://maps.google.com/maps?q=SkyWings+Aviation+Academy+Kochi&output=embed&z=15" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SkyWings Academy Kochi Campus Location"></iframe>
+      <iframe data-src="https://maps.google.com/maps?q=SkyWings+Aviation+Academy+Kochi&output=embed&z=15" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SkyWings Academy Kochi Campus Location"></iframe>
     </div>
   </div>
 </section>

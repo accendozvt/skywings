@@ -450,7 +450,7 @@ export default function Page_diploma_in_airline_airport_management() {
           <h2 className="aam-h2 aam-h2--light">Numbers that speak for themselves.</h2>
         </div>
         <div>
-          <p className="aam-body" style={{ color: 'rgba(254,252,251,0.38)' }}>Real outcomes from a decade of dedicated aviation education at Kerala's No. 1 college.</p>
+          <p className="aam-body" style={{ color: 'rgba(254,252,251,0.72)' }}>Real outcomes from a decade of dedicated aviation education at Kerala's No. 1 college.</p>
         </div>
       </div>
       <div className="aam-numbers">

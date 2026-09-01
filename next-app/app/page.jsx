@@ -502,7 +502,7 @@ export default function Page_home() {
   <div className="sw-wrap">
     <div className="sw-midcta__inner">
       <div className="sw-midcta__text">
-        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(22px,3vw,36px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#ffffff', margin: '0', padding: '0', display: 'block' }}>Enrol Now for 2026 Batch</h2>
+        <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(22px,3vw,36px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Enrol Now for 2026 Batch</h2>
         <p>Seats are limited. Secure your place at Kerala's No.1 premium aviation college today.</p>
       </div>
       <div className="sw-midcta__actions">

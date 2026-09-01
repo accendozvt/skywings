@@ -258,7 +258,7 @@ export default function Page_contact() {
             </div>
           </div>
           <iframe className="swc-map-frame"
-            src="https://maps.google.com/maps?q=SkyWings+Aviation+Academy+Kochi&output=embed&z=15"
+            data-src="https://maps.google.com/maps?q=SkyWings+Aviation+Academy+Kochi&output=embed&z=15"
             allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
             title="SkyWings Kochi Campus Map">
           </iframe>
@@ -272,7 +272,7 @@ export default function Page_contact() {
             </div>
           </div>
           <iframe className="swc-map-frame"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.0!2d75.534!3d11.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQyJzAwLjAiTiA3NcKwMzInMDIuNCJF!5e0!3m2!1sen!2sin!4v1700000000001!5m2!1sen!2sin"
+            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.0!2d75.534!3d11.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQyJzAwLjAiTiA3NcKwMzInMDIuNCJF!5e0!3m2!1sen!2sin!4v1700000000001!5m2!1sen!2sin"
             allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
             title="SkyWings Mahe Campus Map">
           </iframe>

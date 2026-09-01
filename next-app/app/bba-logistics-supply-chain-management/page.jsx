@@ -425,7 +425,7 @@ export default function Page_bba_logistics_supply_chain_management() {
           <h2 className="log-h2 log-h2--light">Numbers that speak for themselves.</h2>
         </div>
         <div>
-          <p className="log-body" style={{ color: 'rgba(254,252,251,0.38)' }}>Real outcomes from Kerala's No. 1 BBA Logistics college, turning students into supply chain leaders.</p>
+          <p className="log-body" style={{ color: 'rgba(254,252,251,0.72)' }}>Real outcomes from Kerala's No. 1 BBA Logistics college, turning students into supply chain leaders.</p>
         </div>
       </div>
       <div className="log-numbers">

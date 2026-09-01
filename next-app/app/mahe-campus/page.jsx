@@ -97,7 +97,7 @@ export default function Page_mahe_campus() {
     <span className="kc-rule"></span>
     <p className="kc-body">Our Mahe campus is located at Lalu's Business Park, opposite Sreenarayana Guru College, easily accessible from Kozhikode, Kannur, Kasaragod, and the entire Malabar belt.</p>
     <div className="kc-map">
-      <iframe src="https://maps.google.com/maps?q=SkyWings+Academy+Mahe+Lalu+Business+Park&output=embed&z=15" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SkyWings Academy Mahe Campus Location"></iframe>
+      <iframe data-src="https://maps.google.com/maps?q=SkyWings+Academy+Mahe+Lalu+Business+Park&output=embed&z=15" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SkyWings Academy Mahe Campus Location"></iframe>
     </div>
   </div>
 </section>
