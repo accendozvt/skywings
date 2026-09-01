@@ -134,22 +134,22 @@ export default function Page_aviation_industry_outlook_2026() {
 				
 				
 							
-							<span role="listitem">
+							<span>
 					<a href="https://www.facebook.com/skywingsaviation/" target="_blank">
 						<span>Facebook-f</span>
 						<i aria-hidden="true"></i>					</a>
 				</span>
-							<span role="listitem">
+							<span>
 					<a href="https://www.instagram.com/skywings_aviation_college/" target="_blank">
 						<span>Instagram</span>
 						<i aria-hidden="true"></i>					</a>
 				</span>
-							<span role="listitem">
+							<span>
 					<a href="https://www.youtube.com/@Skywingsaviation" target="_blank">
 						<span>Youtube</span>
 						<i aria-hidden="true"></i>					</a>
 				</span>
-							<span role="listitem">
+							<span>
 					<a href="https://share.google/IetFcKV1yV9FnrdPQ" target="_blank">
 						<span>Map-marker-alt</span>
 						<i aria-hidden="true"></i>					</a>

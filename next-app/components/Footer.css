@@ -83,7 +83,7 @@
 .swf-bottom { padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.05); }
 .swf-bottom-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .swf-copyright { font-size: 12px; font-weight: 300; color: rgba(254,252,251,0.3); }
-.swf-copyright a { color: rgba(254,252,251,0.45); text-decoration: none; transition: color var(--trans); }
+.swf-copyright a { color: rgba(254,252,251,0.45); text-decoration: underline; transition: color var(--trans); }
 .swf-copyright a:hover { color: var(--cream); }
 .swf-legal { display: flex; gap: 20px; }
 .swf-legal a { font-size: 12px; font-weight: 300; color: rgba(254,252,251,0.3); text-decoration: none; transition: color var(--trans); }

@@ -49,7 +49,7 @@
 .sw-sec--off    { padding: 100px 0; background: var(--offwhite); }
 
 /* ── EYEBROW ── */
-.sw-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-sora); font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--sky); margin-bottom: 20px; }
+.sw-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-sora); font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--sky-text); margin-bottom: 20px; }
 .sw-eyebrow::before { content: ''; display: block; width: 1px; height: 20px; background: var(--sky); flex-shrink: 0; }
 .sw-eyebrow--c { flex-direction: row; align-items: center; justify-content: center; gap: 10px; }
 .sw-eyebrow--c::before { display: none; }
@@ -534,3 +534,5 @@ textarea.sw-form-input { resize: vertical; min-height: 100px; }
 .skywings-btn svg{width:26px;height:26px;flex-shrink:0;}
 @media(min-width:769px){.skywings-mobile-widget{display:none!important;}}
 @media(max-width:768px){.skywings-mobile-widget{display:flex!important;}}
+/* dark hero keeps the bright accent for its eyebrow */
+.sw-hero .sw-eyebrow { color: var(--sky); }

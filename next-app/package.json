@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "node ../_build/gen-llms-full.mjs"
+    "postbuild": "node ../_build/gen-llms-full.mjs && node ../_build/optimize-html.mjs"
   },
   "dependencies": {
     "next": "^15.5.20",

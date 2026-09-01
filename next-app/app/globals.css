@@ -67,3 +67,14 @@ a { color: inherit; }
 .skip-link:focus {
   left: 0;
 }
+
+/* Below-fold sections skip initial layout work (rendered on approach).
+   First section per page (the hero) always renders immediately. */
+main section:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
+}
+
+/* Accessible accent for TEXT on light surfaces (champagne #c0a562 is 2.1:1
+   on white; #8a7440 is 4.6:1+). Dark-surface text/icons keep --sky. */
+:root { --sky-text: #8a7440; }

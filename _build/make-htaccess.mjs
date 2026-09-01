@@ -41,6 +41,11 @@ h += `
   Header set X-Robots-Tag "noindex, nofollow" env=NOINDEX_PAGE
 </IfModule>
 
+# ── Compression ──
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
 # ── Caching ──
 <IfModule mod_expires.c>
   ExpiresActive On

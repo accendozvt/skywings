@@ -1,0 +1,507 @@
+{
+ "100-percent-placement-badge.png": {
+  "w": 335,
+  "h": 335,
+  "variants": []
+ },
+ "admissions-open-2026-badge.png": {
+  "w": 600,
+  "h": 432,
+  "variants": [
+   480
+  ]
+ },
+ "airline-airport-management-student-skywings.png": {
+  "w": 1073,
+  "h": 1600,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "airline-recruitment-partner-1.webp": {
+  "w": 167,
+  "h": 111,
+  "variants": []
+ },
+ "airline-recruitment-partner-2.webp": {
+  "w": 167,
+  "h": 94,
+  "variants": []
+ },
+ "airline-recruitment-partner-3.webp": {
+  "w": 167,
+  "h": 64,
+  "variants": []
+ },
+ "airline-recruitment-partner-4.webp": {
+  "w": 167,
+  "h": 46,
+  "variants": []
+ },
+ "airline-recruitment-partner-5.webp": {
+  "w": 167,
+  "h": 84,
+  "variants": []
+ },
+ "airline-recruitment-partner-6.webp": {
+  "w": 129,
+  "h": 179,
+  "variants": []
+ },
+ "airline-recruitment-partner-7.webp": {
+  "w": 167,
+  "h": 136,
+  "variants": []
+ },
+ "airline-recruitment-partner-8.webp": {
+  "w": 167,
+  "h": 62,
+  "variants": []
+ },
+ "airport-management-course-kerala-students.jpg": {
+  "w": 1600,
+  "h": 893,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "airport-terminal-operations-training.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "aviation-hospitality-student-skywings.png": {
+  "w": 1073,
+  "h": 1600,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "aviation-hospitality-training-skywings.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "aviation-management-training-kochi.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "aviation-student-skywings-kochi.png": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "bba-aviation-colleges-in-kerala-1.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "bba-aviation-colleges-in-kerala-3.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "bba-aviation-colleges-in-kerala-4-300x200.webp": {
+  "w": 300,
+  "h": 200,
+  "variants": []
+ },
+ "bba-aviation-colleges-in-kerala-4.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "bba-aviation-colleges-in-kerala-8.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "bba-logistics-career-scope.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "bba-logistics-student-skywings.png": {
+  "w": 1073,
+  "h": 1600,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "best-aviation-college-in-kerala-2.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "best-aviation-college-in-kerala-3-300x200.webp": {
+  "w": 300,
+  "h": 200,
+  "variants": []
+ },
+ "best-aviation-college-in-kerala-3.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "cabin-crew-inflight-service-training.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "cabin-crew-practical-training-skywings.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "cabin-crew-recruitment-skywings-kochi.png": {
+  "w": 1073,
+  "h": 1600,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "cabin-crew-student-skywings-kochi.png": {
+  "w": 1073,
+  "h": 1600,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "cabin-crew-training-students-kerala.png": {
+  "w": 1073,
+  "h": 1600,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "global-aviation-career-scope-skywings.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "logistics-training-skywings-academy.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "no1-premium-aviation-college-kerala-1-300x200.webp": {
+  "w": 300,
+  "h": 200,
+  "variants": []
+ },
+ "no1-premium-aviation-college-kerala-1.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "no1-premium-aviation-college-kerala-5-300x200.webp": {
+  "w": 300,
+  "h": 200,
+  "variants": []
+ },
+ "no1-premium-aviation-college-kerala-5.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "premium-logistics-training-skywings.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "professional-presentation-training-skywings.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "skywings-academy-campus-kochi.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "skywings-academy-students-kochi.png": {
+  "w": 1073,
+  "h": 1600,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "skywings-annual-event-kerala.jpg": {
+  "w": 1024,
+  "h": 683,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "skywings-aviation-academy-logo.png": {
+  "w": 1508,
+  "h": 998,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "skywings-aviation-college-campus-kochi.webp": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ },
+ "skywings-aviation-college-students.jpg": {
+  "w": 1024,
+  "h": 683,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "skywings-aviation-students-event.jpg": {
+  "w": 1360,
+  "h": 907,
+  "variants": [
+   480,
+   768,
+   1080
+  ]
+ },
+ "skywings-award-ceremony-kerala.jpg": {
+  "w": 1360,
+  "h": 907,
+  "variants": [
+   480,
+   768,
+   1080
+  ]
+ },
+ "skywings-convocation-ceremony.jpg": {
+  "w": 1024,
+  "h": 683,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "skywings-inauguration-2022.jpg": {
+  "w": 1360,
+  "h": 907,
+  "variants": [
+   480,
+   768,
+   1080
+  ]
+ },
+ "skywings-placed-student-01.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-02.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-03.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-04.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-05.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-06.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-07.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-08.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-09.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-10.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-11.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-student-12.webp": {
+  "w": 400,
+  "h": 584,
+  "variants": []
+ },
+ "skywings-placed-students-airlines.png": {
+  "w": 1073,
+  "h": 1600,
+  "variants": [
+   480,
+   768
+  ]
+ },
+ "skywings-premium-campus-kochi.jpg": {
+  "w": 1334,
+  "h": 890,
+  "variants": [
+   480,
+   768,
+   1080
+  ]
+ },
+ "skywings-skyfest-2024.jpg": {
+  "w": 1360,
+  "h": 907,
+  "variants": [
+   480,
+   768,
+   1080
+  ]
+ },
+ "skywings-smart-classroom-kochi.jpg": {
+  "w": 1600,
+  "h": 1073,
+  "variants": [
+   480,
+   768,
+   1080,
+   1440
+  ]
+ }
+}
