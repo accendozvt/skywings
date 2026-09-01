@@ -95,7 +95,7 @@ export default function Page_contact() {
         <div className="swc-form-info">
           <div className="swc-form-info__inner">
             <div className="swc-info-eyebrow">Admissions Open</div>
-            <h3 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '16px', fontWeight: '400', color: '#141922', lineHeight: '1.35', margin: '0', padding: '0', display: 'block', color: '#fefcfb' }}>Send us an enquiry, Contact SkyWings Aviation Academy</h3>
+            <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '16px', fontWeight: '400', color: '#141922', lineHeight: '1.35', margin: '0', padding: '0', display: 'block', color: '#fefcfb' }}>Send us an enquiry, Contact SkyWings Aviation Academy</h2>
             <div className="swc-info-sub">Fill out the form and our admissions counsellor will get back to you within 24 hours.</div>
 
             <div className="swc-info-items">

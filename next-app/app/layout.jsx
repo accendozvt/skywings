@@ -14,8 +14,12 @@ export const metadata = {
     template: '%s',
   },
   icons: {
-    icon: '/assets/images/skywings-aviation-academy-logo.png',
-    apple: '/assets/images/skywings-aviation-academy-logo.png',
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
 };
 
@@ -58,6 +62,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${sora.variable} ${instrumentSans.variable}`}>
       <body>
+        <a href="#main" className="skip-link">Skip to content</a>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <Header />
         <main id="main">{children}</main>

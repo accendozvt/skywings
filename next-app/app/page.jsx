@@ -40,7 +40,7 @@ export default function Page_home() {
   <div className="sw-hero__left">
     <div className="sw-eyebrow sw-eyebrow--light">No.1 Premium Aviation College in Kerala</div>
     <h1 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(28px,4vw,56px)', fontWeight: '300', lineHeight: '1.1', letterSpacing: '-2px', color: '#fefcfb', margin: '0', padding: '0', display: 'block' }}>Your Gateway to a Global Career with the Best Aviation College in Kerala.</h1>
-    <h3 className="sw-hero-kw-h3">No.1 Premium Aviation College in Kerala · Kochi &amp; Mahe Campuses</h3>
+    <p className="sw-hero-kw-h3">No.1 Premium Aviation College in Kerala · Kochi &amp; Mahe Campuses</p>
 
     <div className="sw-hero__tags">
       <span className="sw-hero__tag">
@@ -210,7 +210,7 @@ export default function Page_home() {
     <div style={{ textAlign: 'center' }}>
       <div className="sw-eyebrow sw-eyebrow--c">Our Programmes</div>
       <h2 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: 'clamp(24px,3.2vw,40px)', fontWeight: '300', lineHeight: '1.2', letterSpacing: '-0.8px', color: '#141922', margin: '0', padding: '0', display: 'block' }}>Premium Aviation &amp; Logistics Courses</h2>
-      <h4 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '13px', fontWeight: '400', color: 'var(--text-light)', letterSpacing: '1.2px', textTransform: 'uppercase', margin: '12px 0 20px' }}>Best Aviation College in Kerala · BBA · MBA · Cabin Crew · Logistics</h4>
+      <h3 style={{ fontFamily: 'var(--font-sora),sans-serif', fontSize: '13px', fontWeight: '400', color: 'var(--text-light)', letterSpacing: '1.2px', textTransform: 'uppercase', margin: '12px 0 20px' }}>Best Aviation College in Kerala · BBA · MBA · Cabin Crew · Logistics</h3>
       <span className="sw-rule" style={{ margin: '0 auto 24px' }}></span>
       <p className="sw-body" style={{ maxWidth: '580px', margin: '0 auto' }}>As Kerala's premier aviation college, we offer a range of undergraduate, postgraduate, and diploma courses designed for the modern aviation industry.</p>
     </div>
@@ -421,7 +421,7 @@ export default function Page_home() {
             <circle cx="50" cy="23" r="1.2" fill="currentColor" stroke="none"/>
           </svg>
         </div>
-        <h4 className="sw-infra-card__title">Turn Your Dreams to Reality</h4>
+        <h3 className="sw-infra-card__title">Turn Your Dreams to Reality</h3>
         <p className="sw-infra-card__body">We give you hands-on experience in the Aviation &amp; Logistics industry through technology that will put you at the forefront of the industry.</p>
       </div>
 
@@ -441,7 +441,7 @@ export default function Page_home() {
             <circle cx="58" cy="40" r="2.5" fill="currentColor" stroke="none"/>
           </svg>
         </div>
-        <h4 className="sw-infra-card__title">Well-Crafted Courses</h4>
+        <h3 className="sw-infra-card__title">Well-Crafted Courses</h3>
         <p className="sw-infra-card__body">Our tailor-made courses are a perfect fit for every student's needs. We believe in providing personal education in a public environment.</p>
       </div>
 
@@ -467,7 +467,7 @@ export default function Page_home() {
             <circle cx="46" cy="57" r="3"/>
           </svg>
         </div>
-        <h4 className="sw-infra-card__title">Well Facilitated Classrooms</h4>
+        <h3 className="sw-infra-card__title">Well Facilitated Classrooms</h3>
         <p className="sw-infra-card__body">Our modern training can accommodate up to 250 students. We use a consultative teaching approach to grow your skills quickly.</p>
       </div>
 
@@ -489,7 +489,7 @@ export default function Page_home() {
             <polyline points="42,50 45,53 50,47" stroke="white" strokeWidth="2" fill="none"/>
           </svg>
         </div>
-        <h4 className="sw-infra-card__title">Practical Training</h4>
+        <h3 className="sw-infra-card__title">Practical Training</h3>
         <p className="sw-infra-card__body">Practical trainings are a driving force in helping our students apply their knowledge to various sectors of the service industry.</p>
       </div>
 
@@ -630,22 +630,22 @@ export default function Page_home() {
     <div className="sw-steps">
       <div className="sw-step">
         <div className="sw-step__num">01</div>
-        <h4 className="sw-step__title">Online Registration</h4>
+        <h3 className="sw-step__title">Online Registration</h3>
         <p className="sw-body--sm" style={{ marginTop: '8px' }}>Fill out the application form at skywingsacademy.com or walk into our Kochi or Mahe campus.</p>
       </div>
       <div className="sw-step">
         <div className="sw-step__num">02</div>
-        <h4 className="sw-step__title">Free Counselling Session</h4>
+        <h3 className="sw-step__title">Free Counselling Session</h3>
         <p className="sw-body--sm" style={{ marginTop: '8px' }}>Attend a free career counselling session with our admissions experts to choose the right programme.</p>
       </div>
       <div className="sw-step">
         <div className="sw-step__num">03</div>
-        <h4 className="sw-step__title">Personal Interview</h4>
+        <h3 className="sw-step__title">Personal Interview</h3>
         <p className="sw-body--sm" style={{ marginTop: '8px' }}>A basic assessment of your communication skills and aptitude, no entrance exams required.</p>
       </div>
       <div className="sw-step">
         <div className="sw-step__num">04</div>
-        <h4 className="sw-step__title">Confirm Your Seat</h4>
+        <h3 className="sw-step__title">Confirm Your Seat</h3>
         <p className="sw-body--sm" style={{ marginTop: '8px' }}>Pay the fees and receive your student ID to officially join the No.1 aviation college in Kerala.</p>
       </div>
     </div>

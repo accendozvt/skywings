@@ -16,7 +16,7 @@ export default function Page_bba_aviation() {
     <div className="bba-hero__left">
       <div className="bba-eyebrow">No. 1 Aviation College, Kochi, Kerala</div>
       <h1 className="bba-h1">BBA Aviation (Airline and Airport Management)</h1>
-      <h3 className="bba-hero__sub-h3">BBA Aviation in Kerala · 3-Year UG Degree · Kochi &amp; Mahe</h3>
+      <p className="bba-hero__sub-h3">BBA Aviation in Kerala · 3-Year UG Degree · Kochi &amp; Mahe</p>
 
       <div className="bba-hero__pills">
         <div className="bba-pill">

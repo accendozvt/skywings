@@ -24,7 +24,7 @@ export default function Page_diploma_in_airline_airport_management() {
     <div className="aam-hero__left">
       <div className="aam-eyebrow">No. 1 Aviation College, Kochi, Kerala</div>
       <h1 className="aam-h1">Airport Management Courses, Diploma in Airline and Airport Management</h1>
-      <h3 className="aam-hero-sub-h3">Airport Management Courses in Kerala · 1 Year · Kochi &amp; Mahe</h3>
+      <p className="aam-hero-sub-h3">Airport Management Courses in Kerala · 1 Year · Kochi &amp; Mahe</p>
 
       <div className="aam-hero__pills">
         <div className="aam-pill">

@@ -16,7 +16,7 @@ export default function Page_diploma_in_cabin_crew_management() {
     <div className="cc-hero__left">
       <div className="cc-eyebrow">No. 1 Aviation Academy, Kochi, Kerala</div>
       <h1 className="cc-h1">Diploma in Cabin Crew Operations, Kerala's Premier Training</h1>
-      <h3 className="cc-hero-sub-h3">Diploma in Cabin Crew in Kerala · 1 Year · Kochi &amp; Mahe</h3>
+      <p className="cc-hero-sub-h3">Diploma in Cabin Crew in Kerala · 1 Year · Kochi &amp; Mahe</p>
 
       <div className="cc-hero__pills">
         <div className="cc-pill">

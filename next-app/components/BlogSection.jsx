@@ -58,7 +58,7 @@ export default function BlogSection() {
                     <div className="blg-card__date">{p.dateLabel}</div>
                     <div className="blg-card__title">{p.title}</div>
                     <div className="blg-card__excerpt">{p.excerpt}</div>
-                    <Link href={`/${p.slug}`} className="blg-card__link">
+                    <Link href={`/${p.slug}`} className="blg-card__link" aria-label={`Read article: ${p.title}`}>
                       Read Article {ArrowIcon}
                     </Link>
                   </div>

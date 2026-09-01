@@ -309,7 +309,7 @@ export default function Page_aviation_courses_in_kerala() {
           <div className="cl-why-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
           </div>
-          <h4 className="cl-why-card__title">AI-Integrated Syllabus</h4>
+          <h3 className="cl-why-card__title">AI-Integrated Syllabus</h3>
           <p className="cl-body--sm">We are the first institute in Kerala to teach Artificial Intelligence in aviation. Learn about DigiYatra, biometric security, and smart logistics.</p>
         </div>
 
@@ -317,7 +317,7 @@ export default function Page_aviation_courses_in_kerala() {
           <div className="cl-why-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
-          <h4 className="cl-why-card__title">Dual Campus Advantage</h4>
+          <h3 className="cl-why-card__title">Dual Campus Advantage</h3>
           <p className="cl-body--sm">With state-of-the-art facilities in both Kochi and Mahe, premium education is now easily accessible across Kerala and Malabar.</p>
         </div>
 
@@ -325,7 +325,7 @@ export default function Page_aviation_courses_in_kerala() {
           <div className="cl-why-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>
           </div>
-          <h4 className="cl-why-card__title">100% Placement Assistance</h4>
+          <h3 className="cl-why-card__title">100% Placement Assistance</h3>
           <p className="cl-body--sm">Our dedicated placement cell has tie-ups with top global airlines, airports, and logistics firms. We don't just teach; we launch careers.</p>
         </div>
 
@@ -333,7 +333,7 @@ export default function Page_aviation_courses_in_kerala() {
           <div className="cl-why-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <h4 className="cl-why-card__title">Premium Grooming & Languages</h4>
+          <h3 className="cl-why-card__title">Premium Grooming & Languages</h3>
           <p className="cl-body--sm">Includes intensive communicative English, foreign language basics (French/German), and professional styling in dedicated grooming studios.</p>
         </div>
 
@@ -341,7 +341,7 @@ export default function Page_aviation_courses_in_kerala() {
           <div className="cl-why-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
           </div>
-          <h4 className="cl-why-card__title">UGC & University Recognitions</h4>
+          <h3 className="cl-why-card__title">UGC & University Recognitions</h3>
           <p className="cl-body--sm">Earn valid, government-recognised university degrees (Pondicherry University/Bharathiar University) alongside specialised industry certificates.</p>
         </div>
 

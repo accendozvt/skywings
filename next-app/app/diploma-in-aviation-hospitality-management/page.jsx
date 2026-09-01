@@ -16,7 +16,7 @@ export default function Page_diploma_in_aviation_hospitality_management() {
     <div className="ah-hero__left">
       <div className="ah-eyebrow">No. 1 Aviation College, Kochi, Kerala</div>
       <h1 className="ah-h1">Hospitality Management Course, Diploma in Aviation and Hospitality</h1>
-      <h3 className="ah-hero-sub-h3">Hospitality Management Course in Kerala · 6 Months · Kochi &amp; Mahe</h3>
+      <p className="ah-hero-sub-h3">Hospitality Management Course in Kerala · 6 Months · Kochi &amp; Mahe</p>
 
       <div className="ah-hero__pills">
         <div className="ah-pill">

@@ -11,9 +11,9 @@ export default function HomeNews() {
             <img src={p.image} alt={p.title} loading="lazy" />
           </div>
           <div className="sw-blog-card__body">
-            <h4 className="sw-blog-card__title">{p.title}</h4>
+            <h3 className="sw-blog-card__title">{p.title}</h3>
             <p className="sw-blog-card__excerpt">{p.excerpt.slice(0, 120)}…</p>
-            <Link href={`/${p.slug}`} className="sw-blog-card__link">Read More →</Link>
+            <Link href={`/${p.slug}`} className="sw-blog-card__link" aria-label={`Read more: ${p.title}`}>Read More →</Link>
           </div>
         </div>
       ))}

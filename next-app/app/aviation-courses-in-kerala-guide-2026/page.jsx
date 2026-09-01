@@ -59,7 +59,7 @@ export default function Page_aviation_courses_in_kerala_guide_2026() {
           <h3 className="gak-h3">BBA Aviation, Airline & Airport Management</h3>
           <p className="gak-course__desc">Kerala's most sought-after aviation degree. Combines Business Administration with Airport Operations, IATA Safety, and AI for Aviation. UGC-recognised. Eligible after Plus Two in any stream.</p>
           <div className="gak-course__footer">
-            <a href="/bba-aviation/" className="gak-course__link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/bba-aviation/" className="gak-course__link" aria-label="Learn more about BBA Aviation">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <span className="gak-course__salary">₹20K–₹80K/mo</span>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function Page_aviation_courses_in_kerala_guide_2026() {
           <h3 className="gak-h3">Diploma in Cabin Crew Management</h3>
           <p className="gak-course__desc">The most popular aviation diploma in Kerala for aspiring air hostesses and flight stewards. Intensive grooming, safety training, mock flights, and direct placement support with top airlines.</p>
           <div className="gak-course__footer">
-            <a href="/diploma-in-cabin-crew-management/" className="gak-course__link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/diploma-in-cabin-crew-management/" className="gak-course__link" aria-label="Learn more about the Diploma in Cabin Crew Management">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <span className="gak-course__salary">₹45K–₹2L/mo</span>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function Page_aviation_courses_in_kerala_guide_2026() {
           <h3 className="gak-h3">MBA Aviation, Airline & Airport Management</h3>
           <p className="gak-course__desc">Postgraduate degree for graduates targeting senior management roles in airlines, airports, and aviation consultancies. Strategic Airport Planning, Aviation Law, AI-driven operations.</p>
           <div className="gak-course__footer">
-            <a href="/mba-airline-and-airport-management/" className="gak-course__link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/mba-airline-and-airport-management/" className="gak-course__link" aria-label="Learn more about MBA Aviation">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <span className="gak-course__salary">₹50K–₹1.5L/mo</span>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function Page_aviation_courses_in_kerala_guide_2026() {
           <h3 className="gak-h3">Diploma in Airline & Airport Management</h3>
           <p className="gak-course__desc">Fast-track 1-year aviation diploma covering ground handling, terminal operations, DGR, check-in procedures, and ramp safety. Job-ready in 12 months for Indian and international airports.</p>
           <div className="gak-course__footer">
-            <a href="/diploma-in-airline-airport-management/" className="gak-course__link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/diploma-in-airline-airport-management/" className="gak-course__link" aria-label="Learn more about the Diploma in Airline and Airport Management">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <span className="gak-course__salary">₹20K–₹50K/mo</span>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function Page_aviation_courses_in_kerala_guide_2026() {
           <h3 className="gak-h3">BBA Logistics & Supply Chain Management</h3>
           <p className="gak-course__desc">Aviation degree focused on air cargo, shipping, and global trade logistics. High demand in Kerala's Gulf-connected economy. UGC-recognised with AI-integrated supply chain modules.</p>
           <div className="gak-course__footer">
-            <a href="/bba-logistics-supply-chain-management/" className="gak-course__link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/bba-logistics-supply-chain-management/" className="gak-course__link" aria-label="Learn more about BBA Logistics and Supply Chain Management">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <span className="gak-course__salary">₹25K–₹70K/mo</span>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function Page_aviation_courses_in_kerala_guide_2026() {
           <h3 className="gak-h3">Diploma in Aviation & Hospitality</h3>
           <p className="gak-course__desc">Quickest route into the aviation service industry. Combines airport lounge management, cabin crew basics, and luxury hospitality, for both airline and 5-star hotel placements.</p>
           <div className="gak-course__footer">
-            <a href="/diploma-in-aviation-hospitality-management/" className="gak-course__link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/diploma-in-aviation-hospitality-management/" className="gak-course__link" aria-label="Learn more about the Diploma in Aviation and Hospitality Management">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <span className="gak-course__salary">₹20K–₹1.5L/mo</span>
           </div>
         </div>

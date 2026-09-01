@@ -49,3 +49,21 @@ a { color: inherit; }
 
 /* Shared WhatsApp brand color (kept regardless of theme palette) */
 :root { --wa: #25D366; --wa-hover: #1ebe5d; }
+
+/* Skip-to-content: first focusable element, visible only on focus */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100000;
+  background: var(--sky);
+  color: var(--ink);
+  padding: 12px 20px;
+  border-radius: 0 0 10px 0;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+}
