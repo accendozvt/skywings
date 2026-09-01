@@ -13,5 +13,9 @@
     "basic-ftp": "^6.2.0",
     "puppeteer-core": "^25.8.0",
     "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "chrome-launcher": "^1.2.1",
+    "lighthouse": "^12.8.2"
   }
 }
