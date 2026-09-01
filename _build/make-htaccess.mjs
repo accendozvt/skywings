@@ -41,6 +41,19 @@ for (const [from, to] of pageRedirects) {
   const dest = to === '/' ? '/' : `${to}/`;
   h += `RedirectMatch 301 ^${escRe(from)}/?$ ${dest}\n`;
 }
+h += `\n# Leftover static-template files still on the server -> real pages\n`;
+const templateRedirects = [
+  ['about.html', '/about-us/'], ['contact.html', '/contact/'],
+  ['privacy.html', '/privacy-policy/'], ['academics.html', '/aviation-courses-in-kerala/'],
+  ['admissions.html', '/contact/'], ['faculty-staff.html', '/about-us/'],
+  ['alumni.html', '/about-us/'], ['campus-facilities.html', '/kochi-campus/'],
+  ['students-life.html', '/gallery/'], ['events.html', '/gallery/'],
+  ['event-details.html', '/gallery/'], ['news.html', '/articles-and-news/'],
+  ['news-details.html', '/articles-and-news/'], ['terms-of-service.html', '/'],
+  ['starter-page.html', '/'],
+];
+for (const [from, to] of templateRedirects) h += `RedirectMatch 301 ^/${escRe(from)}$ ${to}\n`;
+
 h += `\n# Old media library URLs -> renamed assets\n`;
 for (const [from, to] of imageRedirects) h += `RedirectMatch 301 ^${escRe(from)}$ ${to}\n`;
 h += `\n# Archive/system prefixes\n`;
