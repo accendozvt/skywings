@@ -40,8 +40,8 @@ export const PAGE_META = {
     desc: "Contact SkyWings Aviation Academy - Kerala's No.1 aviation college. Visit our Kochi or Mahe campus, call +91 9847 163 163 for free career counselling.",
   },
   'airline-campus-interview-2026-cabin-crew-recruitment': {
-    title: 'Airline Campus Interview 2026 - Cabin Crew Recruitment at SkyWings Academy',
-    desc: 'A leading airline is conducting a campus recruitment drive at SkyWings Academy, Kochi. Cabin Crew Recruitment. 2 rounds - online screening + final interview. Limited slots. Register now: 9605 66 44 55.',
+    title: 'Airline Campus Interview 2026 - Cabin Crew | SkyWings',
+    desc: 'A leading airline is conducting a cabin crew campus recruitment drive at SkyWings Academy Kochi. Two rounds, limited slots. Register now: 9605 66 44 55.',
   },
   'career-in-air-cargo-logistics-2026': {
     title: 'Career in Air Cargo & Logistics 2026',
@@ -64,19 +64,46 @@ export const PAGE_META = {
     article: true,
   },
   'aviation-courses-in-kerala-guide-2026': {
-    title: 'Aviation Courses in Kerala 2026 - Complete Guide | SkyWings Academy',
-    desc: 'Complete guide to aviation courses in Kerala. BBA Aviation, MBA Aviation, Cabin Crew Diploma, Airline Management & Logistics courses at SkyWings Academy Kochi & Mahe. Fees, eligibility, careers, and placements.',
+    title: 'Aviation Courses in Kerala 2026: Complete Guide | SkyWings',
+    desc: 'The complete 2026 guide to aviation courses in Kerala: BBA Aviation, MBA, Cabin Crew Diploma and Logistics at SkyWings Kochi & Mahe, with fees and careers.',
     article: true,
   },
-  'bba-logistics-supply-chain-management': { title: 'BBA - Logistics & Supply Chain Management | SkyWings Aviation Academy', desc: GENERIC_DESC },
-  'mba-airline-and-airport-management': { title: 'MBA - Airline & Airport Management | SkyWings Aviation Academy', desc: GENERIC_DESC },
-  gallery: { title: 'Gallery | SkyWings Aviation Academy', desc: GENERIC_DESC },
-  'articles-and-news': { title: 'Blogs & Articles - Aviation & Hospitality | SkyWings Aviation Academy', desc: 'Aviation career guides, industry news and student stories from SkyWings Aviation Academy, Kerala.' },
-  'kochi-campus': { title: 'Skywings Aviation College - Kochi Campus | SkyWings Aviation Academy', desc: GENERIC_DESC },
-  'mahe-campus': { title: 'Skywings Aviation College - Mahe Campus | SkyWings Aviation Academy', desc: GENERIC_DESC },
-  'no1-aviation-institute-in-kerala': { title: 'No.1 Aviation Institute in Kerala | SkyWings Aviation Academy', desc: GENERIC_DESC },
-  'bba-aviation-colleges-in-kerala': { title: 'BBA Aviation Colleges in Kerala | SkyWings Aviation Academy', desc: GENERIC_DESC },
-  'privacy-policy': { title: 'Privacy Policy | SkyWings Aviation Academy', desc: GENERIC_DESC },
+  'bba-logistics-supply-chain-management': {
+    title: 'BBA Logistics & Supply Chain Management | SkyWings',
+    desc: '3-year UGC-recognised BBA in Logistics & Supply Chain Management at SkyWings Kochi. Air cargo, warehousing and global trade careers with 100% placement support.',
+  },
+  'mba-airline-and-airport-management': {
+    title: 'MBA Airline & Airport Management in Kerala | SkyWings',
+    desc: '2-year MBA in Airline & Airport Management at SkyWings Kochi & Mahe. Aviation leadership, airport operations and airline strategy with 100% placement assistance.',
+  },
+  gallery: {
+    title: 'Campus & Placement Gallery | SkyWings Aviation Academy',
+    desc: 'Photo gallery of SkyWings Aviation Academy: Kochi campus life, cabin crew training, placement celebrations, convocations and student events in Kerala.',
+  },
+  'articles-and-news': {
+    title: 'Aviation Blog & Career Guides Kerala | SkyWings Academy',
+    desc: 'Aviation career guides, industry news and student stories for aspiring cabin crew, airport managers and logistics professionals, from SkyWings Academy Kerala.',
+  },
+  'kochi-campus': {
+    title: 'Kochi Campus - Aviation College Ernakulam | SkyWings',
+    desc: 'SkyWings Aviation College Kochi campus on NH Bypass, Ernakulam: smart classrooms, mock cabin training and easy access to Cochin International Airport (CIAL).',
+  },
+  'mahe-campus': {
+    title: 'Mahe Campus - Aviation College Puducherry | SkyWings',
+    desc: "SkyWings Aviation College Mahe campus at Lalu's Business Park, Puducherry: aviation and logistics programmes with modern facilities and placement support.",
+  },
+  'no1-aviation-institute-in-kerala': {
+    title: 'No.1 Aviation Institute in Kerala | SkyWings Academy',
+    desc: 'Why SkyWings is rated the No.1 aviation institute in Kerala: premium campus, airline-experienced trainers, weekly grooming audits and placed students worldwide.',
+  },
+  'bba-aviation-colleges-in-kerala': {
+    title: 'BBA Aviation Colleges in Kerala Compared | SkyWings',
+    desc: 'Comparing BBA Aviation colleges in Kerala? See how SkyWings Academy Kochi leads on syllabus, IATA training, CIAL internships and placement outcomes.',
+  },
+  'privacy-policy': {
+    title: 'Privacy Policy | SkyWings Aviation Academy',
+    desc: 'How Skywings Academy of Aviation & Logistics collects, uses and protects your personal information across skywingsacademy.com enquiries and admissions.',
+  },
   'skywings-feedback-form': { title: 'SkyWings Feedback Form | SkyWings Aviation Academy', desc: 'Internal student feedback form for SkyWings Aviation Academy.', noindex: true },
 };
 
@@ -95,7 +122,11 @@ export function pageMetadata(slug, { ogImage } = {}) {
     alternates: { canonical: path },
     robots: m.noindex
       ? { index: false, follow: false }
-      : { index: true, follow: true },
+      : {
+          index: true,
+          follow: true,
+          googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+        },
     openGraph: {
       type: m.article ? 'article' : 'website',
       siteName: SITE_NAME,
