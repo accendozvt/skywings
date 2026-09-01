@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import { CONTACT } from '@/lib/site';
 import '@/components/legal.css';
 
@@ -6,6 +7,8 @@ export const metadata = pageMetadata('privacy-policy');
 
 export default function PrivacyPolicyPage() {
   return (
+    <>
+      <PageGraph slug="privacy-policy" />
     <div className="legal">
       <div className="legal-hero">
         <div className="legal-wrap">
@@ -102,5 +105,6 @@ export default function PrivacyPolicyPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

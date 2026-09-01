@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import GalleryBehavior from '@/components/GalleryBehavior';
 import './page.css';
 
@@ -7,6 +8,7 @@ export const metadata = pageMetadata('gallery');
 export default function Page_gallery() {
   return (
     <>
+      <PageGraph slug="gallery" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\r\n  \"@context\": \"https://schema.org\",\r\n  \"@type\": \"ImageGallery\",\r\n  \"name\": \"SkyWings Academy Gallery, Campus Life, Events & Placements\",\r\n  \"description\": \"Photo gallery of SkyWings Aviation Academy Kochi, campus life, grooming sessions, placement drives, events, and student life.\",\r\n  \"url\": \"https://skywingsacademy.com/gallery/\",\r\n  \"publisher\": {\r\n    \"@type\": \"EducationalOrganization\",\r\n    \"name\": \"SkyWings Academy of Aviation & Logistics\",\r\n    \"url\": \"https://skywingsacademy.com\"\r\n  },\r\n  \"breadcrumb\": {\r\n    \"@type\": \"BreadcrumbList\",\r\n    \"itemListElement\": [\r\n      { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://skywingsacademy.com\" },\r\n      { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Gallery\", \"item\": \"https://skywingsacademy.com/gallery/\" }\r\n    ]\r\n  }\r\n}" }} />
 <div className="glr">
 

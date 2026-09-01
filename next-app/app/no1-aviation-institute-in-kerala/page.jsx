@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import No1FormBehavior from '@/components/No1FormBehavior';
 import './page.css';
 
@@ -7,6 +8,7 @@ export const metadata = pageMetadata('no1-aviation-institute-in-kerala');
 export default function Page_no1_aviation_institute_in_kerala() {
   return (
     <>
+      <PageGraph slug="no1-aviation-institute-in-kerala" />
 
 <div className="lp">
 

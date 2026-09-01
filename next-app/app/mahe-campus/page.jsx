@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import './page.css';
 
 export const metadata = pageMetadata('mahe-campus');
@@ -6,6 +7,7 @@ export const metadata = pageMetadata('mahe-campus');
 export default function Page_mahe_campus() {
   return (
     <>
+      <PageGraph slug="mahe-campus" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"EducationalOrganization\",\"name\":\"SkyWings Academy, Mahe Campus\",\"description\":\"SkyWings Academy Mahe Campus, Aviation college in Mahe, Puducherry. BBA Aviation, MBA, Cabin Crew, and Diploma courses for students from Malabar, Kozhikode, Kannur, Kasaragod and North Kerala.\",\"url\":\"https://skywingsacademy.com/mahe-campus/\",\"telephone\":\"+919847163163\",\"email\":\"info@skywingsacademy.com\",\"openingHours\":\"Mo-Sa 09:00-18:00\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Lalu's Business Park, Opp. Sreenarayana Guru College\",\"addressLocality\":\"Mahe\",\"addressRegion\":\"Puducherry\",\"postalCode\":\"673310\",\"addressCountry\":\"IN\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":\"11.7002\",\"longitude\":\"75.5338\"},\"hasMap\":\"https://maps.google.com/maps?q=SkyWings+Aviation+Academy+Mahe\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"reviewCount\":\"250\",\"bestRating\":\"5\"},\"breadcrumb\":{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://skywingsacademy.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Mahe Campus\",\"item\":\"https://skywingsacademy.com/mahe-campus/\"}]}}" }} />
 <div className="kc">
 <section className="kc-hero">

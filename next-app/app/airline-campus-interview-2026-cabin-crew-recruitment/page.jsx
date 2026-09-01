@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import './page.css';
 
 export const metadata = pageMetadata('airline-campus-interview-2026-cabin-crew-recruitment');
@@ -6,6 +7,7 @@ export const metadata = pageMetadata('airline-campus-interview-2026-cabin-crew-r
 export default function Page_airline_campus_interview_2026_cabin_crew_recruitment() {
   return (
     <>
+      <PageGraph slug="airline-campus-interview-2026-cabin-crew-recruitment" />
 
 <div className="swci">
 

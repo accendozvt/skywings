@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import './page.css';
 
 export const metadata = pageMetadata('aviation-industry-outlook-2026', { ogImage: '/assets/images/bba-aviation-colleges-in-kerala-4.webp' });
@@ -6,6 +7,7 @@ export const metadata = pageMetadata('aviation-industry-outlook-2026', { ogImage
 export default function Page_aviation_industry_outlook_2026() {
   return (
     <>
+      <PageGraph slug="aviation-industry-outlook-2026" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BlogPosting\",\n  \"headline\": \"Aviation Industry Outlook 2026: Jobs, Salary & Growth in Kerala & India\",\n  \"description\": \"With new airlines like Al Hind Air launching and 163 airports now operational, 2026 is the golden year for aviation industry.\",\n  \"datePublished\": \"2026-01-12T02:19:09\",\n  \"dateModified\": \"2026-03-10T11:56:43\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"SkyWings Aviation Academy\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"SkyWings Aviation Academy\",\n    \"url\": \"https://skywingsacademy.com\"\n  },\n  \"mainEntityOfPage\": \"https://skywingsacademy.com/aviation-industry-outlook-2026/\",\n  \"image\": \"https://skywingsacademy.com/assets/images/bba-aviation-colleges-in-kerala-4.webp\"\n}" }} />
 <div className="art">
   <div className="art-hero">

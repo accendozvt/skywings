@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import './page.css';
 
 export const metadata = pageMetadata('high-paying-aviation-jobs-in-kerala-2026', { ogImage: '/assets/images/no1-premium-aviation-college-kerala-1.webp' });
@@ -6,6 +7,7 @@ export const metadata = pageMetadata('high-paying-aviation-jobs-in-kerala-2026',
 export default function Page_high_paying_aviation_jobs_in_kerala_2026() {
   return (
     <>
+      <PageGraph slug="high-paying-aviation-jobs-in-kerala-2026" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BlogPosting\",\n  \"headline\": \"High Paying Aviation Jobs in Kerala 2026\",\n  \"description\": \"Thinking about Aviation Jobs? Discover high-paying career paths in Airport Management, Logistics, and Operations in Kerala and India.\",\n  \"datePublished\": \"2026-01-11T21:54:45\",\n  \"dateModified\": \"2026-03-10T11:56:41\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"SkyWings Aviation Academy\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"SkyWings Aviation Academy\",\n    \"url\": \"https://skywingsacademy.com\"\n  },\n  \"mainEntityOfPage\": \"https://skywingsacademy.com/high-paying-aviation-jobs-in-kerala-2026/\",\n  \"image\": \"https://skywingsacademy.com/assets/images/no1-premium-aviation-college-kerala-1.webp\"\n}" }} />
 <div className="art">
   <div className="art-hero">

@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import './page.css';
 
 export const metadata = pageMetadata('bba-with-aviation-vs-general-bba', { ogImage: '/assets/images/best-aviation-college-in-kerala-3.webp' });
@@ -6,6 +7,7 @@ export const metadata = pageMetadata('bba-with-aviation-vs-general-bba', { ogIma
 export default function Page_bba_with_aviation_vs_general_bba() {
   return (
     <>
+      <PageGraph slug="bba-with-aviation-vs-general-bba" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BlogPosting\",\n  \"headline\": \"BBA with Aviation vs General BBA: Salary, Scope & Best Career Choice in Kerala (2026)\",\n  \"description\": \"Confused between a normal BBA and BBA with Aviation? We compare the syllabus, salary (₹4L vs ₹2.5L), and job scope in Kerala to help you decide.\",\n  \"datePublished\": \"2026-01-12T02:08:30\",\n  \"dateModified\": \"2026-03-10T11:56:42\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"SkyWings Aviation Academy\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"SkyWings Aviation Academy\",\n    \"url\": \"https://skywingsacademy.com\"\n  },\n  \"mainEntityOfPage\": \"https://skywingsacademy.com/bba-with-aviation-vs-general-bba/\",\n  \"image\": \"https://skywingsacademy.com/assets/images/best-aviation-college-in-kerala-3.webp\"\n}" }} />
 <div className="art">
   <div className="art-hero">

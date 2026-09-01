@@ -29,6 +29,7 @@ export const viewport = {
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': ['EducationalOrganization', 'LocalBusiness'],
+  '@id': `${SITE_URL}/#organization`,
   name: SITE_NAME,
   alternateName: ['SkyWings Academy of Aviation & Logistics', 'Best Aviation College in Kerala', 'No.1 Aviation College Kerala'],
   description:

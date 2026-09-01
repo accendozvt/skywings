@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import './page.css';
 
 export const metadata = pageMetadata('kochi-campus');
@@ -6,6 +7,7 @@ export const metadata = pageMetadata('kochi-campus');
 export default function Page_kochi_campus() {
   return (
     <>
+      <PageGraph slug="kochi-campus" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"EducationalOrganization\",\"name\":\"SkyWings Academy, Kochi Campus\",\"description\":\"SkyWings Academy Kochi Campus, Kerala's No.1 aviation college near Cochin International Airport (CIAL). BBA Aviation, MBA, Cabin Crew, and Diploma courses in Kochi.\",\"url\":\"https://skywingsacademy.com/kochi-campus/\",\"telephone\":\"+919847163163\",\"email\":\"info@skywingsacademy.com\",\"openingHours\":\"Mo-Sa 09:00-18:00\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Pallissery Road, NH Bypass, Behind Starbucks Coffee\",\"addressLocality\":\"Kochi\",\"addressRegion\":\"Kerala\",\"postalCode\":\"682032\",\"addressCountry\":\"IN\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":\"9.9312\",\"longitude\":\"76.2673\"},\"hasMap\":\"https://maps.google.com/maps?q=SkyWings+Aviation+Academy+Kochi\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"reviewCount\":\"250\",\"bestRating\":\"5\"},\"breadcrumb\":{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://skywingsacademy.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Kochi Campus\",\"item\":\"https://skywingsacademy.com/kochi-campus/\"}]}}" }} />
 <div className="kc">
 <section className="kc-hero">

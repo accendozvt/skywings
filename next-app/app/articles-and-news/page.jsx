@@ -1,4 +1,5 @@
 import { pageMetadata } from '@/lib/seo';
+import PageGraph from '@/components/PageGraph';
 import BlogSection from '@/components/BlogSection';
 import './page.css';
 
@@ -30,6 +31,7 @@ const jsonLd = {
 export default function BlogListingPage() {
   return (
     <>
+      <PageGraph slug="articles-and-news" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="blg">
         <section className="blg-hero">
