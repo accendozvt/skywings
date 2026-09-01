@@ -12,8 +12,41 @@
 import fs from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
+const postcss = createRequire(import.meta.url)(join(HERE, '..', 'next-app', 'node_modules', 'postcss'));
+
+/* classes toggled at runtime by site.js / feedback-form.js — never purge */
+const SAFELIST = new Set(['active', 'open', 'visible', 'is-open', 'is-scrolled',
+  'blg-empty', 'answered', 'selected', 'unlocked']);
+
+/* Drop CSS rules whose selectors reference classes absent from this page.
+ * Selectors with no class references (elements, :root, ids) are kept, and
+ * [class*=] attribute selectors are matched by substring against used classes. */
+function purgeCss(css, html) {
+  const used = new Set(SAFELIST);
+  for (const m of html.matchAll(/class="([^"]*)"/g))
+    for (const c of m[1].split(/\s+/)) if (c) used.add(c);
+  const usedArr = [...used];
+  const root = postcss.parse(css);
+  root.walkRules((rule) => {
+    if (rule.parent?.type === 'atrule' && /keyframes/i.test(rule.parent.name)) return;
+    const kept = rule.selectors.filter((sel) => {
+      for (const am of sel.matchAll(/\[class([*^$]?)=['"]?([^'"\]]+?)['"]?\]/g)) {
+        const [, op, val] = am;
+        const ok = usedArr.some((c) => (op === '^' ? c.startsWith(val) : op === '$' ? c.endsWith(val) : c.includes(val)));
+        if (!ok) return false;
+      }
+      const classes = [...sel.matchAll(/\.(-?[a-zA-Z0-9_-]+)/g)].map((x) => x[1]);
+      return classes.every((c) => used.has(c));
+    });
+    if (!kept.length) rule.remove();
+    else if (kept.length !== rule.selectors.length) rule.selectors = kept;
+  });
+  root.walkAtRules((at) => { if (/^(media|supports)$/i.test(at.name) && !at.nodes?.length) at.remove(); });
+  return root.toString();
+}
 const OUT = join(HERE, '..', 'next-app', 'out');
 const DIMS = JSON.parse(fs.readFileSync(join(HERE, 'image-dims.json'), 'utf8'));
 
@@ -59,10 +92,20 @@ for (const file of pages) {
   /* 2. inline stylesheets (order preserved, single style tag at first link) */
   const links = [...html.matchAll(/<link rel="stylesheet" href="(\/_next\/static\/css\/[^"]+)"[^>]*\/>/g)];
   if (links.length) {
-    const css = links.map((m) => readCss(m[1])).join('\n');
+    const css = purgeCss(links.map((m) => readCss(m[1])).join('\n'), html);
     html = html.replace(links[0][0], `<style>${css}</style>`);
     for (const m of links.slice(1)) html = html.replace(m[0], '');
+    /* preload the latin (.p) subsets so the LCP heading repaints with the
+       webfont before the LCP window closes */
+    const fonts = [...new Set([...css.matchAll(/url\((\/_next\/static\/media\/[^)]+\.p\.woff2)\)/g)].map((m) => m[1]))];
+    const preloads = fonts.map((f) => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin/>`).join('');
+    if (preloads) html = html.replace('</head>', preloads + '</head>');
   }
+
+  /* minify JSON-LD blobs (source formatting ships \r\n + indentation) */
+  html = html.replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/g, (m, a, body, b) => {
+    try { return a + JSON.stringify(JSON.parse(body)) + b; } catch { return m; }
+  });
 
   /* 3. images: srcset + lazy; first content image = LCP */
   const mainIdx = html.indexOf('<main');

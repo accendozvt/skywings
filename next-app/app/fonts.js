@@ -6,11 +6,11 @@ import { Sora, Instrument_Sans } from 'next/font/google';
 export const sora = Sora({
   subsets: ['latin'],
   variable: '--font-sora-var',
-  display: 'swap',
+  display: 'optional',
 });
 
 export const instrumentSans = Instrument_Sans({
   subsets: ['latin'],
   variable: '--font-body-var',
-  display: 'swap',
+  display: 'optional',
 });

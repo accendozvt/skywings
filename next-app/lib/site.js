@@ -26,7 +26,7 @@ export const COURSES = [
   { slug: 'bba-aviation', title: 'BBA Aviation', sub: 'Airline & Airport Management · 3 Years', icon: 'plane' },
   { slug: 'diploma-in-cabin-crew-management', title: 'Diploma in Cabin Crew', sub: 'Cabin Crew Management · 1 Year', icon: 'user' },
   { slug: 'mba-airline-and-airport-management', title: 'MBA Aviation', sub: 'Airline & Airport Management · 2 Years', icon: 'monitor' },
-  { slug: 'diploma-in-airline-airport-management', title: 'Diploma — Airline & Airport', sub: 'Airport Management · 1 Year', icon: 'building' },
+  { slug: 'diploma-in-airline-airport-management', title: 'Diploma: Airline & Airport', sub: 'Airport Management · 1 Year', icon: 'building' },
   { slug: 'bba-logistics-supply-chain-management', title: 'BBA Logistics', sub: 'Supply Chain Management · 3 Years', icon: 'truck' },
   { slug: 'diploma-in-aviation-hospitality-management', title: 'Aviation & Hospitality', sub: 'Diploma · 6 Months', icon: 'coffee' },
 ];

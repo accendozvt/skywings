@@ -24,7 +24,7 @@ export default function ContactFormBehavior() {
       const message = g('swc-message')?.value.trim() || '';
 
       const msg =
-        '*New Enquiry — SkyWings Academy*\n\n' +
+        '*New Enquiry: SkyWings Academy*\n\n' +
         `*Name:* ${name}\n*Phone:* ${phone}\n` +
         (email ? `*Email:* ${email}\n` : '') +
         (city ? `*City:* ${city}\n` : '') +

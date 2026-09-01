@@ -3,7 +3,7 @@
 export const POSTS = [
   {
     slug: 'aviation-courses-in-kerala-guide-2026',
-    title: 'Aviation Courses in Kerala 2026 — The Complete Guide',
+    title: 'Aviation Courses in Kerala 2026: The Complete Guide',
     excerpt:
       'Every aviation course in Kerala compared: BBA Aviation, MBA Aviation, Cabin Crew Diploma, Airline Management & Logistics. Fees, eligibility, careers and placements.',
     date: '2026-02-01',

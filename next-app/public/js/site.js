@@ -63,7 +63,7 @@
       e.preventDefault();
       var f = homeForm;
       var v = function (n) { return (f[n] && f[n].value || '').trim(); };
-      var msg = '🎓 *New Enquiry — SkyWings Academy*\n\n' +
+      var msg = '🎓 *New Enquiry: SkyWings Academy*\n\n' +
         '*Name:* ' + v('sw_name') + '\n*Phone:* ' + v('sw_phone') + '\n' +
         (v('sw_email') ? '*Email:* ' + v('sw_email') + '\n' : '') +
         '*Course:* ' + v('sw_course') + '\n' +
@@ -84,7 +84,7 @@
       if (!val('swc-name')) return g('swc-name').focus();
       if (!val('swc-phone')) return g('swc-phone').focus();
       if (!val('swc-course')) return g('swc-course').focus();
-      var msg = '*New Enquiry — SkyWings Academy*\n\n' +
+      var msg = '*New Enquiry: SkyWings Academy*\n\n' +
         '*Name:* ' + val('swc-name') + '\n*Phone:* ' + val('swc-phone') + '\n' +
         (val('swc-email') ? '*Email:* ' + val('swc-email') + '\n' : '') +
         (val('swc-city') ? '*City:* ' + val('swc-city') + '\n' : '') +

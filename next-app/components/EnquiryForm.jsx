@@ -17,7 +17,7 @@ export default function EnquiryForm() {
     const message = f.sw_message.value.trim();
 
     const wa =
-      '🎓 *New Enquiry — SkyWings Academy*\n\n' +
+      '🎓 *New Enquiry: SkyWings Academy*\n\n' +
       `*Name:* ${name}\n*Phone:* ${phone}\n` +
       (email ? `*Email:* ${email}\n` : '') +
       `*Course:* ${course}\n` +

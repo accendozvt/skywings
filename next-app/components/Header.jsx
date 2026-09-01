@@ -64,7 +64,7 @@ export default function Header() {
     <>
       <header className={`swh${scrolled ? ' is-scrolled' : ''}`} role="banner">
         <div className="swh-inner">
-          <Link href="/" className="swh-logo" aria-label="SkyWings Aviation Academy — Home">
+          <Link href="/" className="swh-logo" aria-label="SkyWings Aviation Academy, Home">
             <Image
               src="/assets/images/skywings-aviation-academy-logo.png"
               alt="SkyWings Aviation Academy"
